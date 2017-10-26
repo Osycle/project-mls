@@ -1637,12 +1637,18 @@ main{
 
 // INDEX
 
+.short-about{
 
+}
 .ver-tabs{
-	
+	background-color: white;
+	float: left;
 	.nav-tabs{
 
 		li{
+			&.active{
+				color: $color_4:;
+			}
 			&:not(:first-child){
 				margin-top: 33%;
 			}

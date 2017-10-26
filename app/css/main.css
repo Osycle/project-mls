@@ -15115,10 +15115,13 @@ main {
   bottom: initial;
   right: 10px; }
 
-.ver-tabs .nav-tabs li {
-  float: initial; }
-  .ver-tabs .nav-tabs li:not(:first-child) {
-    margin-top: 33%; }
+.ver-tabs {
+  background-color: white;
+  float: left; }
+  .ver-tabs .nav-tabs li {
+    float: initial; }
+    .ver-tabs .nav-tabs li:not(:first-child) {
+      margin-top: 33%; }
 
 .map-content {
   position: relative; }
