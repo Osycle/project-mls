@@ -87,7 +87,7 @@ function phoneDap(){
 	$(".copyright")
 		.before( $(".social") )
 }
-phoneDap();
+
 
 //RESIZE
 $( window ).on("resize", function(e){

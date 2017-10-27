@@ -201,8 +201,8 @@
 
 
 					<div class="col-md-12 success-info">
-						<div id="success-message"><!-- Спасибо за заказ --></div>
-						<div id="fail-message"><!-- Ошибка --></div>
+						<div id="success-message"></div>
+						<div id="fail-message"></div>
 					</div>
 
 	      	<form id="feedback" method="post" action="feedback.php" class="contact-form">
@@ -514,18 +514,20 @@
 	<!-- CONTENT -->
 	<main class="container-fluid">
 
+		<!-- ABOUT & ADVANTAGE -->
 		<div class="row">
-			<div class="container marg-ver-60">
+			<div class="container marg-top-60">
 
 				<h1>О компании</h1>
+
 				<!-- SHORT-ABOUT -->
 				<div class="short-about">
 					<!-- TAB --> 
 					<div class="col-xs-12 ver-tabs">
 
-						<div class="padd-ver-45 padd-hor-45 p-marg-top-15 col-xs-8 ver-tabs-content">
+						<div class="padd-ver-30 float-left padd-hor-30 p-marg-top-15 col-md-8">
 						  <!-- Nav tabs -->
-						  <ul class="ver-tab-nav col-xs-3" role="tablist">
+						  <ul class="ver-tab-nav" role="tablist">
 						    <li class="active">
 						    	<a href="#home" aria-controls="home" data-toggle="tab">
 						    		<b>Информация о нас</b>
@@ -544,7 +546,7 @@
 						  </ul>
 
 						  <!-- Tab panes -->
-						  <div class="ver-tab-content col-xs-9">
+						  <div class="ver-tab-content ">
 
 						    <div role="tabpanel" class="tab-pane fade in active" id="home">
 						    	<p>
@@ -582,24 +584,81 @@
 						  </div>
 
 						</div>
-						<div class="ver-tabs-img col-xs-4">
+						<div class="ver-tabs-img col-md-4 col-xs-12">
 							<img src="img/smile.jpg"/>
 						</div>
 
 					</div>
 				</div><!-- ./SHORT-ABOUT -->
 
+				
+				<!-- SHORT-ADVANTAGE -->
+				<div class="short-advantage inlineble-2 marg-top-60">
+
+					<figure>
+						<div class="img-content align-center">
+							<img src="img/icons/advantage-1.svg"/>
+						</div>
+						<div class="desc">
+							<p>100% сохранность груза</p>
+						</div>
+					</figure>
+					<figure>
+						<div class="img-content align-center">
+							<img src="img/icons/advantage-2.svg"/>
+						</div>
+						<div class="desc">
+							<p>100% сохранность груза</p>
+						</div>
+					</figure>
+					<figure>
+						<div class="img-content align-center">
+							<img src="img/icons/advantage-3.svg"/>
+						</div>
+						<div class="desc">
+							<p>100% сохранность груза</p>
+						</div>
+					</figure>
+					<figure>
+						<div class="img-content align-center">
+							<img src="img/icons/advantage-4.svg"/>
+						</div>
+						<div class="desc">
+							<p>100% сохранность груза</p>
+						</div>
+					</figure>
+
+				</div>
+
 			</div> <!-- ./CONTAINER -->
 		</div>
-			
-	
+		
+
+
+		<div class="row ">
+			<div class="container marg-top-60" style="img/semi-bg-1.jpg">
+
+				<div class="about-us-text p-marg-top-15 padd-ver-60 padd-hor-45">
+					<p>
+						Еще вчера - мы не беспокоились, что нас не знают, но заботились о том, чтобы нас знали.
+						Уже сегодня наша компания успешно занимается транспортировками грузов из Европы, стран СНГ и Юго-Восточной Азии.
+					</p>
+
+					<p>
+						С каждым днем мы увеличиваем свой опыт в осуществлении транспортировок грузов. Мы верим, что сплоченность нашей команды, профессионализм 
+						и ответственность - непременные условия достижения высоких результатов.
+					</p>
+				</div>
+
+			</div>
+		</div>
+		
 		<!-- GOOGLE MAP -->
-		<div class="map-content">
-	  	<div id="map" class="row"></div>
+		<div class="map-content marg-top-60">
 
 			<div class="container">
 
-				<div class="col-xs-3 map-block" data-wow-duration="1.2s" data-wow-delay="3s">
+				<div class="col-md-3 map-block" data-wow-duration="1.2s" data-wow-delay="3s">
 
 					<h2>Контакты</h2>
 					<h4>Адрес</h4>
@@ -615,7 +674,7 @@
 				</div>
 
 			</div>
-			
+			<div id="map" class="row"></div>
 			<script>
 
 			var i = {
@@ -749,7 +808,7 @@
 		<div class="skin-1">
 			<div class="container">
 
-				<section class="col-xs-12 footer-menu padd">
+				<section class="col-xs-12 footer-menu hidden-xs">
 					<ul>
 						<li><a href="about.html">О нас</a></li>
 						<li><a href="services.html">Услуги</a></li>
