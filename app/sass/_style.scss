@@ -1246,9 +1246,9 @@ $header-height: 110px;
 	.menu-list{
 		text-align: center;
 		li{
+			@extend .btn-red-gradient;
 			width: 100%;
-			background-color: $color_3;
-	    border-radius: 5px;
+	    border-radius: 7px;
 	    margin-bottom: 15px;
 	    //transition: all 0.3s ease-in-out;
 	    &:focus, &:hover, &:active{
@@ -1311,12 +1311,21 @@ $header-height: 110px;
 	overflow: hidden;
 	background-position: 0 0;
 	background-repeat: repeat-y;
+	background-size: cover;
+	
 }
 .banner-content{
-	@include table-celling( $header-height*2 );
+	@include table-celling( $header-height*2+10 );
 }
 .banner-shadow{
-	background: linear-gradient(to left, rgba( $color_1, 0.3),rgba($color_4, 0.3) );
+
+	background: linear-gradient(to left, rgba( $color_1, 0.5),rgba($color_4, 0.3) );
+	height: 100%;
+	position: absolute;
+	display: block;
+	float: left;
+	width: 100%;
+
 }
 
 

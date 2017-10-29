@@ -14359,7 +14359,7 @@ button:hover, button:focus {
   .btn-style i, .btn-red-1 i, [class*="btn-blue"] i, [class*="btn-red"] i, .btn-opacity i {
     vertical-align: middle; }
 
-.btn-red-gradient {
+.btn-red-gradient, .min-menu-modal .menu-list li {
   background: -webkit-gradient(linear, left top, left bottom, from(#ab1633), to(#e20010));
   background: -webkit-linear-gradient(top, #ab1633, #e20010);
   background: -o-linear-gradient(top, #ab1633, #e20010);
@@ -14917,9 +14917,8 @@ button:hover, button:focus {
   text-align: center; }
   .min-menu-modal .menu-list li {
     width: 100%;
-    background-color: #d52828;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
     margin-bottom: 15px; }
     .min-menu-modal .menu-list li:focus, .min-menu-modal .menu-list li:hover, .min-menu-modal .menu-list li:active {
       -webkit-transform: scale(1.1);
@@ -14972,20 +14971,27 @@ button:hover, button:focus {
   color: white;
   overflow: hidden;
   background-position: 0 0;
-  background-repeat: repeat-y; }
+  background-repeat: repeat-y;
+  -webkit-background-size: cover;
+  background-size: cover; }
 
 .banner-content {
   display: table-cell;
-  height: 220px;
+  height: 230px;
   padding-left: 15px;
   padding-right: 15px;
   vertical-align: middle; }
 
 .banner-shadow {
-  background: -webkit-gradient(linear, right top, left top, from(rgba(31, 76, 153, 0.3)), to(rgba(227, 31, 36, 0.3)));
-  background: -webkit-linear-gradient(right, rgba(31, 76, 153, 0.3), rgba(227, 31, 36, 0.3));
-  background: -o-linear-gradient(right, rgba(31, 76, 153, 0.3), rgba(227, 31, 36, 0.3));
-  background: linear-gradient(to left, rgba(31, 76, 153, 0.3), rgba(227, 31, 36, 0.3)); }
+  background: -webkit-gradient(linear, right top, left top, from(rgba(31, 76, 153, 0.5)), to(rgba(227, 31, 36, 0.3)));
+  background: -webkit-linear-gradient(right, rgba(31, 76, 153, 0.5), rgba(227, 31, 36, 0.3));
+  background: -o-linear-gradient(right, rgba(31, 76, 153, 0.5), rgba(227, 31, 36, 0.3));
+  background: linear-gradient(to left, rgba(31, 76, 153, 0.5), rgba(227, 31, 36, 0.3));
+  height: 100%;
+  position: absolute;
+  display: block;
+  float: left;
+  width: 100%; }
 
 .breadcrumb {
   background: transparent; }
