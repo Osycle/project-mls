@@ -3479,6 +3479,14 @@ input[type="button"].btn-block {
 .fade.in {
   opacity: 1;
 }
+.scale {
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+.scale.in {
+  transform: scale(1);
+}
+
 .collapse {
   display: none;
 }

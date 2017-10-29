@@ -41,17 +41,17 @@
 			       thumbAmount:3,
 
 			       hideThumbsOnMobile:"off",
-			       hideBulletsOnMobile:"off",
+			       hideBulletsOnMobile:"on",
 			       hideArrowsOnMobile:"off",
 			       hideThumbsUnderResoluition:0,
 
-			       hideThumbs:0,
+			       hideThumbs:-1,
 			       hideTimerBar:"off",
 
-			       keyboardNavigation:"on",
+			       keyboardNavigation:"off",
 
 			       navigationType:"bullet",
-			       navigationArrows:"solo",
+			       navigationArrows:"none",
 			       navigationStyle:"round",
 
 			       navigationHAlign:"center",
@@ -106,10 +106,14 @@
 
   </head>
 <body>
+	<noscript>
+		<p>Ваш браузер не поддерживает скрипты!<br/> 
+			 Пожалуйста подключите в настройках браузера Javascript</p>
+	</noscript> 
 	<!-- HEADER -->
 	
-
-	<header id="header">
+	<div class="header-hidden"></div>
+	<header id="header" class="header-scroll">
 		<div class="container">
 			<div class="header-navbar">
 		    <!-- LOGOTYPE -->
@@ -117,7 +121,7 @@
 	      	<a  href="index.html" ><img src="img/logo.png"/></a>
 	      </div>
 	      <!-- MENU TOGGLE BUTTON -->
-		     <button class="menu-toggle collapsed" type="button" data-toggle="modal" data-target="#menu-modal">
+		     <button class="menu-toggle collapsed" type="button" data-toggle="modal" data-target="#menuModal">
 		       <span class="icon-bar"></span>
 		       <span class="icon-bar"></span>
 		       <span class="icon-bar"></span>
@@ -128,7 +132,7 @@
 
 	  		<div class="nav-feedback">
 		  		<button class="btn-blue-1" type="button" data-toggle="modal" data-target="#feedback-modal">
-		  				<a>Связаться с нами</a>
+		  				<b class="clc">Связаться с нами</b>
 		  		</button>
 		  	</div>
 
@@ -136,17 +140,8 @@
         <!-- MENU -->
        	<div class="nav-menu">
 	       	<div class="nav-header">
-	       		<form id="change-lang" method="get" action="" class="contact-form">
 
-							<select  name="lang" form="change-lang" >
-								<option type="submit" onclick="" value="ru">Ру</option>
-								<option type="submit"	value="uz">Uz</option>
-								<option type="submit"	value="en">En</option>
-							</select>
-							<i class="fa fa-angle"></i>
-							
-		      	</form>
-		  		</div>
+
           <ul class="menu-list">
 						<li><a href="about.html">О нас</a></li>
 						<li><a href="services.html">Услуги</a></li>
@@ -154,6 +149,17 @@
 						<li><a href="vacancies">Отзывы</a></li>
 						<li><a href="contacts.html">Контакты</a></li>
           </ul>
+					
+					<div class="dropdown-lang">
+					  <div tabindex="1" role="button" class="dropbtn">
+					  	<span>Ру</span><i class="fa fa-angle-down"></i>
+					  </div>
+					  <div class="dropdown-content">
+					    <a href="ru">Ру</a>
+					    <a href="uz">Уз</a>
+					    <a href="en">Англ</a>
+					  </div>
+					</div>
 
       	</div>
 
@@ -165,7 +171,7 @@
 
 
 	<!-- MIN MENU MODAL -->
-  <div class="min-menu-modal modal fade" id="menu-modal" tabindex="-1" role="dialog" aria-labelledby="min-menu">
+  <div class="min-menu-modal modal scale a-minMenu" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="min-menu">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	    	
@@ -188,7 +194,7 @@
 
 
 	<!-- FEEDBACK MODAL-->
-	<div class="feedback modal fade" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback">
+	<div class="feedback-modal modal scale" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 
@@ -204,26 +210,50 @@
 						<div id="success-message"></div>
 						<div id="fail-message"></div>
 					</div>
-
+					<h2>Связаться с нами</h2>
 	      	<form id="feedback" method="post" action="feedback.php" class="contact-form">
 
-						<label>Имя</label>
-						<input class="form-control" type="text" name="name" placeholder="Имя" autocomplete="off" required="required"
+
+
+						<label>Ваше имя</label>
+						<input class="form-control" 
+									 type="text" 
+									 name="name" 
+									 placeholder="Имя" autocomplete="off" required="required"
 									 data-toggle="popover" 
 									 data-trigger="focus"
-									 data-content="Введите своё имя"/
-									 >
+									 data-content="Введите своё имя"/>
 
-						<label>Телефон</label>
-						<input class="form-control" type="tel" name="phone" placeholder="+998 (xx) xxx-xx-xx" minlength="14" autocomplete="off" required="required"
+
+
+						<label>Электронная почта</label>
+						<input class="form-control" 
+									 type="email" 
+									 name="email" 
+									 placeholder="email" autocomplete="off" required="required"
+									 data-toggle="popover" 
+									 data-trigger="focus"
+									 data-content="Укажите электронную почту"/>
+
+
+						<label>Номер телефона</label>
+						<input class="form-control" type="tel" 
+									 name="phone" 
+									 placeholder="+998 (xx) xxx-xx-xx" autocomplete="off" required="required"
+									 minlength="14"
 									 data-toggle="popover" 
 									 data-trigger="focus"
 									 data-content="Укажите номер телефона"/>
 
+
+
+						<textarea class="form-control" 
+									 name="message" 
+									 placeholder="Сообщение"></textarea>
 						
 	      	</form>
 			      <div class="modal-footer">
-			      	<button type="submit" class="align-right btn-opacity" form="feedback" autofocus="autofocus">Заказать</button>
+			      	<button type="submit" class="align-right btn-opacity" form="feedback" autofocus="autofocus">Отправить</button>
 			      </div>
 
 	      </div>
@@ -264,8 +294,7 @@
 					<!-- SLIDE -->
 					<li class="slide-1" 
 							data-transition="fade"
-							data-slotamount="3"
-							data-masterspeed="300">
+							data-masterspeed="800">
 
 						<img src="img/slider/slide-1.jpg">
 
@@ -273,26 +302,20 @@
 								 data-x="center" 
 								 data-y="center"
 								 data-voffset="-150"
-								 data-speed="1000" 
-								 data-start="1000" 
+								 data-speed="500" 
+								 data-start="700" 
 								 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
 								 data-easing="easeOutBack">
 							<h1 >ЖД перевозки</h1>
 						</div>
 
 
-						<div class="tp-caption customin customout randomrotate tp-resizeme start splitted pargi" 
+						<div class="tp-caption sfb fade  start" 
 								 data-x="center" 
 								 data-y="center" 
 								 data-voffset="-50"
-								 data-speed="600" 
-								 data-start="1000"
-								 data-elementdelay="0.011"
-								 data-endelementdelay="0.005"
-								 data-splitin="chars" 
-								 data-splitout="chars" 
-							   data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-							   data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" >
+								 data-speed="500" 
+								 data-start="900" >
 							
 							<p>Вид наземного транспорта, перевозка грузов и 
 								пассажиров на котором осуществляется колёсными 
@@ -305,21 +328,19 @@
 								 data-x="center" 
 								 data-y="center" 
 								 data-voffset="50" 
-								 data-speed="800"
+								 data-speed="500"
 								 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								 data-start="1200">
+								 data-start="1000">
 							<button class="btn-red-1">
 									<a href="">Подробнее</a>
 							</button>
 						</div>
 
 					</li>
-
 					<!-- SLIDE -->
 					<li class="slide-1" 
 							data-transition="fade"
-							data-slotamount="3"
-							data-masterspeed="300">
+							data-masterspeed="800">
 
 						<img src="img/slider/slide-2.jpg">
 
@@ -327,26 +348,20 @@
 								 data-x="center" 
 								 data-y="center"
 								 data-voffset="-150"
-								 data-speed="1000" 
-								 data-start="1000" 
+								 data-speed="500" 
+								 data-start="700" 
 								 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
 								 data-easing="easeOutBack">
 							<h1 >ЖД перевозки</h1>
 						</div>
 
 
-						<div class="tp-caption customin customout randomrotate tp-resizeme start splitted pargi" 
+						<div class="tp-caption sfb fade  start" 
 								 data-x="center" 
 								 data-y="center" 
 								 data-voffset="-50"
-								 data-speed="600" 
-								 data-start="1000"
-								 data-elementdelay="0.011"
-								 data-endelementdelay="0.005"
-								 data-splitin="chars" 
-								 data-splitout="chars" 
-							   data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-							   data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" >
+								 data-speed="500" 
+								 data-start="900" >
 							
 							<p>Вид наземного транспорта, перевозка грузов и 
 								пассажиров на котором осуществляется колёсными 
@@ -359,125 +374,15 @@
 								 data-x="center" 
 								 data-y="center" 
 								 data-voffset="50" 
-								 data-speed="800"
+								 data-speed="500"
 								 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								 data-start="1200">
+								 data-start="1000">
 							<button class="btn-red-1">
 									<a href="">Подробнее</a>
 							</button>
 						</div>
 
 					</li>
-
-					<!-- SLIDE -->
-					<li class="slide-1" 
-							data-transition="fade"
-							data-slotamount="3"
-							data-masterspeed="300">
-
-						<img src="img/slider/slide-3.jpg">
-
-						<div class="caption customin " 
-								 data-x="center" 
-								 data-y="center"
-								 data-voffset="-150"
-								 data-speed="1000" 
-								 data-start="1000" 
-								 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								 data-easing="easeOutBack">
-							<h1 >ЖД перевозки</h1>
-						</div>
-
-
-						<div class="tp-caption customin customout randomrotate tp-resizeme start splitted pargi" 
-								 data-x="center" 
-								 data-y="center" 
-								 data-voffset="-50"
-								 data-speed="600" 
-								 data-start="1000"
-								 data-elementdelay="0.011"
-								 data-endelementdelay="0.005"
-								 data-splitin="chars" 
-								 data-splitout="chars" 
-							   data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-							   data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" >
-							
-							<p>Вид наземного транспорта, перевозка грузов и 
-								пассажиров на котором осуществляется колёсными 
-								транспортными средствами по рельсовым путям.</p>
-
-						</div>
-
-
-						<div class="tp-caption customin start show" 
-								 data-x="center" 
-								 data-y="center" 
-								 data-voffset="50" 
-								 data-speed="800"
-								 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								 data-start="1200">
-							<button class="btn-red-1">
-									<a href="">Подробнее</a>
-							</button>
-						</div>
-
-					</li>
-					<!-- SLIDE -->
-					<li class="slide-1" 
-							data-transition="fade"
-							data-slotamount="3"
-							data-masterspeed="300">
-
-						<img src="img/slider/slide-4.jpg">
-
-						<div class="caption customin " 
-								 data-x="center" 
-								 data-y="center"
-								 data-voffset="-150"
-								 data-speed="1000" 
-								 data-start="1000" 
-								 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								 data-easing="easeOutBack">
-							<h1 >ЖД перевозки</h1>
-						</div>
-
-
-						<div class="tp-caption customin customout randomrotate tp-resizeme start splitted pargi" 
-								 data-x="center" 
-								 data-y="center" 
-								 data-voffset="-50"
-								 data-speed="600" 
-								 data-start="1000"
-								 data-elementdelay="0.011"
-								 data-endelementdelay="0.005"
-								 data-splitin="chars" 
-								 data-splitout="chars" 
-							   data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-							   data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" >
-							
-							<p>Вид наземного транспорта, перевозка грузов и 
-								пассажиров на котором осуществляется колёсными 
-								транспортными средствами по рельсовым путям.</p>
-
-						</div>
-
-
-						<div class="tp-caption customin start show" 
-								 data-x="center" 
-								 data-y="center" 
-								 data-voffset="50" 
-								 data-speed="800"
-								 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								 data-start="1200">
-							<button class="btn-red-1">
-									<a href="">Подробнее</a>
-							</button>
-						</div>
-
-					</li>
-
-
-
 
 
 
@@ -511,44 +416,55 @@
 
 
 
-	<!-- CONTENT -->
+	<!-- MAIN -->
 	<main class="container-fluid">
 
-		<!-- ABOUT & ADVANTAGE -->
-		<div class="row">
-			<div class="container marg-top-60">
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- SHORT-ABOUT -->
+		<div class="row marg-top-60">
+			<div class="container">
 
 				<h1>О компании</h1>
 
-				<!-- SHORT-ABOUT -->
 				<div class="short-about">
 					<!-- TAB --> 
-					<div class="col-xs-12 ver-tabs">
+					<div class="col-xs-12 ver-tabs bg-color-white">
 
 						<div class="padd-ver-30 float-left padd-hor-30 p-marg-top-15 col-md-8">
 						  <!-- Nav tabs -->
 						  <ul class="ver-tab-nav" role="tablist">
 						    <li class="active">
-						    	<a href="#home" aria-controls="home" data-toggle="tab">
+						    	<a href="#ver-info-1" data-toggle="tab">
 						    		<b>Информация о нас</b>
 						    	</a>
 						    </li>
 						    <li>
-						    	<a href="#profile" aria-controls="profile" data-toggle="tab">
+						    	<a href="#ver-info-2" data-toggle="tab">
 						    		<b>Наша миссия</b>
 						    	</a>
 						    </li>
 						    <li>
-						    	<a href="#messages" aria-controls="messages" data-toggle="tab">
+						    	<a href="#ver-info-3" data-toggle="tab">
 						    		<b>Цели компании</b>
 						    	</a>
 						    </li>
 						  </ul>
 
 						  <!-- Tab panes -->
-						  <div class="ver-tab-content ">
+						  <div class="ver-tab-content list-style-1">
 
-						    <div role="tabpanel" class="tab-pane fade in active" id="home">
+						    <div role="tabpanel" class="tab-pane a-scale in active" id="ver-info-1">
 						    	<p>
 						    		Автомобильные грузоперевозки являются основным видом деятельности компании . 
 						    		Мы оказываем услуги перевозки грузов по территории Европейского Союза, СНГ, Турции, 
@@ -561,23 +477,29 @@
 										наших автоперевозок и удовлетворять потребности клиентов в 
 										полном объеме.
 						    	</p>
-						    	<ul class="list-style-1">
+						    	<ul>
 						    		<li>Автомобильные грузоперевозки  подтвердили универсальность</li>
 										<li>Междугородние перевозки пользуются популярностью</li>
 										<li>ЖД перевозки осуществляются колёсными транспортнымисредствами, по железнодорожным путям</li>
 						    	</ul>
 						    </div>
 
-						    <div role="tabpanel" class="tab-pane fade " id="profile">
+						    <div role="tabpanel" class="tab-pane a-scale " id="ver-info-2">
 						    	<p>
-						    		iusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						    		Для организации перевозок автомобильным транспортом мы 
+										используем как собственный, так и привлеченный автопарк. 
+										Благодаря этому нам удалось максимально расширить географию 
+										наших автоперевозок и удовлетворять потребности клиентов в 
+										полном объеме.
 						    	</p>
 						    </div>
 
 
-						    <div role="tabpanel" class="tab-pane fade " id="messages">
+						    <div role="tabpanel" class="tab-pane a-scale " id="ver-info-3">
 						    	<p>
-						    		accusamus labore sustainable VHS.
+						    		Вид наземного транспорта, перевозка грузов и 
+										пассажиров на котором осуществляется колёсными 
+										транспортными средствами по рельсовым путям.
 						    	</p>
 						    </div>
 
@@ -589,17 +511,44 @@
 						</div>
 
 					</div>
-				</div><!-- ./SHORT-ABOUT -->
+				</div>
+
+			</div> <!-- ./CONTAINER -->
+		</div><!-- ./SHORT-ABOUT -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- SHORT-ADVANTAGE -->
+		<div class="row marg-top-60">
+			<div class="container">
 
 				
-				<!-- SHORT-ADVANTAGE -->
-				<div class="short-advantage inlineble-2 marg-top-60">
+				<div class="short-advantage inlineble-2">
 
 					<figure>
 						<div class="img-content align-center">
 							<img src="img/icons/advantage-1.svg"/>
 						</div>
-						<div class="desc">
+						<div class="desc align-center">
 							<p>100% сохранность груза</p>
 						</div>
 					</figure>
@@ -607,7 +556,7 @@
 						<div class="img-content align-center">
 							<img src="img/icons/advantage-2.svg"/>
 						</div>
-						<div class="desc">
+						<div class="desc align-center">
 							<p>100% сохранность груза</p>
 						</div>
 					</figure>
@@ -615,7 +564,7 @@
 						<div class="img-content align-center">
 							<img src="img/icons/advantage-3.svg"/>
 						</div>
-						<div class="desc">
+						<div class="desc align-center">
 							<p>100% сохранность груза</p>
 						</div>
 					</figure>
@@ -623,54 +572,364 @@
 						<div class="img-content align-center">
 							<img src="img/icons/advantage-4.svg"/>
 						</div>
-						<div class="desc">
+						<div class="desc align-center">
 							<p>100% сохранность груза</p>
 						</div>
 					</figure>
-
 				</div>
+
+
 
 			</div> <!-- ./CONTAINER -->
-		</div>
-		
+		</div><!-- ./SHORT-ADVANTAGE -->
 
 
-		<div class="row ">
-			<div class="container marg-top-60" style="img/semi-bg-1.jpg">
 
-				<div class="about-us-text p-marg-top-15 padd-ver-60 padd-hor-45">
-					<p>
-						Еще вчера - мы не беспокоились, что нас не знают, но заботились о том, чтобы нас знали.
-						Уже сегодня наша компания успешно занимается транспортировками грузов из Европы, стран СНГ и Юго-Восточной Азии.
-					</p>
 
-					<p>
-						С каждым днем мы увеличиваем свой опыт в осуществлении транспортировок грузов. Мы верим, что сплоченность нашей команды, профессионализм 
-						и ответственность - непременные условия достижения высоких результатов.
-					</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- SHORT-ABOUT-TEXT -->
+		<div class="row marg-top-60">
+			<div class="container">
+
+				
+				<div>
+					<div class="about-text p-marg-top-15 padd-ver-60 padd-hor-40">
+						<p>
+							Еще вчера - мы не беспокоились, что нас не знают, но заботились о том, чтобы нас знали.
+							<br/>
+							Уже сегодня наша компания успешно занимается транспортировками грузов из Европы, стран СНГ и Юго-Восточной Азии.
+						</p>
+
+						<p>
+							С каждым днем мы увеличиваем свой опыт в осуществлении транспортировок грузов. Мы верим, что сплоченность нашей команды, профессионализм 
+							и ответственность - непременные условия достижения высоких результатов.
+						</p>
+					</div>
 				</div>
 
-			</div>
-		</div>
+
+			</div> <!-- ./CONTAINER -->
+		</div><!-- ./SHORT-ABOUT-TEXT -->
 		
-		<!-- GOOGLE MAP -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- BONUS -->
+		<div class="row marg-top-60">
+			<div class="skin-bonus padd-ver-50" style="background-image: url('img/semi-bg-1.jpg');">
+				<div class="container">
+
+					<div class="align-center color-white">
+						<h2>Получите беспланый расчет тарифа</h2>
+						<button class="btn-blue-1" type="button" data-toggle="modal" data-target="#feedback-modal">
+			  				<b class="clc">Связаться с нами</b>
+			  		</button>
+					</div>
+
+				</div>
+			</div>
+		</div><!-- ./BONUS -->
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- SHORT-CARPARK -->
+		<div class="row marg-top-60">
+			<div class="container">
+
+				<h1>Наш Автопарк</h1>
+
+				<div class="inlineble-2 short-carpark">
+
+					<figure class="bg-color-white marg-top-30">
+						<div class="img-content">
+							<img src="img/automobils/automobil-1.jpg"/>
+						</div>
+
+						<div class="desc padd-ver-30 padd-hor-15">
+							<b class="display-block padd-ver-10">
+								<a href="">
+									Самосвал MAN TGS 41.400
+								</a>
+							</b>
+							<p>
+								Создавая эту страничку, мы обещали, 
+								что будем честно сообщать о себе хорошее и плохое. 
+								Так вот, хорошая новость, в январе-феврале мы отгрузили из РФ 11 машин со 
+								сборным грузом и 3 машины с другим груз...
+							</p>
+						</div>
+					</figure>
+					
+					<figure class="bg-color-white marg-top-30">
+						<div class="img-content">
+							<img src="img/automobils/automobil-2.jpg"/>
+						</div>
+
+						<div class="desc padd-ver-30 padd-hor-15">
+							<b class="display-block padd-ver-10">
+								<a href="">
+									MAN TGS 19.360 Евро 4, MAN TGS 19.400
+								</a>
+							</b>
+							<p>
+								Создавая эту страничку, мы обещали, 
+								что будем честно сообщать о себе хорошее и плохое. 
+								Так вот, хорошая новость, в январе-феврале мы отгрузили из РФ 11 машин со 
+								сборным грузом и 3 машины с другим груз...
+							</p>
+						</div>
+					</figure>
+					
+					<figure class="bg-color-white marg-top-30">
+						<div class="img-content">
+							<img src="img/automobils/automobil-3.jpg"/>
+						</div>
+
+						<div class="desc padd-ver-30 padd-hor-15">
+							<b class="display-block padd-ver-10">
+								<a href="">
+									Фургоны марки ГБАСПГ ISUZU SAZ NQR  PL
+								</a>
+							</b>
+							<p>
+								Создавая эту страничку, мы обещали, 
+								что будем честно сообщать о себе хорошее и плохое. 
+								Так вот, хорошая новость, в январе-феврале мы отгрузили из РФ 11 машин со 
+								сборным грузом и 3 машины с другим груз...
+							</p>
+						</div>
+					</figure>
+					
+					<figure class="bg-color-white marg-top-30">
+						<div class="img-content">
+							<img src="img/automobils/automobil-4.jpg"/>
+						</div>
+
+						<div class="desc padd-ver-30 padd-hor-15">
+							<b class="display-block padd-ver-10">
+								<a href="">
+									Результаты работы в январе и феврале
+								</a>
+							</b>
+							<p>
+								Создавая эту страничку, мы обещали, 
+								что будем честно сообщать о себе хорошее и плохое. 
+								Так вот, хорошая новость, в январе-феврале мы отгрузили из РФ 11 машин со 
+								сборным грузом и 3 машины с другим груз...
+							</p>
+						</div>
+					</figure>
+
+
+				</div>
+
+			</div><!-- ./CONTAINER -->
+		</div><!-- ./SHORT-CARPARK -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- SHORT-REVIEWS -->
+		<div class="row marg-top-60 bg-color-white">
+			<div class="container padd-ver-30">
+
+				<h1>Отзывы</h1>
+
+				<div class="short-reviews marg-ver-30 padd-ver-45">
+
+			
+
+					 
+					  <div class="bord">
+					  	<div class="tab-content">
+
+						    <figure role="tabpanel" class="tab-pane fade" id="review-1">
+						    		<img src="img/review-1.jpg" alt=""/>
+
+							    	<aside>
+							    		<b><font size="4">Азизов Ботирбек, </font></b>
+							    		<em>Предприниматель</em>
+							        <p>
+												Руководство замечательное, порядочное и с пониманием относиться ко всему! 
+												Нет ничего трудного,если все во время исполнишь свое обязательство. 
+												Встреча руководства и коллег после дальней командировки. 
+												Нет ничего трудного,если все во время исполнишь свое обязательство. 
+												Встреча руководства и коллег после дальней командировки.
+							        </p>
+							        <p>
+												Руководство замечательное, порядочное и с пониманием относиться ко всему! 
+												Нет ничего трудного,если все во время исполнишь свое обязательство. 
+												Встреча руководства и коллег после дальней командировки. 
+												Нет ничего трудного,если все во время исполнишь свое обязательство. 
+												Встреча руководства и коллег после дальней командировки.
+							        </p>
+
+							      </aside>
+						    </figure>
+
+						    <figure role="tabpanel" class="tab-pane fade in active" id="review-2">
+						    		<img src="img/review-1.jpg" alt=""/>
+
+							    	<aside>
+							    		<b><font size="4">Ботиржонов Азизбек, </font></b>
+							    		<em>Предприниматель</em>
+							        <p>
+												Руководство замечательное, порядочное и с пониманием относиться ко всему! 
+												Нет ничего трудного,если все во время исполнишь свое обязательство. 
+												Встреча руководства и коллег после дальней командировки. 
+												Нет ничего трудного,если все во время исполнишь свое обязательство. 
+												Встреча руководства и коллег после дальней командировки.
+							        </p>
+							      </aside>
+						    </figure>
+
+						    <figure role="tabpanel" class="tab-pane fade" id="review-3">
+						    		<img src="img/review-1.jpg" alt=""/>
+
+							    	<aside>
+							    		<b><font size="4">Авезов Рустам, </font></b>
+							    		<em>Предприниматель</em>
+							        <p>
+												Руководство замечательное, порядочное и с пониманием относиться ко всему! 
+												Нет ничего трудного,если все во время исполнишь свое обязательство.
+							        </p>
+							      </aside>
+						    </figure>
+
+					
+
+
+
+							 	<!-- REVIEWS-TAB PAGINATION -->
+							  <ul class="pagination-red" role="tablist">
+
+							    <li><a href="#review-1" data-toggle="tab"> </a></li>
+							    <li class="active"><a href="#review-2" data-toggle="tab"></a></li>
+							    <li><a href="#review-3" data-toggle="tab"></a></li>
+
+							  </ul>
+
+
+					  	</div><!-- ./TAB-CONTENT -->
+					  </div>
+				
+
+				</div>
+			</div><!-- ./CONTAINER -->
+		</div><!-- ./SHORT-REVIEWS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- MAP -->
 		<div class="map-content marg-top-60">
 
 			<div class="container">
 
-				<div class="col-md-3 map-block" data-wow-duration="1.2s" data-wow-delay="3s">
+				<div class="col-md-3 map-block bg-color-white">
 
 					<h2>Контакты</h2>
-					<h4>Адрес</h4>
+					<address>
+						<h4>Адрес</h4>
+							Республика Узбекистан, г.Ташкент, Яшнабадский район, 
+							ул. Уйсозлар, 23 А
 
-					<p>Республика Узбекистан, г.Ташкент, Яшнабадский район, ул. Уйсозлар, 23 А</p>
-					<h4>Телефон</h4>
-					<p>
-						+99871 280 24 97<br/>
-						+99871 280 32 34
-					</p>
-					<h4>Email</h4>
-					<p><a href="manlogistic777@gmail.com">manlogistic777@gmail.com</a></p>
+						<h4>Телефон</h4>
+						<p>+99871 280 24 97<br/>
+							 +99871 280 32 34</p>
+
+						<h4>Email</h4>
+						<a href="mailto:manlogistic777@gmail.com">
+							manlogistic777@gmail.com</a>
+
+					</address>
 				</div>
 
 			</div>
@@ -695,6 +954,8 @@
 							gm_position_lat: 			 		41.298539,
 							gm_position_lng: 				 	69.219502
 					}
+
+			var mapBlock = document.getElementsByClassName("map-block")[0];
 
 		   	function initMap() {
 						var map = new google.maps.Map(document.getElementById('map'), {
@@ -766,15 +1027,19 @@
 						});
 						var infoWindow = new google.maps.InfoWindow({
 							content: i.gm_content,
-							maxWidth: "300"
+							maxWidth: "400"
 						});
+						var gm_status = false;
 						marker.addListener('click', function(){
-							if (marker.getAnimation() !== null){
+
+							if (gm_status){
 								infoWindow.open(map, marker);
-								marker.setAnimation(null);
+								$(function(){ if($( document ).width() > 991) $(mapBlock).slideUp(); });
+								gm_status = !gm_status;
 							}else{
+								$(function(){ if($( document ).width() > 991) $(mapBlock).slideDown(); });
 								infoWindow.close(map, marker);
-								marker.setAnimation(google.maps.Animation.BOUNCE);
+								gm_status = !gm_status;
 							}
 
 						});
@@ -786,7 +1051,7 @@
 					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVUinUZqQAIM1NfbavWbOKtsc3l-XE_ag&callback=initMap">
 				</script>
 			</div>
-		</div>
+		</div><!-- ./MAP -->
 
 
 
@@ -841,11 +1106,9 @@
 									title="Создание и продвижение сайтов в Ташкенте"
 									style="text-decoration: underline;">Создание сайтов</a> 
 
-									<font color="skyblue" style="font-style: italic;">
-										Life</font>
+									<em><font color="skyblue">Life</font></em>
 
-									<font color="ghostwhite">
-										Style</font>
+									<font color="ghostwhite">Style</font>
 						</p>
 					</div>
 				

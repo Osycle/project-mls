@@ -10,13 +10,15 @@ $color_1: #1f4c99;
 $color_2: #191970;
 $color_3: #d52828;//red
 $color_4: #e31f24;;//red
-$font-family: "Open Sans";
+$font-family-1: "Open Sans";
+$font-family-2: "Myriad Pro";
+$font-family-3: "Intro";
 $color_footer: #1b4e9b;
 
 
 $color_gray_1: darken(#f8f8f8, 0%);
 $color_gray_2: darken(#f3f3f3, 0%);
-$color_gray_3: darken(#ebebeb, 8%);
+$color_gray_3: darken(#ebebeb, 2%);
 
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em;
@@ -78,13 +80,13 @@ $color_gray_3: darken(#ebebeb, 8%);
  ::-webkit-scrollbar-thumb{
  	//border-radius: 5px;
  	z-index: 500;
-	background-color: lighten($color_1, 5%);
+	background-color: lighten($color_2, 5%);
 }
 ::-webkit-scrollbar-thumb:hover{
-	background-color: darken($color_1, 5%);
+	background-color: darken($color_2, 5%);
 } 
 ::-webkit-scrollbar-thumb:active{
-	background-color: darken($color_1, 10%);
+	background-color: darken($color_2, 10%);
 }
 ::-webkit-scrollbar-track-piece{
 	background-color: white;
@@ -96,13 +98,13 @@ $color_gray_3: darken(#ebebeb, 8%);
 ::-o-scrollbar-thumb{
 	z-index: 500;
 	//border-radius: 5px;
-	background-color: lighten($color_1, 5%);
+	background-color: lighten($color_2, 5%);
 }
 ::-o-scrollbar-thumb:hover{
-	background-color: darken($color_1, 5%);
+	background-color: darken($color_2, 5%);
 } 
 ::-o-scrollbar-thumb:active{
-	background-color: darken($color_1, 10%);
+	background-color: darken($color_2, 10%);
 }
 ::-o-scrollbar-track-piece{
 	background-color: rgba(white, 0.5);
@@ -110,14 +112,14 @@ $color_gray_3: darken(#ebebeb, 8%);
 
 html{
 	-ms-scrollbar-track-color: rgba(0, 0, 0, 0);
-	-ms-scrollbar-face-color: $color_1;
+	-ms-scrollbar-face-color: $color_2;
 	-ms-scrollbar-shadow-color: $color_2;
 	-ms-scrollbar-base-color: lighten($color_2, 5%);
 
 	-ms-scroll-translation: vertical-to-horizontal;
 	-ms-scroll-snap-type: mandatory;
-	-ms-scrollbar-3dlight-color: $color_1;
-	-ms-scrollbar-darkshadow-color: darken($color_1, 5%);
+	-ms-scrollbar-3dlight-color: $color_2;
+	-ms-scrollbar-darkshadow-color: darken($color_2, 5%);
 	-ms-scrollbar-highlight-color: transparent;
 }
 
@@ -127,17 +129,20 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	text-size-adjust: none;
-	font: 16px $font-family;
+	font: 16px $font-family-1;
 	color: #333;
 	background-color: $color_gray_1;
 }
 
 
-p, li, ul{
+p, li, ul, menu{
 	font-weight: 300;
 	margin: 0;
 	padding: 0;
 	vertical-align: middle;
+}
+menuitem{
+	display: inline-block;
 }
 a{
 	transition: color 0.2s ease-in-out;
@@ -160,9 +165,9 @@ img{
 	outline: 0;
 }
 h1,h2,h3,h4,h5{
-	font-family: "Myriad Pro Regular", sans-serif;
+	font-family: $font-family-1;
 	color: inherit;
-	line-height: 170%;
+	line-height: 160%;
 }
 h4{
 	font-size: em(14, 16);;
@@ -236,29 +241,28 @@ button:hover, button:focus{
 
 //	PADD
 @for $i from 0 through 12 {
-	.padd-hor-#{5*$i}) { 
+	.padd-hor-#{5*$i} { 
 			padding-left: 5*$i+px;
 			padding-right: 5*$i+px;
 	 	
 	}
 }
 @for $i from 0 through 12 {
-	.padd-ver-#{5*$i}) { 
+	.padd-ver-#{5*$i} { 
 			padding-top: 5*$i+px;
 			padding-bottom: 5*$i+px;
 	 	
 	}
-	
 }
 @for $i from 0 through 12 {
-	.padd-top-#{5*$i}) { 
+	.padd-top-#{5*$i} { 
 
 		padding-top: 5*$i+px;
 
 	}
 }
 @for $i from 0 through 12 {
-	.padd-bottom-#{5*$i}) { 
+	.padd-bottom-#{5*$i} { 
 
 			padding-bottom: 5*$i+px;
 	 	
@@ -266,14 +270,14 @@ button:hover, button:focus{
 }
 
 @for $i from 0 through 12 {
-	.padd-left-#{5*$i}) { 
+	.padd-left-#{5*$i} { 
 
 		padding-left: 5*$i+px;
 
 	}
 }
 @for $i from 0 through 12 {
-	.padd-right-#{5*$i}) { 
+	.padd-right-#{5*$i} { 
 
 			padding-right: 5*$i+px;
 	 	
@@ -282,14 +286,14 @@ button:hover, button:focus{
 
 //	MARG
 @for $i from 0 through 12 {
-	.marg-hor-#{5*$i}) { 
+	.marg-hor-#{5*$i} { 
 			margin-left: 5*$i+px;
 			margin-right: 5*$i+px;
 	 	
 	}
 }
 @for $i from 0 through 12 {
-	.marg-ver-#{5*$i}) { 
+	.marg-ver-#{5*$i} { 
 			margin-top: 5*$i+px;
 			margin-bottom: 5*$i+px;
 	 	
@@ -297,14 +301,14 @@ button:hover, button:focus{
 }
 
 @for $i from 0 through 12 {
-	.marg-top-#{5*$i}) { 
+	.marg-top-#{5*$i} { 
 
 		margin-top: 5*$i+px;
 
 	}
 }
 @for $i from 0 through 12 {
-	.marg-bottom-#{5*$i}) { 
+	.marg-bottom-#{5*$i} { 
 
 			margin-bottom: 5*$i+px;
 	 	
@@ -312,7 +316,7 @@ button:hover, button:focus{
 }
 
 @for $i from 0 through 12 {
-	.marg-left-#{5*$i}) { 
+	.marg-left-#{5*$i} { 
 
 		margin-left: 5*$i+px;
 
@@ -331,7 +335,7 @@ button:hover, button:focus{
 
 //P-MARG
 @for $i from 0 through 6 {
-	.p-marg-top-#{5*$i}) { 
+	.p-marg-top-#{5*$i} { 
 
 		p{
 			margin-top: 5*$i+px;
@@ -340,7 +344,7 @@ button:hover, button:focus{
 	}
 }
 @for $i from 0 through 6 {
-	.p-marg-bottom-#{5*$i}) { 
+	.p-marg-bottom-#{5*$i} { 
 		p{
 			margin-bottom: 5*$i+px;
 		}
@@ -369,6 +373,19 @@ button:hover, button:focus{
 	text-align: right;
 }
 
+.align-center-impt{
+	text-align: center !important;
+}
+.align-left-impt{
+	text-align: left !important;
+}
+.align-right-impt{
+	text-align: right !important;
+}
+
+
+
+
 .float-center{
 	text-align: center;
 }
@@ -382,30 +399,64 @@ button:hover, button:focus{
 
 
 
-
-#modal-shadow{
-	@extend .modal;
-	background: rgba(0, 0, 0, 0.50);
-}
-.modal-cos-dialog{
-	z-index:1060;
-	@include modal-center(60%, 500px);
-
-
-	position: fixed;
-	background-color: white;
-	border: 5px solid $color_2;
-	text-align: center;
-	padding: 50px 20px;
-	display: block;
-	//display: none;
-	border-radius: 40px;
-	p, h3{
-		font-size: em(18, 16);
-		font-weight: bold;
-		color: #333;
+@for $i from 0 through 9 {
+	.font-w-#{100*$i} { 
+		font-weight: 100*$i;
 	}
 }
+.font-w-bold{
+	font-weight: bold;
+}
+.font-w-bolded{
+	font-weight: bolder;
+}
+
+
+
+
+.display-block{
+	display: block;
+}
+.display-none{
+	display: none;
+}
+
+
+
+.bg-center{
+	background-position: center center;
+}
+
+
+
+.color-white{
+	color: white;
+}
+.color-black{
+	color: black;
+}
+
+.color-1{
+	color: $color_1;
+}
+.color-2{
+	color: $color_2;
+}
+.color-3{
+	color: $color_3;
+}
+.color-4{
+	color: $color_3;
+}
+
+.bg-color-white{
+	background-color: white;
+}
+.bg-color-black{
+	background-color: #333;
+}
+
+
 
 
 .claf{
@@ -478,8 +529,8 @@ button:hover, button:focus{
 /* 	padding-left: 20px;
 	padding-right: 20px; */
 	white-space: nowrap;
-	a{
-		padding: 15px 20px;
+	a, .clc{
+		padding: 20px 35px;
 		display: block;
 		position: relative;
 	}
@@ -523,7 +574,7 @@ button:hover, button:focus{
 	&:hover, &:focus{
 		filter: brightness(125%);
 	}
-	a{
+	a, .clc{
 		color: white;
 		z-index: 1;
 	}
@@ -609,11 +660,10 @@ button:hover, button:focus{
 	}
 	figure{
 		
-		@extend .marg-top-30;
 		display: inline-block;
 		display: inline-table;
 	}
-	.img-content, .desc{
+	.img-content, .desc.align-center{
 		
 		&, *{
 			text-align: center;
@@ -641,14 +691,55 @@ button:hover, button:focus{
 @media only screen and ( max-width: 991px ){
 	.inlineble-2{
 		@include inline-ble(96/2+%, 0+%);
+
+
+
+		&.short-advantage{
+			figure{
+				&:nth-child(1){
+					border-bottom: 1px solid $color_gray_3;
+				}
+				&:nth-child(2){
+					border-right: 0;
+					border-bottom: 1px solid $color_gray_3;
+				}
+			}
+		}
+
+		&.short-carpark{
+			figure{
+				width: 48%;
+				margin-right: 1%;
+			}
+		}
+
+
 	}
 }
 
 @media only screen and ( max-width: 787px ){
 	.inlineble-2{
 		@include inline-ble(100%, 0%);
+
+
+		&.short-advantage{
+			figure{
+					border-right: 0;
+					border-bottom: 1px solid $color_gray_3;
+			}
+		}
+
+		&.short-carpark{
+			figure{
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+
 	}
+
 }
+
 
 
 
@@ -662,18 +753,24 @@ $header-height: 110px;
 
 #header{
 	top: 0;
-	z-index: 10;
+	z-index: 100;
 	right: 0;
 	left: 0;
 	position: relative;
+	background-color: #f8f8f8;
 	transition: background 0.35s cubic-bezier(0.70, 0.65, 0.5, 1.00);
-	background: url(../img/bg.png) -300px -700px no-repeat;
 	//height: $header-height;
-
 }
+.header-hidden{
+	//position: relative;
+	//height: $header-height;
+}
+
+
 .header-navbar{
 
 }
+
 .logo, .main-navbar, .menu-toggle{
 
 	@include table-celling($header-height);
@@ -685,11 +782,11 @@ $header-height: 110px;
   padding: 25px 0;
   transition: all 0.3s ease-in-out;
   
+	&:hover, &:focus{
+  	transform: scale(1.05);
+  }
   & > a{
   	//@include table-celling(150px);
-  	&:hover, &:focus{
-	  	transform: scale(1.05);
-	  }
   	&:focus{
   		outline: 0;
   	}
@@ -713,9 +810,82 @@ $header-height: 110px;
 
 
 
+.dropdown-lang{
+	position: relative;
+	display: inline-block;
+	z-index: 1;
+
+	background-color: white;
+	border: 1px solid $color_gray_3;
+	border-radius: 50px;
+	width: 80px;
+	text-align: left;
+	margin-top: 10px;
+	margin-left: 15px;
+	span{
+		border-radius: 50px;
+		padding: 5px 15px;
+		appearance: none;
+    vertical-align: middle;
+    position: relative;
+    display: inline-block;
+    font-size: em(16,16);
+    font-weight: 600;
+	}
+	i{
+		color: rgba($color_1, 0.8);
+		vertical-align: middle;
+		display: inline-block;
+		font-size: em(28, 16);
+	}
+	.dropbtn{
+		outline: none;
+/* 		&:focus{
+			& ~ .dropdown-content{
+				transform: matrix(1, 0, 0, 1, 0, 0);
+				display: block;
+			}
+		} */
+	}
+	.dropdown-content{
+		display: none;
+		position: relative;
+		overflow: hidden;
+		transition: transform 0.3s ease-in;
+		position: absolute;
+		margin-left: -7px;
+		padding-top: 5px;
+
+		&.active{
+			display: block;
+		}
+		a{
+			border-radius: 3px;
+			border: 1px solid $color_gray_3;
+			background-color: white;
+			text-align: center;
+			display: block;
+			padding: 10px 28px;
+			&:hover{
+				color: white;
+				background-color: $color_1;
+			}
+
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
 .nav-header{
 	//padding: 10px 0;
-	float: right;
+	//float: right;
 	display: inline-block;
 	&>span{
 		margin: 0 15px;
@@ -756,17 +926,20 @@ $header-height: 110px;
 	}
 }
 .nav-menu:not(.min){
-	width: 70%;
+	width: 75%;
 	text-align: center;
 	display: table;
+	position: relative;
   margin: auto auto;
 	a{
 		color: #333;
-		transition: all 0.3s ease-in-out;
+		transition: all 0.1s linear;
 	}
 	.menu-list{
 		@extend .clearfix;
-		font-size: 18px;
+		font-size: em(20, 16);
+		display: inline-block;
+		color: #333;
 		&, ul {
 			//background-color: $color_1;
 		}
@@ -782,11 +955,10 @@ $header-height: 110px;
 			position: relative;
 	    display: inline-block;
 	    & > a{
-	    	font-family: $font-family;
-	    	font-weight: 500;
+	    	font-family: $font-family-1;
+	    	font-weight: 600;
 				padding: 5px 0px;
 				margin: 10px 15px;
-	    	border-bottom: 2px solid #FACDD4;
 	    	//@include table-celling(150px);
 	    }
 			&.active > a{
@@ -795,8 +967,8 @@ $header-height: 110px;
 			}
 			&:hover, &:focus{
 				& > a{
-					background-color: white;
-					color: $color_1;
+					//transform: scale(1.05);
+					color: lighten($color_2, 10%);
 				}
 				.sub-menu-1{
 					visibility: visible;
@@ -939,6 +1111,7 @@ $header-height: 110px;
 }
 .menu-toggle:not(.collapsed){
 	.icon-bar{
+		opacity: 0;
    	&:nth-child(1){
    		transform: rotate(138deg) translate(6px, -5px);
    	}
@@ -954,7 +1127,7 @@ $header-height: 110px;
 }
 .icon-bar{
 	transition: all 0.3s ease-in-out;
-	background-color: $color_3;
+	background-color: $color_4;
   display: block;
   width: 35px;
   height: 4px;
@@ -980,27 +1153,28 @@ $header-height: 110px;
 .modal-dialog{
 
 	width: 70%;
-      margin: 50px 15% !important;
+  margin: 50px 15% !important;
 	.btn{
 
 		background-color: transparent;
 		position: relative;
 		float: right;
 		display: block;
-		color: white;
+		color: black;
 		width: 60px;
 		height: 50px;
 		right: -1px;
     top: -1px;
     border-radius: 0 5px;
-  	&:focus{
-			border: 2px solid white;
+  	&:active{
+  		outline: none;
+			box-shadow: inset 0 0 8px;
 		}
 
 	}
 
 	.icon-bar{
-		background-color: white;
+		background-color: $color_4;
 
    	&:nth-child(1){
    		transform: rotate(138deg) translate(4px, -2px);
@@ -1013,17 +1187,36 @@ $header-height: 110px;
 	}
 }
 .modal-content{
-	background: rgba(black, 0.5);
+	background: white;
+	color: #333;
+	input{
+		margin-bottom: 10px;
+	}
+	textarea{
+		resize: none;
+		margin-top: 30px;
+		height: 120px;	
+	}
+	.form-control{
+		&:focus{
+			border-color: $color_1;
+			box-shadow: inset 0 1px 1px rgba(#000, 0.075), 0 0 8px rgba( $color_1, 0.6 );
+		}
+	}
 
 }
 .modal-body{
 	margin-top: 50px;
+	h1, h2{
+		margin: 0;
+	}
 }
 .modal-footer{
 	.btn-opacity{
 		transition: all 0.3s ease-in-out;
-		@extend .btn-red-gradient;
 		margin: 15px 0;
+		background-color: $color-2;
+		border-radius: 3px;
 		padding: 5px 30px;
 		color: white;
 		&:hover, &:focus{
@@ -1044,7 +1237,9 @@ $header-height: 110px;
 }
 //MINI MENU
 .min-menu-modal{
-
+	.contact-form{
+		margin-top:0;
+	}
 	.menu-toggle{
 		margin-right: 10px;
 	}
@@ -1052,40 +1247,44 @@ $header-height: 110px;
 		text-align: center;
 		li{
 			width: 100%;
-			background-color: rgba($color_3, 0.5);
+			background-color: $color_3;
 	    border-radius: 5px;
 	    margin-bottom: 15px;
-	    transition: transform 0.3s ease-in-out;
+	    //transition: all 0.3s ease-in-out;
 	    &:focus, &:hover, &:active{
 		  	transform: scale(1.1); 
 		  }
 		}
 		a{
 	    color: white;
+	    font-weight: 500;
 	    font-size: 1.3em;
 			display: block;
-			padding: 20px ;
+			padding: 15px ;
 			&:focus{
 				border: 2px solid white;
 			}
 		}
 	}
 	.nav-header{
-		position: absolute;
+		display: block;
+		//position: absolute;
 		top: -10%;
 	}
 }
-.feedback{
+.feedback-modal{
 
 	form{
-		width: 80%;
-		color: white;
+		width: 90%;
 		margin: auto;
-		margin-bottom: 50px;
+		margin-bottom: 30px;
 	}
 	.modal-content{
-		@include modal-center(350px, -10%);
 
+		@include modal-center(450px, 10%);
+		@media only screen and (max-width: 991px){
+			@include modal-center(300px, 10%);
+		}
 	}
 	.modal-body{
 		padding: 0 50px;
@@ -1101,29 +1300,24 @@ $header-height: 110px;
 
 
 
-.navbar-scroll{
-
-
-}
 
 
 //BANNER
 
 #banner{
 	@extend .bg-cover;
+	transition: all 0.3s ease-in;
 	color: white;
 	overflow: hidden;
-	background-position: center 100%;
-	//background-image: url('../img/country-bg.jpg');
+	background-position: 0 0;
 	background-repeat: repeat-y;
-	.country-shadow{
-		background: linear-gradient(to bottom, rgba(50, 50, 50, 0), black);
-	}
 }
 .banner-content{
-	@include table-celling( $header-height+30 );
+	@include table-celling( $header-height*2 );
 }
-
+.banner-shadow{
+	background: linear-gradient(to left, rgba( $color_1, 0.3),rgba($color_4, 0.3) );
+}
 
 
 // BREADCRUMP
@@ -1133,12 +1327,20 @@ $header-height: 110px;
 	&, a, .active{ 
 		color: rgba(white, 0.5);
 		text-transform: uppercase;
+		transition: all 0.3s ease-in;
+		font-weight: 500;
+		font-size: em(16, 16);
+		a:hover{
+			letter-spacing: 1px;
+			text-decoration: none;
+			color: white;
+		}
 	}
 	& > li + li:before{
 
 		color: rgba(white, 0.4);
 		font-family: FontAwesome;
-		content: "\f178";
+		content: "\f0da";
 		margin:0  15px;
 	}
 	li{
@@ -1156,7 +1358,7 @@ $header-height: 110px;
 */
 h1{
 	position: relative;
-	font-weight: 500;
+	font-weight: 600;
 	font-size: em(30, 16);
 	text-transform: uppercase;
 	padding-bottom: 10px;
@@ -1186,9 +1388,14 @@ h3{
 }
 h4{
 	font-size: em(18, 16);
+	font-weight: 600;
+}
+h1, h2, h3{
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 p{
-	font-size: em(16, 16);
+	font-size: 1em;
 	font-weight: 400;
 }
 
@@ -1201,6 +1408,12 @@ main{
 	p{
 		color: #333;
 		line-height: 170%;
+	}
+	a{
+		&:hover, &:focus{
+			color: $color_4;
+			text-decoration: underline;
+		}
 	}
 }
 .content-column{
@@ -1232,9 +1445,6 @@ main{
 		line-height: 150%;
 	}
 }
-
-
-
 
 
 
@@ -1291,6 +1501,12 @@ main{
 		display: inline-block;
 		line-height: 110% !important;
 	}
+	p{
+		font-size: em(14, 16) ;
+		padding: 0 25%;
+		text-align: center;
+		line-height: 20px;
+	}
 	.tp-caption{
 		position: absolute;
 		white-space: normal;
@@ -1320,10 +1536,10 @@ main{
 
 	@media only screen and (max-width: 767px){
 
-		& {
+/* 		& {
 			ul li div{display: none;}
 			ul li div.tp-bgimg, ul li div.slotholder{display: block;}
-		}
+		} */
 
 	}
 }////
@@ -1331,177 +1547,92 @@ main{
 
 
 .round{
-	opacity: 0.8 !important;
+	
 	margin-left: -80px !important;
 	.bullet{
 		margin-left: 15px !important;
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//INDEX SERVICES
-.services{
-	transition: background 0.35s cubic-bezier(0.70, 0.65, 0.5, 1.00);
-	background: url(../img/bg.png) -220px -500px no-repeat;
-	&, h1, h2, h3{
-
-		color: #333;
-
-	}
-}
-.services-short{
-
-	.slide-content{
-	}
-	.flickity-viewport{
-		height: 250px;
-
-	}
-	.flickity-prev-next-button.next{
-		right: -10%;
-		box-shadow: -15px 0 20px -5px white;
-	}
-	.flickity-prev-next-button.previous{
-		left: -10%;
-		box-shadow: 15px 0 20px -5px white;
-	}
-	.flickity-prev-next-button previous{
-		background: url(../img/slider/icons/arrow.png) center center no-repeat transparent;
-	}
-		/* big buttons, no circle */
-
-	.flickity-prev-next-button {
-		border-radius: 10px;
-	  width: 70px;
-	  height: 70px;
-    background-color: white;
-	  &:hover{
-	  	background-color: white;
-	  }
-	}
-
-	/* arrow color */
-	.flickity-prev-next-button .arrow {
-	  fill: #b1b1b1;
-	}
-	.flickity-prev-next-button.no-svg {
-	  color: white;
-	}
-	/* hide disabled button */
-	.flickity-prev-next-button:disabled {
-	  display: none;
-	}
-}
-
-.slider-serv{
-	width: 92%;
-	left: 4%;
-	margin: 50px 0;
-}
-.serv-item{
-	text-align: center;
-	display: inline-block;
-	border-left: 2px solid rgba($color_3, 0.1);
-	padding: 0 10px;
-	&.is-selected{
-		a{
-			color: $color_1;
-		}
-	}
-	&:nth-child(1) .service-desc{
-		border:0;
-	}	
-
-}
-.service-desc{
-
-  width: 190px;
-	height: 100px;
-	&:nth-child(1){
-		border-left: 2px solid rgba($color_3, 0.1);
-	}
-	line-height: 170%;
-	a:hover{ 
-		color: $color_3;
-	}
-	a:focus{
-	 color: $color_2;
-	}
-	span{
-		@include table-celling(100px);
-		font-weight: 500;
-		float: initial;
-		//padding: 20px 20px;
-		//display: block;
-		font-size: 16px;
-		&:before{
-			//@extend .claf;
-			
+		opacity: 0.4 !important;
+		margin-right: 15px !important;
+		&.selected{
+			opacity: 1 !important;			
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 .list-style-1{
-	padding-left: 15px;
-	position: relative;
-		margin-top: 15px;
-	li{
-		padding: 0 15px;
-		padding-top: 15px;
-		font-style: oblique;
-		font-weight: 600;
-		list-style: none;
-		list-style-position: outside;
-		list-style-image: url('../img/icons/list-icon.png');
-/* 		&:before{
-			@extend .claf;
-			width: 9px;
-			height: 9px;
-			border-radius: 50%;
-			color: #191970;
-		} */
 
+	ul{
+		padding-left: 15px;
+		position: relative;
+		margin-top: 15px;
+		li{
+			padding: 0 15px;
+			padding-top: 15px;
+			font-style: oblique;
+			font-weight: 600;
+			list-style: none;
+			list-style-position: outside;
+			list-style-image: url('../img/icons/list-icon.png');
+		}
 	}
+
+}
+.list-style-2{
+
+	ul{
+		padding-left: 15px;
+		margin-top: 15px;
+		li{
+			font-size: 1em;
+			list-style: circle;
+			line-height: 170%;
+			list-style-position: outside;
+		}
+	}
+
 }
 
 
 
 
-// INDEX
+// ------------------- INDEX
 
+
+//short-about
 .short-about{
 	position: relative;
 	overflow: hidden;
 }
 
-
+//short-advantage
 .short-advantage{
 	background-color: $color_gray_2;
 	figure{
-		padding: 40px;
+		padding: 40px 50px;
 		border-right: 1px solid $color_gray_3;
+		&:last-child{
+			border-right: 0;
+			margin-right: 0;
+		}
 		img{
 			width: 90px;
 			height: 90px;
@@ -1509,7 +1640,7 @@ main{
 	}
 }
 
-.about-us-text{
+.about-text{
 	border: 1px dashed $color_gray_3;
 	position: relative;
 }
@@ -1518,8 +1649,117 @@ main{
 
 
 
+.skin-bonus{
+	background-size: cover;
+	background-position: center;
+}
 
+//short-carpark
+.short-carpark{
 
+	figure{
+		width: 23%;
+    margin-right: 1.5%;
+    height: 530px;
+    img{
+    	width: 100%;
+    }
+	}
+	a{
+		font-weight: 600;
+		font-size: em(17, 16);
+	}
+
+}
+
+//short-reviews
+.short-reviews{
+	
+	.bord{
+		margin-left: 7.5%;
+		min-height: 250px;
+		position: relative;
+		padding: 30px 0;
+		border: 2px solid $color_gray_3;
+		@media only screen and (max-width: 991px){
+			margin-left: initial;
+		}
+	}
+	.tab-content{
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		figure{
+
+		}
+		img, aside, .pagination-red{
+			float: left;
+			position: relative;
+		}
+		$img_width: 165;
+		img{
+			top: 50%;
+			left: -+$img_width/2+px;
+			margin-top: -+$img_width/2+px;
+			position: absolute;
+		}
+		aside{
+			margin-bottom: 15px;
+			margin-top: 15px;
+		  margin-left: 12.5%;
+    	width: 82.5%;
+    }
+    p{
+    	margin-top: 15px;
+    }
+    .pagination-red{
+			display: block;
+			width: 85%;
+			margin-top: 15px;
+			margin-left: 12.5%;
+	    li{
+	    	margin-right: 30px;
+	    }
+    }
+    @media only screen and (max-width: 991px){
+    	img{
+				top: 0;
+				left: 50%;
+				margin-left: -+$img_width/2+px;
+				position: relative;
+    	}
+    	aside{
+    		padding: 0 15px;
+    		margin-left: initial; 
+    		width: 100%;
+    	}
+    }
+
+	}
+
+}
+.pagination-red{
+
+	li{
+		display: inline-block;
+		background-color: transparent;
+		border: 1px solid $color_gray_3;
+    border-radius: 50%;
+		box-shadow: 0 0 10px $color_gray_3;
+		width: 15px;
+    height: 15px;
+    &.active{
+			background-color: $color_3;
+			width: 10px;
+			height: 10px;
+		}
+		a{
+			width: 15px;
+			height: 15px;
+			display: block;
+		}
+	}
+}
 
 
 
@@ -1533,7 +1773,6 @@ main{
 
 //VERTICAL-TABS
 .ver-tabs{
-	background-color: white;
 	overflow: hidden;
 	position: relative;
 	height: 100%;
@@ -1560,6 +1799,9 @@ main{
 			font-size: em(17, 16);
 			position: relative;
 			display: block;
+			&:hover{
+				text-decoration: none;
+			}
 		}
 		&:before{
 			@extend .claf;
@@ -1578,6 +1820,7 @@ main{
 				background-color: $color_3;
 			}
 			a{
+				text-decoration: none;
 				color: $color_3;
 			}
 		}
@@ -1662,6 +1905,12 @@ main{
 
 
 
+
+
+
+
+
+
 .map-content{
 	position: relative;
 }
@@ -1674,12 +1923,11 @@ main{
 .map-block{
 	position: absolute;
 	z-index: 1;
-	background-color: white;
 	top: 50%;
 	margin-top: -195px;
 	margin-left: 30px;
 	width: 350px;
-	padding: 0 30px;
+	padding: 15px 30px;
 	padding-bottom: 15px;
 	h4{
 		margin-bottom: 0;
@@ -1693,7 +1941,7 @@ main{
 	}
 	
 }
-@media only screen and( max-width:911px ){
+@media only screen and( max-width: 911px ){
 	.map-block{
 		position: relative;
 		margin: 15px 0 60px 0!important;

@@ -8,9 +8,22 @@
 	html body{
 		font-size: 15px;
 	}
-		.nav-menu:not(.min) .menu-list > li > a{
+	.nav-menu:not(.min) .menu-list > li > a{
 		margin: 10px 5px;
 	}
+	.nav-menu:not(.min) .menu-list{
+		font-size: em(17, 16);
+	}
+
+	.nav-feedback{
+		.btn-blue-1{
+			.clc{
+				padding: 20px 15px;
+				
+			}
+		}
+	}
+
 }
 
 
@@ -32,6 +45,9 @@
 		@include table-celling( 90px );
 		
 	}
+	.header-hidden{
+		height: 90px;
+	}
 	.logo{
 		text-align: center;
 		img{
@@ -39,9 +55,11 @@
 		}
 	}
 
-
-
-
+	.dropdown-lang{
+		margin: 0;
+		top: -10%;
+		position: absolute;
+	}
 
 
 	.img-circle{

@@ -14,16 +14,39 @@ $path: "../fonts";
   font-style: normal;
 }
 
+
+
 @font-face {
-    font-family: 'Myriad Pro Regular';
-    src: local('Myriad Pro Regular'),
-         local('MyriadPro-Regular'),
-         url($path+'/MyriadProRegular.woff') format('woff'),
-         url($path+'/MyriadProRegular.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+  font-family: 'Myriad Pro';
+  src: url('MyriadPro-Regular.eot');
+  src: local('Myriad Pro Regular'), local('MyriadPro-Regular'),
+    url($path+'/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url($path+'/MyriadPro-Regular.woff') format('woff'),
+    url($path+'/MyriadPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('MyriadPro-Semibold.eot');
+  src: local('Myriad Pro Semibold'), local('MyriadPro-Semibold'),
+    url($path+'/MyriadPro-Semibold.eot?#iefix') format('embedded-opentype'),
+    url($path+'/MyriadPro-Semibold.woff') format('woff'),
+    url($path+'/MyriadPro-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Intro';
+    src: local('Intro'), 
+         url($path+'/intro.woff2') format('woff2'), 
+         url($path+'/intro.woff') format('woff'), 
+         url($path+'/intro.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 
 
 
