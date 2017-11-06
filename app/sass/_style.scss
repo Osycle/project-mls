@@ -396,6 +396,28 @@ button:hover, button:focus{
 	text-align: right;
 }
 
+.absolute{
+	position: absolute;
+}
+.absolute-impt{
+	position: absolute !important;
+}
+
+.relative{
+	position: relative;
+}
+.relative-impt{
+	position: relative !important;
+}
+
+.fixed{
+	position: fixed;
+}
+.fixed-impt{
+	position: fixed !important;
+}
+
+
 
 
 
