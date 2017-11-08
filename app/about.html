@@ -26,12 +26,9 @@
 
   </head>
 <body>
-	<noscript class="align-center-impt padd-ver-60 marg-ver-60">
-		<p>
-			Ваш браузер не поддерживает скрипты!<br/> 
-			Пожалуйста подключите в настройках браузера
-			<font size="5" color="navy">Javascript</font>
-		</p>
+	<noscript>
+		<p>Ваш браузер не поддерживает скрипты!<br/> 
+			 Пожалуйста подключите в настройках браузера Javascript</p>
 	</noscript> 
 	<!-- HEADER -->
 	
@@ -69,7 +66,7 @@
           <ul class="menu-list">
 						<li><a href="about.html">О нас</a></li>
 						<li><a href="services.html">Услуги</a></li>
-						<li><a href="ourcars.html">Наше авто</a></li>
+						<li><a href="partners.html">Наше авто</a></li>
 						<li><a href="vacancies">Отзывы</a></li>
 						<li><a href="contacts.html">Контакты</a></li>
           </ul>
@@ -118,7 +115,7 @@
 
 
 	<!-- FEEDBACK MODAL-->
-	<div class="feedback-modal modal  slideInUp animated" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback">
+	<div class="feedback-modal modal slideInUp animated" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 
@@ -207,11 +204,23 @@
 
 
 	<!-- MAIN -->
-	<main class="container-fluid align-center">
+	<main class="container-fluid">
+
+
+
+
+
+
+	
+
+
+
+
+
 
 
 		<!-- BANNER -->
-		<div id="banner" class="row" style="background-image: url('img/slider/slide-1.jpg');" >
+		<div id="banner" class="row" style="background-image: url('img/slider/slide-3.jpg');" >
 			<div class="banner-shadow" 
 								data-aos="fade"
 								data-aos-duration="1000"
@@ -224,8 +233,17 @@
 						<h1 data-aos="fade-right"
 								data-aos-duration="1000"
 								data-aos-delay="300">
-								404</h1>
+								О нас</h1>
 
+						<ol class="breadcrumb padd-hor-0 marg-bottom-0 marg-top-15" 
+								data-aos="fade-left"
+								data-aos-duration="1000"
+								data-aos-delay="300">
+
+						  <li><a href="index.html">Главная</a></li>
+						  <li class="active"><a href="">О нас</a></li>
+
+						</ol>
 					</div>
 
 				</div> <!-- ./CONTEINER -->
@@ -235,28 +253,102 @@
 
 
 
-		<div class="padd-ver-60 marg-ver-60 bg-color-white">
 
-			<h1>
-				<font size="7" face="cursive" color="navy">
-					<sub>4</sub>0<sup>4</sup>
-				</font>
-			</h1>
 
-			<h3>Страница не найдена</h3>
-			<p>
-				<strong>Вероятные причины:</strong><br>
-				Была допущена ошибка при наборе адреса.<br>
-				Вы нажали на устаревшую ссылку.
-			</p>
-			<p>
-				<a href="index.html"><u>Перейти на главную</u></a>
-			</p>
+
+		<div class="row about">
+			<div class="container">
+
+				<!-- SHORT-ABOUT -->
+				<div class="row m-v-60">
+					<div class="container">
+
+						<h1>О компании</h1>
+
+						<div class="short-about">
+							<!-- TAB --> 
+							<div class="col-xs-12 ver-tabs bg-color-white">
+
+								<div class="p-v-30 float-left p-h-30 parag-m-t-15 col-md-8">
+								  <!-- Nav tabs -->
+								  <ul class="ver-tab-nav" role="tablist">
+								    <li class="active">
+								    	<a href="#ver-info-1" data-toggle="tab">
+								    		<b>Информация о нас</b>
+								    	</a>
+								    </li>
+								    <li>
+								    	<a href="#ver-info-2" data-toggle="tab">
+								    		<b>Наша миссия</b>
+								    	</a>
+								    </li>
+								    <li>
+								    	<a href="#ver-info-3" data-toggle="tab">
+								    		<b>Цели компании</b>
+								    	</a>
+								    </li>
+								  </ul>
+
+								  <!-- Tab panes -->
+								  <div class="ver-tab-content list-style-1">
+
+								    <div role="tabpanel" class="tab-pane fadeIn animated active" id="ver-info-1">
+								    	<p>
+								    		Автомобильные грузоперевозки являются основным видом деятельности компании . 
+								    		Мы оказываем услуги перевозки грузов по территории Европейского Союза, СНГ, Турции, 
+								    		Индии и ОАЭ.
+								    	</p>
+								    	<p>
+												Для организации перевозок автомобильным транспортом мы 
+												используем как собственный, так и привлеченный автопарк. 
+												Благодаря этому нам удалось максимально расширить географию 
+												наших автоперевозок и удовлетворять потребности клиентов в 
+												полном объеме.
+								    	</p>
+								    	<ul>
+								    		<li>Автомобильные грузоперевозки  подтвердили универсальность</li>
+												<li>Междугородние перевозки пользуются популярностью</li>
+												<li>ЖД перевозки осуществляются колёсными транспортнымисредствами, по железнодорожным путям</li>
+								    	</ul>
+								    </div>
+
+								    <div role="tabpanel" class="tab-pane fadeIn animated" id="ver-info-2">
+								    	<p>
+								    		Для организации перевозок автомобильным транспортом мы 
+												используем как собственный, так и привлеченный автопарк. 
+												Благодаря этому нам удалось максимально расширить географию 
+												наших автоперевозок и удовлетворять потребности клиентов в 
+												полном объеме.
+								    	</p>
+								    </div>
+
+
+								    <div role="tabpanel" class="tab-pane fadeIn animated" id="ver-info-3">
+								    	<p>
+								    		Вид наземного транспорта, перевозка грузов и 
+												пассажиров на котором осуществляется колёсными 
+												транспортными средствами по рельсовым путям.
+								    	</p>
+								    </div>
+
+								  </div>
+
+								</div>
+								<div class="ver-tabs-img col-md-4 col-xs-12">
+									<img src="img/smile.jpg"/>
+								</div>
+
+							</div>
+						</div>
+
+					</div> <!-- ./CONTAINER -->
+				</div><!-- ./SHORT-ABOUT -->
+
+
+
+
+			</div>
 		</div>
-
-
-
-
 
 
 

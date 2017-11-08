@@ -18,84 +18,10 @@
 		<script src="js/main.js"></script>
 		
 		<!-- REVOLUTION BANNER CSS SETTINGS -->
-		<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" />
 		<!-- jQuery REVOLUTION Slider  -->
 		<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 		<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-		<script>
-		/**
-			REVOLUTION Slider
-		*/
-			  $(function() {
-			    $('.rev-slider').revolution({
-						delay:9000,
-						startwidth:1170,
-						startheight:845,
-						autoHeight:"off",
-						fullScreenAlignForce:"off",
-
-						onHoverStop:"off",
-
-						thumbWidth:100,
-						thumbHeight:50,
-						thumbAmount:3,
-
-						hideThumbsOnMobile:"off",
-						hideBulletsOnMobile:"on",
-						hideArrowsOnMobile:"off",
-						hideThumbsUnderResoluition:0,
-
-						hideThumbs:5,
-						hideTimerBar:"off",
-
-						keyboardNavigation:"off",
-
-						navigationType:"bullet",
-						navigationArrows:"none",
-						navigationStyle:"round",
-
-						navigationHAlign:"center",
-						navigationVAlign:"bottom",
-						navigationHOffset:30,
-						navigationVOffset:30,
-
-						soloArrowLeftHalign:"left",
-						soloArrowLeftValign:"center",
-						soloArrowLeftHOffset:20,
-						soloArrowLeftVOffset:0,
-
-						soloArrowRightHalign:"right",
-						soloArrowRightValign:"center",
-						soloArrowRightHOffset:20,
-						soloArrowRightVOffset:0,
-
-
-						touchenabled:"on",
-						swipe_velocity:"0.7",
-						swipe_max_touches:"1",
-						swipe_min_touches:"1",
-						drag_block_vertical:"false",
-
-						stopAtSlide:-1,
-						stopAfterLoops:-1,
-						hideCaptionAtLimit:0,
-						hideAllCaptionAtLilmit:0,
-						hideSliderAtLimit:0,
-
-						fullWidth:"off",
-						fullScreen:"on",
-						fullScreenOffsetContainer: "",
-
-						dottedOverlay:"none",
-						forceFullWidth:"off",
-
-			      shadow:0
-			 
-
-			    });
-
-			 	});
-			</script>
 
     <title>Title</title>
 
@@ -107,8 +33,8 @@
   </head>
 <body>
 	<noscript>
-		<p>Ваш браузер не поддерживает скрипты!<br/> 
-			 Пожалуйста подключите в настройках браузера Javascript</p>
+		<h1>Ваш браузер не поддерживает скрипты!<br/> 
+			 Пожалуйста подключите в настройках браузера Javascript</h1>
 	</noscript> 
 	<!-- HEADER -->
 	
@@ -195,7 +121,7 @@
 
 
 	<!-- FEEDBACK MODAL-->
-	<div class="feedback-modal modal scale" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback">
+	<div class="feedback-modal modal  slideInUp animated" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 
@@ -281,7 +207,81 @@
 
 
 
+		<script>
+		/**
+			REVOLUTION Slider
+		*/
+			  $(function() {
+			  	
+			    $('.rev-slider').revolution({
+						delay:9000,
+						startwidth:1170,
+						startheight: 845,
+						autoHeight:"off",
+						fullScreenAlignForce:"off",
 
+						onHoverStop:"off",
+
+						thumbWidth:100,
+						thumbHeight:50,
+						thumbAmount:3,
+
+						hideThumbsOnMobile:"off",
+						hideBulletsOnMobile:"on",
+						hideArrowsOnMobile:"off",
+						hideThumbsUnderResoluition:0,
+
+						hideThumbs:5,
+						hideTimerBar:"on",
+
+						keyboardNavigation:"off",
+
+						navigationType:"bullet",
+						navigationArrows:"none",
+						navigationStyle:"round",
+
+						navigationHAlign:"center",
+						navigationVAlign:"bottom",
+						navigationHOffset:30,
+						navigationVOffset:30,
+
+						soloArrowLeftHalign:"left",
+						soloArrowLeftValign:"center",
+						soloArrowLeftHOffset:20,
+						soloArrowLeftVOffset:0,
+
+						soloArrowRightHalign:"right",
+						soloArrowRightValign:"center",
+						soloArrowRightHOffset:20,
+						soloArrowRightVOffset:0,
+
+
+						touchenabled:"on",
+						swipe_velocity:"0.7",
+						swipe_max_touches:"1",
+						swipe_min_touches:"1",
+						drag_block_vertical:"false",
+
+						stopAtSlide:-1,
+						stopAfterLoops:-1,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0,
+						hideSliderAtLimit:0,
+
+						fullWidth:"off",
+						fullScreen:"on",
+						fullScreenOffsetContainer: "",
+
+						dottedOverlay:"none",
+						forceFullWidth:"off",
+
+			      shadow:0
+			 
+
+			    });
+
+			 	});
+			</script>
 
 
 
@@ -539,7 +539,7 @@
 
 
 		<!-- SHORT-ABOUT -->
-		<div class="row marg-top-60">
+		<div class="row m-v-60">
 			<div class="container">
 
 				<h1>О компании</h1>
@@ -548,7 +548,7 @@
 					<!-- TAB --> 
 					<div class="col-xs-12 ver-tabs bg-color-white">
 
-						<div class="padd-ver-30 float-left padd-hor-30 p-marg-top-15 col-md-8">
+						<div class="p-v-30 float-left p-h-30 parag-m-t-15 col-md-8">
 						  <!-- Nav tabs -->
 						  <ul class="ver-tab-nav" role="tablist">
 						    <li class="active">
@@ -571,7 +571,7 @@
 						  <!-- Tab panes -->
 						  <div class="ver-tab-content list-style-1">
 
-						    <div role="tabpanel" class="tab-pane a-scale in active" id="ver-info-1">
+						    <div role="tabpanel" class="tab-pane fadeIn animated active" id="ver-info-1">
 						    	<p>
 						    		Автомобильные грузоперевозки являются основным видом деятельности компании . 
 						    		Мы оказываем услуги перевозки грузов по территории Европейского Союза, СНГ, Турции, 
@@ -591,7 +591,7 @@
 						    	</ul>
 						    </div>
 
-						    <div role="tabpanel" class="tab-pane a-scale " id="ver-info-2">
+						    <div role="tabpanel" class="tab-pane fadeIn animated" id="ver-info-2">
 						    	<p>
 						    		Для организации перевозок автомобильным транспортом мы 
 										используем как собственный, так и привлеченный автопарк. 
@@ -602,7 +602,7 @@
 						    </div>
 
 
-						    <div role="tabpanel" class="tab-pane a-scale " id="ver-info-3">
+						    <div role="tabpanel" class="tab-pane fadeIn animated" id="ver-info-3">
 						    	<p>
 						    		Вид наземного транспорта, перевозка грузов и 
 										пассажиров на котором осуществляется колёсными 
@@ -645,7 +645,7 @@
 
 
 		<!-- SHORT-ADVANTAGE -->
-		<div class="row marg-top-60">
+		<div class="row m-v-60">
 			<div class="container">
 
 				
@@ -664,7 +664,7 @@
 							<img src="img/icons/advantage-2.svg"/>
 						</div>
 						<div class="desc align-center">
-							<p>100% сохранность груза</p>
+							<p>Быстрая доставка</p>
 						</div>
 					</figure>
 					<figure>
@@ -672,7 +672,7 @@
 							<img src="img/icons/advantage-3.svg"/>
 						</div>
 						<div class="desc align-center">
-							<p>100% сохранность груза</p>
+							<p>Различные виды грузов</p>
 						</div>
 					</figure>
 					<figure>
@@ -680,7 +680,7 @@
 							<img src="img/icons/advantage-4.svg"/>
 						</div>
 						<div class="desc align-center">
-							<p>100% сохранность груза</p>
+							<p>Надежность</p>
 						</div>
 					</figure>
 				</div>
@@ -711,12 +711,12 @@
 
 
 		<!-- SHORT-ABOUT-TEXT -->
-		<div class="row marg-top-60">
+		<div class="row m-v-60">
 			<div class="container">
 
 				
 				<div>
-					<div class="about-text p-marg-top-15 padd-ver-60 padd-hor-40">
+					<div class="about-text parag-m-t-15 p-v-40 p-h-40">
 						<p>
 							Еще вчера - мы не беспокоились, что нас не знают, но заботились о том, чтобы нас знали.
 							<br/>
@@ -754,8 +754,8 @@
 
 
 		<!-- BONUS -->
-		<div class="row marg-top-60">
-			<div class="skin-bonus padd-ver-50" style="background-image: url('img/semi-bg-1.jpg');">
+		<div class="row m-v-60">
+			<div class="skin-bonus p-v-50" style="background-image: url('img/semi-bg-1.jpg');">
 				<div class="container">
 
 					<div class="align-center color-white">
@@ -793,7 +793,7 @@
 
 
 		<!-- SHORT-CARPARK -->
-		<div class="row marg-top-60">
+		<div class="row m-v-60">
 			<div class="container">
 
 				<h1>Наш Автопарк</h1>
@@ -805,8 +805,8 @@
 							<img src="img/automobils/automobil-1.jpg"/>
 						</div>
 
-						<div class="desc padd-ver-30 padd-hor-15">
-							<b class="display-block padd-ver-10">
+						<div class="desc p-v-30 p-h-15">
+							<b class="display-block p-v-10">
 								<a href="">
 									Самосвал MAN TGS 41.400
 								</a>
@@ -825,8 +825,8 @@
 							<img src="img/automobils/automobil-2.jpg"/>
 						</div>
 
-						<div class="desc padd-ver-30 padd-hor-15">
-							<b class="display-block padd-ver-10">
+						<div class="desc p-v-30 p-h-15">
+							<b class="display-block p-v-10">
 								<a href="">
 									MAN TGS 19.360 Евро 4, MAN TGS 19.400
 								</a>
@@ -845,8 +845,8 @@
 							<img src="img/automobils/automobil-3.jpg"/>
 						</div>
 
-						<div class="desc padd-ver-30 padd-hor-15">
-							<b class="display-block padd-ver-10">
+						<div class="desc p-v-30 p-h-15">
+							<b class="display-block p-v-10">
 								<a href="">
 									Фургоны марки ГБАСПГ ISUZU SAZ NQR  PL
 								</a>
@@ -865,8 +865,8 @@
 							<img src="img/automobils/automobil-4.jpg"/>
 						</div>
 
-						<div class="desc padd-ver-30 padd-hor-15">
-							<b class="display-block padd-ver-10">
+						<div class="desc p-v-30 p-h-15">
+							<b class="display-block p-v-10">
 								<a href="">
 									Результаты работы в январе и феврале
 								</a>
@@ -911,12 +911,12 @@
 
 
 		<!-- SHORT-REVIEWS -->
-		<div class="row marg-top-60 bg-color-white">
-			<div class="container padd-ver-30">
+		<div class="row m-v-60 bg-color-white">
+			<div class="container p-v-30">
 
 				<h1>Отзывы</h1>
 
-				<div class="short-reviews marg-ver-30 padd-ver-45">
+				<div class="short-reviews marg-ver-30 p-v-45">
 
 			
 
@@ -1016,7 +1016,7 @@
 
 
 		<!-- MAP -->
-		<div class="map-content marg-top-60">
+		<div class="map-content m-t-60">
 
 			<div class="container">
 
@@ -1045,7 +1045,7 @@
 
 			var i = {
 							// GOOGLE MAP INIT
-							gm_content: '<h3>MLS</h3>'+
+							gm_content: '<h3><a  href="index.html" ><img src="img/logo.png"/></a></h3>'+
 											'<p>Республика Узбекистан, г.Ташкент, Яшнабадский район, ул. Уйсозлар, 23 А</p>'+
 											'<p><strong>Телефоны:</strong></p>'+
 											'<p>+99871 280 24 97<br>+99871 280 24 97</p>'+
@@ -1055,18 +1055,18 @@
 							gm_title : 								'Мы',
 							gm_icon: 									"img/icons/marker.png",
 
-							gm_marker_position_lat:  	41.293000,
-							gm_marker_position_lng:  	69.219502,
+							gm_marker_position_lat:  	41.2579352,
+							gm_marker_position_lng:  	69.3347696,
 
-							gm_position_lat: 			 		41.298539,
-							gm_position_lng: 				 	69.219502
+							gm_position_lat: 			 		41.2579352,
+							gm_position_lng: 				 	69.3347696
 					}
 
 			var mapBlock = document.getElementsByClassName("map-block")[0];
 
 		   	function initMap() {
 						var map = new google.maps.Map(document.getElementById('map'), {
-								zoom: 13,
+								zoom: 15,
 								center: {lat: i.gm_position_lat, lng: i.gm_position_lng},
 								disableDefaultUI: true,
 								mapTypeId: 'terrain',
@@ -1150,6 +1150,15 @@
 							}
 
 						});
+							if (gm_status){
+								infoWindow.open(map, marker);
+								$(function(){ if($( document ).width() > 991) $(mapBlock).slideUp(); });
+								gm_status = !gm_status;
+							}else{
+								$(function(){ if($( document ).width() > 991) $(mapBlock).slideDown(); });
+								infoWindow.close(map, marker);
+								gm_status = !gm_status;
+							}
 
 					}//initMap end
 

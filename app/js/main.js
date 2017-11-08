@@ -13,24 +13,6 @@ $(function(){
 		offset: 30
 	}).init();
 
-	$(".p-animated p").map(function(i, el){
-		$(el).attr({
-					"data-aos": "fade-up",
-					"data-aos-duration": 600,
-					"data-aos-delay": 100*i});
-		$(el).addClass("invisible");
-		setTimeout(function(){$(el).removeClass("invisible")}, 600);
-		setTimeout(function(){$(el).removeClass("aos-animate")}, 100);
-	})
-	$(".p-animated ul li").map(function(i, el){
-		$(el).attr({
-					"data-aos": "fade-up",
-					"data-aos-duration": 600,
-					"data-aos-delay": 100*i});
-		$(el).addClass("invisible");
-		setTimeout(function(){$(el).removeClass("invisible")}, 600);
-		setTimeout(function(){$(el).removeClass("aos-animate")}, 100);
-	});
 
 	// AOS
 	AOS.init({
