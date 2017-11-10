@@ -1119,6 +1119,7 @@ $header-height: 110px;
 	.modal-content{
 
 		@include modal-center(450px, 10%);
+		margin-top: 15px;
 		@media only screen and (max-width: 991px){
 			@include modal-center(300px, 10%);
 		}
@@ -1774,23 +1775,6 @@ main{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .map-content{
 	position: relative;
 }
@@ -1828,6 +1812,100 @@ main{
 		width: 100%;
 	}
 }
+
+
+
+
+
+
+//----------------CONTACTS
+
+
+
+.feedback-contacts{
+	.form-control{
+		height: 50px;
+	}
+	form{
+		//padding: 0 60px;
+	}
+	textarea{
+		resize: none;
+		height: 120px;
+		&~label{
+			span{
+				border-bottom: 2px solid transparent;
+			}
+			:after{
+			
+			}
+		}
+		&:focus{
+			&~label{
+				span{
+					top: -5px;
+    			left: 2px;
+				}
+				&:after{
+					
+					border-color: rgba($color_2, 0.1);
+				}
+			}
+
+			
+		}
+	}
+	span.input{
+
+	}
+	span{
+		font-size: 1.2em;
+		//padding: 0;
+	}
+	input{
+		//margin: 5px 0 5px 0;
+		//height: 100px;
+		margin-top: 0.5em;
+		font-size: 1.2em;
+	}
+	.input{
+		margin: 0.5em;
+	}
+	.input__label{
+		//height: 80px;
+	}
+	.input__label-content{
+		//top: 10px;
+	}
+	#input-2, #textarea-1{
+		&~label{
+			&:after{
+				border-bottom: 4px solid $color_1;
+			}
+		}
+	}
+	#input-1, #input-3{
+		&~label{
+			&:after{
+				border-bottom: 4px solid $color_3;
+			}
+		}
+	}
+
+	.modal-footer{
+		padding: 0 60px;	
+	}
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /*

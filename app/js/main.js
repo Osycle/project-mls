@@ -21,12 +21,11 @@ $(function(){
 	  duration: 1000,
 	  delay: 100
 	});
+	
 	setTimeout(function(){AOS.refresh()}, 300);
 
 
-var header_status = false;
-
-
+	var header_status = false;
 
 
 	//menu init

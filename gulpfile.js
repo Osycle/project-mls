@@ -48,7 +48,8 @@ gulp.task('scripts', () =>
 			'app/js/jquery.min.js',
 			'app/js/smoothscroll.js',
 			'app/js/bootstrap.js',
-			'app/js/jquery.fractionslider.js',
+			//'app/js/jquery.fractionslider.js',
+			'app/js/classie.js',
 			'app/js/aos.js',
 			'app/js/wow.js',
 			'app/js/flickity.js'
