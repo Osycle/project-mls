@@ -5,12 +5,12 @@ $(function(){
 
 
 
-
+	loadedInit();
 
 
 	//WOW
 	new WOW({
-		offset: 30
+		offset: 200
 	}).init();
 
 
@@ -21,12 +21,15 @@ $(function(){
 	  duration: 1000,
 	  delay: 100
 	});
-	
 	setTimeout(function(){AOS.refresh()}, 300);
-
-
-	var header_status = false;
-
+	// SKROLLR
+	if( !isMobile )
+	skrollr.init({
+		smoothScrolling: false,
+		mobileDeceleration: 0.004
+	});
+						 
+						
 
 	//menu init
 	$(".nav-menu").initMenu({
@@ -34,7 +37,7 @@ $(function(){
 		"subMenu": ".sub-menu-1",
 		"modalMenu": "#menuModal",
 		menuHoverIn: function(){}
-	})
+	});
 
 
 function phoneDap(){
@@ -46,10 +49,15 @@ function phoneDap(){
 
 function dropbtn(){
 	$(".dropdown-lang .dropbtn").on("click", function(){
-		$( $(this).siblings(".dropdown-content") ).toggleClass("active");
+
+		$( $(this)
+			.siblings(".dropdown-content") )
+			.toggleClass("active");
+
 	});
 	$(".dropdown-lang .dropdown-content").on("mouseleave", function(){
-		$(this).removeClass("active");
+		$(this)
+		.removeClass("active");
 	});
 }
 dropbtn();
@@ -63,27 +71,56 @@ $( window ).on("resize", function(e){
 
 });
 //SCROLL
+var header_status = false;
 $( window ).on("scroll", function(e){
-	
-	if($(window).scrollTop() > 300 && header_status == false){
-		
-
+	if($(window).scrollTop() > 300 && header_status){
 		//$(".header-scroll").addClass("in");
-		
 		header_status = true; 
-
-	}else if($(window).scrollTop() < 300 && header_status == true){
-
+	}else if($(window).scrollTop() < 300 && header_status){
 		//$(".header-scroll").removeClass("in");
-		
 		header_status = false;
-
 	}
 
 });
 
 
 
+
+
+	});//$
+}) (jQuery);
+
+
+var isWebkit = /Webkit/i.test(navigator.userAgent),
+		isChrome = /Chrome/i.test(navigator.userAgent),
+		isMobile = !!("ontouchstart" in window),
+		isAndroid = /Android/i.test(navigator.userAgent);
+
+
+function loadedInit(){
+
+	//SCROLLR
+	$("[data-scroll-animated]").map(function(i, el){
+		var el = $(el) ;
+		var scrollOffset = [];
+	 	$( el.attr("data-scroll-animated").split(',') )
+	 		.map(function(i, el){
+				scrollOffset.push( el.trim() );
+			})
+
+		i % 2 == 1 ? 
+		el.attr("data-"+scrollOffset[0], "transform: translate3d(-30%, 0%, 0px);")
+			.attr("data-"+scrollOffset[1], "transform: translate3d( 0%, 0%, 0px);")
+		:
+		el.attr("data-"+scrollOffset[0], "transform: translate3d(30%, 0%, 0px);")
+			.attr("data-"+scrollOffset[1], "transform: translate3d( 0%, 0%, 0px);")
+	})
+	//WOW
+	$(".animation").map(function(i, el){
+		$(el).addClass("fadeInUp")
+	})
+
+}
 
 
 //COMMON FUNTIONS
@@ -109,7 +146,7 @@ function ajPost(u, d, s, c){
 		complete: c
 	});
 }
- $.fn.fadeToggleBool = function( dura = 290 ){
+ $.fn.fadeToggleBool = function( dura ){
  	var self = $( $(this) ),
  		 bool = self.css("display") == "none";
 
@@ -149,8 +186,6 @@ function scrolledDiv(el) {
 }
 
 
-	});//$
-}) (jQuery);
 
 
 
@@ -247,7 +282,6 @@ function Menu( menu, options ){
 		if ( $( window ).width() < el.width() + el.offset().left ) 
 			el.addClass("left");
 	}
-
 }
 
 

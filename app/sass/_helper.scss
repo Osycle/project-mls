@@ -15,6 +15,15 @@ html{
 }
 
 //-----------------------------PADD
+
+@for $i from 0 through 24 {
+	.p-#{5*$i} {
+		padding: 5*$i+px;}}
+
+
+
+
+
 @for $i from 0 through 24 {
 	.p-h-#{5*$i} { 
 		padding-left: 5*$i+px;
