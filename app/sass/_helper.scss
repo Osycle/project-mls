@@ -3,26 +3,17 @@
 */
 
 
-html{
-
 
 
 @for $i from 0 through 10 {
 	.box-#{10*$i} { 
 		width: 10*$i+%;
-		float: left;
 	}
 }
 
 //-----------------------------PADD
-
-@for $i from 0 through 24 {
-	.p-#{5*$i} {
-		padding: 5*$i+px;}}
-
-
-
-
+html{
+	
 
 @for $i from 0 through 24 {
 	.p-h-#{5*$i} { 
@@ -49,7 +40,7 @@ html{
 @for $i from 0 through 30 {
 	.p-r-#{5*$i} { 
 		padding-right: 5*$i+px;}}
-
+}
 //------------------------MARG
 @for $i from 0 through 30 {
 	.m-h-#{5*$i} { 
@@ -77,8 +68,12 @@ html{
 	.m-r-#{5*$i}) { 
 		margin-right: 5*$i+px;}}
 
-
-
+.m-auto{
+	margin: auto;
+}
+/* [class*="m-h"], [class*="m-v"]{
+	overflow: hidden;	
+} */
 
 //--------------------Parag-MARGIN
 @for $i from 0 through 12 {
@@ -133,14 +128,14 @@ html{
 
 //------------------Parag-PADDING
 @for $i from 0 through 12 {
-	.parag-p-top-#{5*$i} { 
+	.parag-p-t-#{5*$i} { 
 		p{
 			padding-top: 5*$i+px;
 		}
 	}
 }
 @for $i from 0 through 12 {
-	.parag-p-bottom-#{5*$i} { 
+	.parag-p-b-#{5*$i} { 
 		p{
 			padding-bottom: 5*$i+px;
 		}
@@ -148,16 +143,25 @@ html{
 }
 
 @for $i from 0 through 12 {
-	.parag-p-left-#{5*$i} { 
+	.parag-p-l-#{5*$i} { 
 		p{
 			padding-left: 5*$i+px;
 		}
 	}
 }
 @for $i from 0 through 12 {
-	.parag-p-right-#{5*$i} { 
+	.parag-p-r-#{5*$i} { 
 		p{
 			padding-right: 5*$i+px;
+		}
+	}
+}
+
+@for $i from 0 through 12 {
+	.parag-p-h-#{5*$i} { 
+		p{
+			padding-right: 5*$i+px;
+			padding-left: 5*$i+px;
 		}
 	}
 }
@@ -334,11 +338,95 @@ html{
 
 
 
+@media (max-width: 991px){
 
+
+	.float-left-sm{
+		float: left;
+	}
+	.float-none-sm{
+		float: none;
+	}
+	.float-right-sm{
+		float: right;
+	}
+	.float-none-sm-impt{
+		float: none !important;
+	}
+	.float-left-sm-impt{
+		float: left !important;
+	}
+	.float-right-sm-impt{
+		float: right !important;
+	}
+
+
+	.align-left-sm{
+		text-align: left ;
+	}
+	.align-center-sm{
+		text-align: center ;
+	}
+	.align-right-sm{
+		text-align: right ;
+	}
+
+	.align-left-sm-impt{
+		text-align: left !important;
+	}
+	.align-center-sm-impt{
+		text-align: center !important;
+	}
+	.align-right-sm-impt{
+		text-align: right !important;
+	}
+
+
+}
 
 
 @media (min-width: 992px){
 
+	.float-left-md{
+		float: left;
+	}
+	.float-none-md{
+		float: none;
+	}
+	.float-right-md{
+		float: right;
+	}
+	.float-none-md-impt{
+		float: none !important;
+	}
+	.float-left-md-impt{
+		float: left !important;
+	}
+
+	.float-right-md-impt{
+		float: right !important;
+	}
+
+
+	.align-left-md{
+		text-align: left ;
+	}
+	.align-center-md{
+		text-align: center ;
+	}
+	.align-right-md{
+		text-align: right ;
+	}
+	.align-left-md-impt{
+		text-align: left !important;
+	}
+	.align-center-md-impt{
+		text-align: center !important;
+	}
+	.align-right-md-impt{
+		text-align: right !important;
+	}
+	
 
 	@for $i from 12 through 1 {
 
@@ -377,8 +465,3 @@ html{
 
 
 }
-
-
-
-
-}//html
