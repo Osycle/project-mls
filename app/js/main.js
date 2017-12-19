@@ -4,28 +4,28 @@
 $(function(){
 
 
-
 	loadedInit();
 
 
 	//WOW
 	new WOW({
-		offset: 200
+		offset: 210
 	}).init();
 
 
 	// AOS
 	AOS.init({
-	  offset: 0,
-	  once: true,
+	  offset: 100,
+	  //once: true,
 	  duration: 1000,
-	  delay: 100
+	  delay: 50
 	});
 	setTimeout(function(){AOS.refresh()}, 300);
 	// SKROLLR
 	if( !isMobile )
 	skrollr.init({
 		smoothScrolling: false,
+		forceHeight: false,
 		mobileDeceleration: 0.004
 	});
 						 

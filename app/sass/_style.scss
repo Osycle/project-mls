@@ -6,14 +6,14 @@
 											--- Variables ---
 */
 
-$color_1: #1f4c99;// blue
+$color_1: #18509b;// blue
 $color_2: #191970;// dark-blue
 $color_3: #d52828;//red
 $color_4: #e31f24;;//red
 $font-family-1: "Open Sans";
 $font-family-2: "Myriad Pro";
 $font-family-3: "Intro";
-$color_footer: #1b4e9b;
+$color_footer: $color_1;
 
 
 $color_gray_1: darken(#f8f8f8, 0%);
@@ -587,8 +587,17 @@ tr:nth-child(even) {
 }
 
 .inlineble-2{
-	@include inline-ble(96/4+%, 10/20+%);
+
+	figure{
+		width: 24.7%;	
+		padding-right: 15px;
+		padding-left: 15px;
+	}
 	@include img-circle(140px, 140px);
+	@media (min-width: 991px){
+	margin-left: -15px;
+	margin-right: -15px;
+	}
 }
 
 [class*="inline-box"]{
@@ -1238,6 +1247,7 @@ $header-height: 110px;
 	transition: all 0.3s ease-in;
 	color: white;
 	overflow: hidden;
+	z-index: 3;
 	background-position: 0 0;
 	background-repeat: repeat-y;
 	background-size: cover;
@@ -1500,51 +1510,74 @@ main{
 	}
 }
 
+.box-shadow{
+	box-shadow: 0px 0px 35px -15px black;
+}
 
 .bg-line{
-  z-index: -1;
+  //z-index: 2;
+  pointer-events: none;
   position: absolute;
   opacity: 0.2;
-  top: 20px;
+  top: 130px;
   text-align: center;
   width: 100%;
+  left: -10%;
 	//fill-opacity: 0.3;
+	svg{
+		transform: scaleY(-1);
+		width: 1170px;
+		height: 2339px;
+	}
 	.line-1{
 		//10373
-		stroke: $color_4;
+		stroke: darken($color_gray_1, 15%);
+		stroke-dasharray: 10320;
+		
 	}
 	.line-2{
+		//stroke-dasharray: 7697;
 		//10297
 		stroke: $color_1;
+		stroke-dasharray: 10297;
+    stroke-dashoffset: 0;
 	}
 	path{
+		//transition: all 0.1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+		stroke-linecap:unset;
+		stroke-linejoin:miter;
+		stroke-miterlimit:4;
+		stroke-opacity:1;
 		fill: transparent;
     stroke-width: 15px;
-   // stroke-miterlimit: 50;
-    //stroke-linejoin: initial;
 	}
 
 }
 .bg-swing{
 	margin-top: 150px;
 	margin-bottom: 150px;
-	height: 200px;
+	//height: 200px;
+
 	position: relative;
-	//background-color: $color_1;
-	background-image: url("../img/bg/bg-1.jpg");
+	//background-image: url("../img/bg/bg-1.jpg");
+	background-color: $color_1;
+	z-index: 1;
+	&, &:after, &:before{
+		background-color: $color_1;
+
+	}
 	&:before{
 		@extend .claf;
-		background-color: $color_1;
     height: 100px;
     top: -100px;
     left: 50%;
+
     transform: matrix(2, 0, -40, 5, 0, 0);
 	}
 	&:after{
 		@extend .claf;
-		background-color: $color_1;
     height: 100px;
-    top: 200px;
+    top: 100%;
     left: 50%;
     transform: matrix(2, 0, 40, 5, 0, 0);
 	}
@@ -1554,21 +1587,28 @@ main{
 .bg-parallax{
 	overflow: hidden;
 	position: relative;
+	display: block;
 	.bg-black{
     //background-color: rgba(black, 0.5);
-    background:  linear-gradient(to left, rgba(31, 76, 153, 0.3), rgba(227, 31, 36, 0.1));
+    background:  linear-gradient(to left, rgba(31, 76, 153, 0.4), rgba(227, 31, 36, 0.2));
     height: 100%;
     width: 100%;
     z-index: 1;
+    display: none;
     position: absolute;
 	}
 
 }
+.over-skin{
+	overflow: hidden;
+	position: relative;
+}
 #lax{
-	height: 100vh;
-	background:transparent center no-repeat;
-	background-size:cover;
-		overflow: hidden;
+	height: 75vh;
+	width: 100%;
+	//background:transparent center no-repeat;
+	//background-size:cover;
+	overflow: hidden;
 	position: relative;
 }
 .parallax-image-wrapper {
@@ -1720,7 +1760,8 @@ main{
 .short-advantage{
 	background-color: $color_gray_2;
 	figure{
-		padding: 40px 50px;
+		padding-top: 40px;
+		padding-bottom: 40px;
 		border-right: 1px solid $color_gray_3;
 		&:last-child{
 			border-right: 0;
@@ -1768,16 +1809,10 @@ main{
 	border: 1px dashed $color_gray_3;
 	position: relative;
 }
-
-
-
-
-
 .skin-bonus{
 	background-size: cover;
 	background-position: center;
 }
-
 //short-carpark
 .short-carpark{
 
@@ -2081,9 +2116,22 @@ main{
 
 //----------------CONTACTS
 
+.contacts{
 
+}
+.contacts-feedback, .contacts-content{
+	//background-color: rgba(white, 0.5);
+}
 .contacts-feedback{
+	
+	padding: 20px 30px;
+	//padding-bottom: 20px;
+	margin: 60px 0;
+	z-index: 2;
+	//@extend .box-shadow;
+	//border-right: 1px solid rgba($color_1, 0.5);
 	.form-control{
+		
 		height: 50px;
 	}
 	form{
@@ -2128,6 +2176,8 @@ main{
 	}
 	.input{
 		margin: 0.5em;
+		max-width: 350px;
+		width: calc(100% - 1em);
 	}
 	.input-name, .input-email, .input-phone, .textarea-msg{
 		.input__field{
@@ -2187,7 +2237,7 @@ main{
 
 
 .contacts-content{
-	border-left: 1px solid $color_gray_1;
+	//border-left: 1px solid $color_gray_1;
 	address{
 		margin: 40px 0;
 	}
@@ -2223,14 +2273,38 @@ main{
 
 //----------------ABOUT
 
-
 .about{
+	background-color: white;
+	position: relative;
+	.bg-swing, .bg-line{
+		z-index: 2;
+	}
+	.short-advantage{
+		background-color: transparent;
+		z-index: 1;
+		position: relative;
+		p{
+			color: white;}
+	}
+}
+.about-content-1, .about-content-3{
+	background-color: white;
+	z-index: 1;
+	position: relative;
+}
+[class*="about-content"]{
+	//background-color: white;
+	.desc-content{
+		padding: 30px 0;
+		margin: 60px 0;
+	}
 	p{
 		padding: 0 15px;
 	}
 	ul{
 		padding: 0 35px;
 	}
+	
 }
 
 
@@ -2250,7 +2324,7 @@ main{
 	font-size: 150px;
 	font-family: serif;
 	position: absolute;
-	color: $color_gray_3;
+	color: rgba($color_1, 0.3);
 }
 .quote-1{
   top: -0.5em;
@@ -2273,6 +2347,7 @@ main{
 	width: 100%;
 }
 .review{
+	box-shadow: 0px 0px 35px -15px black;
 	margin: 60px 0;
 	.review-head{
 		text-align: center;
@@ -2359,11 +2434,16 @@ main{
 }
 
 .services{
-
+	.bg-line{
+		top: -70px;
+	}
+	svg{
+		transform: scaleY(-1) rotateY(180deg);
+	}
 }
 
 .services-content{
-
+	background-color: blue;
 	@extend .flex-box;
 
 
@@ -2373,11 +2453,27 @@ main{
 	width: 150px;
 	height: 200px;
 	position: relative;
-
+	border: 30px outset rgba($color_1, 0.5);
+	transition: opacity 0.6s ease-in-out ,
+	border 0.3s ease-in-out 0.3s !important;
+	box-shadow: 0px 0px 20px -2px black;
 	background-position: center;
 	background-origin: border-box;
 	background-size: cover;
-
+	&:nth-child(2){transition-delay: 0.2s;}
+	&:nth-child(3){transition-delay: 0.3s;}
+	&:nth-child(4){transition-delay: 0.4s;}
+	&:nth-child(5){transition-delay: 0.5s;}
+	a{
+		white-space: nowrap;
+	}
+	&.aos-animate{
+		border-width: 1px;
+		a{white-space: normal;}
+	}
+	&:hover{
+		//border: 100px outset rgba($color_1, 0.5);
+	}
 	.context-caption{
 		color: #333;
 		display: flex;
@@ -2397,6 +2493,7 @@ main{
 		font-size: 0.9em;
 	}
 	a{
+		color: white;
 		text-transform: uppercase;
 		font-weight: 600;
 		font-size: 1.2em;
@@ -2407,7 +2504,7 @@ main{
 		display: flex;
 		height: 100%;
 		transition: all 0.3s ease-in;
-		background-color: rgba(white, 1);
+		background-color: rgba($color_1, 0.3);
 		&:focus{
 			color: inherit;
 			text-decoration: none;

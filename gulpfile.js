@@ -46,7 +46,7 @@ gulp.task('scripts', () =>
 	{	
 	return gulp.src([
 			'app/js/jquery.min.js',
-			'app/js/smoothscroll.js',
+			//'app/js/smoothscroll.js',
 			'app/js/bootstrap.js',
 			//'app/js/jquery.fractionslider.js',
 			'app/js/classie.js',
