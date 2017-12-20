@@ -711,10 +711,13 @@ $header-height: 130px;
 .logo {
 
   float: left;
-  padding: 23px 0;
+  padding: 25px 0;
   transition: all 0.3s ease-in-out;
   img{
-  width: 260px;
+  	width: 260px;
+  	@media (max-width:1200px){
+  		width: 230px;
+  	}
   }
 	&:hover, &:focus{
   	//transform: scale(1.05);
@@ -729,7 +732,7 @@ $header-height: 130px;
 }
 .main-navbar{
 
-	width: inherit;
+	width: 1%;
 	float: initial;
 	
 	.btn-blue-1{
@@ -892,7 +895,7 @@ $header-height: 130px;
 	    	font-family: $font-family-1;
 	    	font-weight: 600;
 				padding: 5px 0px;
-				margin: 10px 15px;
+				margin: 10px 8px;
 	    	//@include table-celling(150px);
 	    }
 			&.active > a{
@@ -1418,6 +1421,9 @@ main{
 
 
 //INDEX SLIDER
+.index-slider{
+	overflow: hidden;
+}
 .fullscreen-container {
 	width:100%;
 	position:relative;
@@ -1432,7 +1438,7 @@ main{
 	//display: none;
 }
 .rev-slider{
-	
+	overflow: hidden;
 	[class*="btn"]{
 		padding: 15px 75px;
 	}
@@ -1514,21 +1520,50 @@ main{
 .box-shadow{
 	box-shadow: 0px 0px 35px -15px black;
 }
+/* @keyframes blink {
+	to {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	from {
+		opacity: 0;
+	}
+} */
+@keyframes blink {
+	from {
+		stroke-opacity: 0.2;
+	}
+	30% {
+		stroke-opacity: 0.4;
+	}
+	70% {
+		stroke-opacity: 0.4;
+	}
+
+	to {
+		stroke-opacity: 0.2;
+	}
+}
 
 .bg-line{
   //z-index: 2;
+  display: none;
   pointer-events: none;
   position: absolute;
-  opacity: 0.2;
+  //opacity: 0.2;
   top: 90px;
   text-align: center;
   width: 100%;
   left: -10%;
+  //animation: blink 2s linear infinite;
 	//fill-opacity: 0.3;
 	svg{
 		transform: scaleY(-1);
 		width: 1170px;
-		height: 2339px;
+		height: 2400px;
+		//height: 2339px;
 	}
 	.line-1{
 		//10373
@@ -1544,7 +1579,8 @@ main{
     stroke-dashoffset: 0;
 	}
 	path{
-		//transition: all 0.1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+		//transition: all 0.2s linear;
+		animation: blink 5s linear infinite;
 		stroke-linecap:unset;
 		stroke-linejoin:miter;
 		stroke-miterlimit:4;
@@ -2119,12 +2155,16 @@ main{
 
 
 //----------------CONTACTS
-
+.feedback-contacts{
+	background-color: rgba(white, 0.5);
+	z-index:2;
+	position: relative;
+}
 .contacts{
 
 }
 .contacts-feedback, .contacts-content{
-	//background-color: rgba(white, 0.5);
+//	background-color: rgba(white, 0.5);
 }
 .contacts-feedback{
 	
@@ -2672,7 +2712,7 @@ main{
 	padding: 10px 0;
 	text-align: center;
 	img{
-		width: 250px;
+		width: 180px;
 	}
 }
 .footer-info{

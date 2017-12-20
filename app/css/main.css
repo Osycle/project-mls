@@ -17400,17 +17400,20 @@ tr:nth-child(even) {
 
 .logo {
   float: left;
-  padding: 23px 0;
+  padding: 25px 0;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
   .logo img {
     width: 260px; }
+    @media (max-width: 1200px) {
+      .logo img {
+        width: 230px; } }
   .logo > a:focus {
     outline: 0; }
 
 .main-navbar {
-  width: inherit;
+  width: 1%;
   float: initial; }
   .main-navbar .btn-blue-1 {
     float: right; }
@@ -17543,7 +17546,7 @@ tr:nth-child(even) {
         font-family: "Open Sans";
         font-weight: 600;
         padding: 5px 0px;
-        margin: 10px 15px; }
+        margin: 10px 8px; }
       .nav-menu:not(.min) .menu-list > li.active > a {
         color: #d52828;
         border: 0; }
@@ -17956,6 +17959,9 @@ main {
   margin-top: 10px;
   line-height: 150%; }
 
+.index-slider {
+  overflow: hidden; }
+
 .fullscreen-container {
   width: 100%;
   position: relative;
@@ -17965,49 +17971,44 @@ main {
 .banner {
   position: relative; }
 
-.rev-slider [class*="btn"] {
-  padding: 15px 75px; }
-
-.rev-slider * {
-  color: white; }
-
-.rev-slider h1 {
-  position: relative;
-  font-weight: 500;
-  font-size: 2.8125em;
-  letter-spacing: 2px;
-  height: 80px; }
-
-.rev-slider h2 {
-  white-space: normal;
-  font-weight: 300;
-  font-size: 1.75em;
-  display: inline-block;
-  line-height: 110% !important; }
-
-.rev-slider p {
-  font-size: 0.875em;
-  padding: 0 25%;
-  text-align: center;
-  line-height: 20px; }
-
-.rev-slider .tp-caption {
-  position: absolute;
-  white-space: normal; }
-  .rev-slider .tp-caption a {
+.rev-slider {
+  overflow: hidden; }
+  .rev-slider [class*="btn"] {
+    padding: 15px 75px; }
+  .rev-slider * {
     color: white; }
-    .rev-slider .tp-caption a:hover {
+  .rev-slider h1 {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.8125em;
+    letter-spacing: 2px;
+    height: 80px; }
+  .rev-slider h2 {
+    white-space: normal;
+    font-weight: 300;
+    font-size: 1.75em;
+    display: inline-block;
+    line-height: 110% !important; }
+  .rev-slider p {
+    font-size: 0.875em;
+    padding: 0 25%;
+    text-align: center;
+    line-height: 20px; }
+  .rev-slider .tp-caption {
+    position: absolute;
+    white-space: normal; }
+    .rev-slider .tp-caption a {
       color: white; }
-
-.rev-slider .slide-1 .pargi {
-  width: 50%;
-  text-align: center;
-  line-height: 20px;
-  font-size: 0.875em !important; }
-
-@media only screen and (max-width: 767px) {
-  .rev-slider {
-    /* 		& {
+      .rev-slider .tp-caption a:hover {
+        color: white; }
+  .rev-slider .slide-1 .pargi {
+    width: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 0.875em !important; }
+  @media only screen and (max-width: 767px) {
+    .rev-slider {
+      /* 		& {
 			ul li div{display: none;}
 			ul li div.tp-bgimg, ul li div.slotholder{display: block;}
 		} */ } }
@@ -18023,10 +18024,40 @@ main {
   -webkit-box-shadow: 0px 0px 35px -15px black;
   box-shadow: 0px 0px 35px -15px black; }
 
+/* @keyframes blink {
+	to {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	from {
+		opacity: 0;
+	}
+} */
+@-webkit-keyframes blink {
+  from {
+    stroke-opacity: 0.2; }
+  30% {
+    stroke-opacity: 0.4; }
+  70% {
+    stroke-opacity: 0.4; }
+  to {
+    stroke-opacity: 0.2; } }
+@keyframes blink {
+  from {
+    stroke-opacity: 0.2; }
+  30% {
+    stroke-opacity: 0.4; }
+  70% {
+    stroke-opacity: 0.4; }
+  to {
+    stroke-opacity: 0.2; } }
+
 .bg-line {
+  display: none;
   pointer-events: none;
   position: absolute;
-  opacity: 0.2;
   top: 90px;
   text-align: center;
   width: 100%;
@@ -18036,7 +18067,7 @@ main {
     -ms-transform: scaleY(-1);
     transform: scaleY(-1);
     width: 1170px;
-    height: 2339px; }
+    height: 2400px; }
   .bg-line .line-1 {
     stroke: #d2d2d2;
     stroke-dasharray: 10320; }
@@ -18045,6 +18076,8 @@ main {
     stroke-dasharray: 10297;
     stroke-dashoffset: 0; }
   .bg-line path {
+    -webkit-animation: blink 5s linear infinite;
+    animation: blink 5s linear infinite;
     stroke-linecap: unset;
     stroke-linejoin: miter;
     stroke-miterlimit: 4;
@@ -18434,6 +18467,11 @@ main {
     margin: 15px 0 60px 0 !important;
     width: 100%; } }
 
+.feedback-contacts {
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+  position: relative; }
+
 .contacts-feedback {
   padding: 20px 30px;
   margin: 60px 0;
@@ -18819,7 +18857,7 @@ main {
   padding: 10px 0;
   text-align: center; }
   .footer-logo img {
-    width: 250px; }
+    width: 180px; }
 
 .footer-info {
   margin: 30px 0; }
