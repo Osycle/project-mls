@@ -175,9 +175,7 @@ button:hover, button:active, button:focus{
 button{
 	outline: 0;
 }
-p{
-	margin: 15px 0;
-}
+
 img{
 	max-width: 100%;
 	outline: 0;
@@ -590,8 +588,6 @@ tr:nth-child(even) {
 
 	figure{
 		width: 24.7%;	
-		padding-right: 15px;
-		padding-left: 15px;
 	}
 	@include img-circle(140px, 140px);
 	@media (min-width: 991px){
@@ -685,7 +681,7 @@ tr:nth-child(even) {
 /*
 										 --- HEADER ---
 */
-$header-height: 110px; 
+$header-height: 130px; 
 
 #header{
 	top: 0;
@@ -715,9 +711,11 @@ $header-height: 110px;
 .logo {
 
   float: left;
-  padding: 25px 0;
+  padding: 23px 0;
   transition: all 0.3s ease-in-out;
-  
+  img{
+  width: 260px;
+  }
 	&:hover, &:focus{
   	//transform: scale(1.05);
   }
@@ -1248,17 +1246,20 @@ $header-height: 110px;
 	color: white;
 	overflow: hidden;
 	z-index: 3;
-	background-position: 0 0;
-	background-repeat: repeat-y;
-	background-size: cover;
+	background-position: center 0;
+	background-repeat: no-repeat;
+	background-size: initial;
 	
 }
 .banner-content{
-	@include table-celling( $header-height*2+10 );
+	@include table-celling( $header-height*2+30 );
+	width: 1%;
 }
 .banner-shadow{
 
-	background: linear-gradient(to left, rgba( $color_1, 0.5),rgba($color_4, 0.3) );
+	background: linear-gradient(to left, rgba( $color_1, 0.4),rgba($color_4, 0.3) );
+	//background: linear-gradient(to left, rgba( $color_1, 0.5),rgba(black, 0.3) );
+	//background: rgba(black, 0.3);
 	height: 100%;
 	position: absolute;
 	display: block;
@@ -1292,7 +1293,7 @@ $header-height: 110px;
 	li{
 		transition: all 0.3s ease-in;
 		&:hover{
-			transform: matrix(1, 0, -0.2, 1, 0, 0);
+			transform: matrix(1, 0, 0, 1, 5, 0);
 		}
 	}
 }
@@ -1519,7 +1520,7 @@ main{
   pointer-events: none;
   position: absolute;
   opacity: 0.2;
-  top: 130px;
+  top: 90px;
   text-align: center;
   width: 100%;
   left: -10%;
@@ -2061,6 +2062,9 @@ main{
 	height: 595px;
 	color: #06599f;
 	position: relative;
+	img{
+		width: 200px;
+	}
 }
 .map-block{
 	position: absolute;
@@ -2435,7 +2439,7 @@ main{
 
 .services{
 	.bg-line{
-		top: -70px;
+		top: -30px;
 	}
 	svg{
 		transform: scaleY(-1) rotateY(180deg);
@@ -2443,7 +2447,7 @@ main{
 }
 
 .services-content{
-	background-color: blue;
+
 	@extend .flex-box;
 
 
@@ -2460,10 +2464,11 @@ main{
 	background-position: center;
 	background-origin: border-box;
 	background-size: cover;
-	&:nth-child(2){transition-delay: 0.2s;}
-	&:nth-child(3){transition-delay: 0.3s;}
-	&:nth-child(4){transition-delay: 0.4s;}
-	&:nth-child(5){transition-delay: 0.5s;}
+	&:nth-child(1){transition-delay: 0.4s !important;}
+	&:nth-child(2){transition-delay: 0.3s !important;}
+	&:nth-child(3){transition-delay: 0.2s !important;}
+	&:nth-child(4){transition-delay: 0.5s !important;}
+	&:nth-child(5){transition-delay: 0.6s !important;}
 	a{
 		white-space: nowrap;
 	}
@@ -2561,7 +2566,7 @@ main{
  									 width 0.25s ease-out 0.0s,
  									 color 0.3s ease-in 0.25s,
  									 height 0.25s ease-out 0.2s;
- 			background-color: rgba($color_3, 0.5);
+ 			background-color: rgba($color_4, 0.5);
 		}
 		&:after{
 			//overflow: overlay;
@@ -2666,6 +2671,9 @@ main{
 .footer-logo{
 	padding: 10px 0;
 	text-align: center;
+	img{
+		width: 250px;
+	}
 }
 .footer-info{
   margin: 30px 0;
