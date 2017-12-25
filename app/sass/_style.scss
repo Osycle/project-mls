@@ -1559,6 +1559,7 @@ main{
   left: -10%;
   //animation: blink 2s linear infinite;
 	//fill-opacity: 0.3;
+
 	svg{
 		transform: scaleY(-1);
 		width: 1170px;
@@ -1587,6 +1588,12 @@ main{
 		stroke-opacity:1;
 		fill: transparent;
     stroke-width: 15px;
+	}
+	&.reverse{
+		top: -30px;
+		svg{
+			transform: scaleY(-1) rotateY(180deg);
+		}
 	}
 
 }
@@ -1626,12 +1633,12 @@ main{
 	position: relative;
 	display: block;
 	.bg-black{
-    //background-color: rgba(black, 0.5);
-    background:  linear-gradient(to left, rgba(31, 76, 153, 0.4), rgba(227, 31, 36, 0.2));
+    background-color: rgba(black, 0.7);
+    //background:  linear-gradient(to left, rgba(31, 76, 153, 0.4), rgba(227, 31, 36, 0.2));
     height: 100%;
     width: 100%;
     z-index: 1;
-    display: none;
+    //display: none;
     position: absolute;
 	}
 
@@ -2477,14 +2484,8 @@ main{
 	align-items: center;
 }
 
-.services{
-	.bg-line{
-		top: -30px;
-	}
-	svg{
-		transform: scaleY(-1) rotateY(180deg);
-	}
-}
+
+
 
 .services-content{
 
@@ -2664,6 +2665,35 @@ main{
 .service-section{
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ------------ OURCARS
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -18084,6 +18084,11 @@ main {
     stroke-opacity: 1;
     fill: transparent;
     stroke-width: 15px; }
+  .bg-line.reverse {
+    top: -30px; }
+    .bg-line.reverse svg {
+      -webkit-transform: scaleY(-1) rotateY(180deg);
+      transform: scaleY(-1) rotateY(180deg); }
 
 .bg-swing {
   margin-top: 150px;
@@ -18113,14 +18118,10 @@ main {
   position: relative;
   display: block; }
   .bg-parallax .bg-black {
-    background: -webkit-gradient(linear, right top, left top, from(rgba(31, 76, 153, 0.4)), to(rgba(227, 31, 36, 0.2)));
-    background: -webkit-linear-gradient(right, rgba(31, 76, 153, 0.4), rgba(227, 31, 36, 0.2));
-    background: -o-linear-gradient(right, rgba(31, 76, 153, 0.4), rgba(227, 31, 36, 0.2));
-    background: linear-gradient(to left, rgba(31, 76, 153, 0.4), rgba(227, 31, 36, 0.2));
+    background-color: rgba(0, 0, 0, 0.7);
     height: 100%;
     width: 100%;
     z-index: 1;
-    display: none;
     position: absolute; }
 
 .over-skin {
@@ -18663,13 +18664,6 @@ main {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
-
-.services .bg-line {
-  top: -30px; }
-
-.services svg {
-  -webkit-transform: scaleY(-1) rotateY(180deg);
-  transform: scaleY(-1) rotateY(180deg); }
 
 .services-item {
   margin: 15px;
