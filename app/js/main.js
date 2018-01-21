@@ -6,6 +6,15 @@ $(function(){
 
 	loadedInit();
 
+	// FANCYBOX
+	if( $("[data-fancybox]").length != 0 )
+		$("[data-fancybox]").fancybox({
+			afterShow : function( instance, current ) {
+
+			},
+			animationEffect : "fade"
+			//transitionEffect: "zoom-in-out"
+		});
 
 	//WOW
 	new WOW({
@@ -16,11 +25,12 @@ $(function(){
 	// AOS
 	AOS.init({
 	  offset: 100,
-	  //once: true,
+	  once: true,
 	  duration: 1000,
 	  delay: 50
 	});
 	setTimeout(function(){AOS.refresh()}, 300);
+
 	// SKROLLR
 	if( !isMobile ){
 		skrollr.init({
@@ -52,11 +62,9 @@ function phoneDap(){
 
 function dropbtn(){
 	$(".dropdown-lang .dropbtn").on("click", function(){
-
 		$( $(this)
 			.siblings(".dropdown-content") )
 			.toggleClass("active");
-
 	});
 	$(".dropdown-lang .dropdown-content").on("mouseleave", function(){
 		$(this)
@@ -68,11 +76,7 @@ dropbtn();
 
 
 //RESIZE
-$( window ).on("resize", function(e){
-
-	// body
-
-});
+$( window ).on("resize", function(e){});
 //SCROLL
 var header_status = false;
 $( window ).on("scroll", function(e){
@@ -83,29 +87,59 @@ $( window ).on("scroll", function(e){
 		//$(".header-scroll").removeClass("in");
 		header_status = false;
 	}
-
 });
 
+if( $(".dop-toggle").length != 0 )
+	$(".dop-toggle").click(function(){
+		$(".dop-toggle").toggleClass("in");
+		if( $(".product-details").length != 0 )
+			$(this).siblings(".product-details").slideToggle();
+	})
 
-/*if(window.navigator.platform.indexOf('Mac') < 0){
-(function(){var D={
-	frameRate:150,
-	animationTime:500,
-	stepSize:120,
-	pulseAlgorithm:true,
-	pulseScale:6,
-	pulseNormalize:1,
-	accelerationDelta:20,
-	accelerationMax:1,
-	keyboardSupport:true,
-	arrowScroll:50,
-	touchpadSupport:true,
-	fixedBackground:true,excluded:""};var u=D;var s=false;var p=false;var h={x:0,y:0};var b=false;var w=document.documentElement;var d;var y;var G=[120,120,120];var o={left:37,up:38,right:39,down:40,spacebar:32,pageup:33,pagedown:34,end:35,home:36};var u=D;function J(){var K=false;if(K){a("keydown",t)}if(u.keyboardSupport&&!K){f("keydown",t)}}function E(){if(!document.body){return}var K=document.body;var L=document.documentElement;var O=window.innerHeight;var M=K.scrollHeight;w=(document.compatMode.indexOf("CSS")>=0)?L:K;d=K;J();b=true;if(top!=self){p=true}else{if(M>O&&(K.offsetHeight<=O||L.offsetHeight<=O)){L.style.height="auto";if(w.offsetHeight<=O){var N=document.createElement("div");N.style.clear="both";K.appendChild(N)}}}if(!u.fixedBackground&&!s){K.style.backgroundAttachment="scroll";L.style.backgroundAttachment="scroll"}}var z=[];var g=false;var m=+new Date;function F(N,M,R,O){O||(O=1000);x(M,R);if(u.accelerationMax!=1){var K=+new Date;var S=K-m;if(S<u.accelerationDelta){var P=(1+(30/S))/2;if(P>1){P=Math.min(P,u.accelerationMax);M*=P;R*=P}}m=+new Date}z.push({x:M,y:R,lastX:(M<0)?0.99:-0.99,lastY:(R<0)?0.99:-0.99,start:+new Date});if(g){return}var Q=(N===document.body);var L=function(U){var T=+new Date;var ab=0;var aa=0;for(var W=0;W<z.length;W++){var ad=z[W];var ac=T-ad.start;var V=(ac>=u.animationTime);var X=(V)?1:ac/u.animationTime;if(u.pulseAlgorithm){X=j(X)}var Z=(ad.x*X-ad.lastX)>>0;var Y=(ad.y*X-ad.lastY)>>0;ab+=Z;aa+=Y;ad.lastX+=Z;ad.lastY+=Y;if(V){z.splice(W,1);W--}}if(Q){window.scrollBy(ab,aa)}else{if(ab){N.scrollLeft+=ab}if(aa){N.scrollTop+=aa}}if(!M&&!R){z=[]}if(z.length){A(L,N,(O/u.frameRate+1))}else{g=false}};A(L,N,0);g=true}function l(N){if(jQuery("body").hasClass("woocommerce-checkout")){return}if(jQuery(N.target).closest(".navbar-collapse").length===1){return}if(jQuery(N.target).closest(".chosen-results").length===1){return}if(jQuery(N.target).closest(".select2-results").length===1){return}if(jQuery(N.target).closest(".modal-open").length===1){return}if(jQuery(N.target).closest(".search-header-wrapper").length===1){return}if(!b){E()}var O=N.target;var M=B(O);if(!M||N.defaultPrevented||k(d,"embed")||(k(O,"embed")&&/\.pdf/i.test(O.src))){return true}var L=N.wheelDeltaX||0;var K=N.wheelDeltaY||0;if(!L&&!K){K=N.wheelDelta||0}if(!u.touchpadSupport&&I(K)){return true}if(Math.abs(L)>1.2){L*=u.stepSize/120}if(Math.abs(K)>1.2){K*=u.stepSize/120}F(M,-L,-K);N.preventDefault()}function t(L){var Q=L.target;var O=L.ctrlKey||L.altKey||L.metaKey||(L.shiftKey&&L.keyCode!==o.spacebar);if(/input|textarea|select|embed/i.test(Q.nodeName)||Q.isContentEditable||L.defaultPrevented||O){return true}if(k(Q,"button")&&L.keyCode===o.spacebar){return true}var M,S=0,R=0;var N=B(d);var P=N.clientHeight;if(N==document.body){P=window.innerHeight}switch(L.keyCode){case o.up:R=-u.arrowScroll;break;case o.down:R=u.arrowScroll;break;case o.spacebar:M=L.shiftKey?1:-1;R=-M*P*0.9;break;case o.pageup:R=-P*0.9;break;case o.pagedown:R=P*0.9;break;case o.home:R=-N.scrollTop;break;case o.end:var K=N.scrollHeight-N.scrollTop-P;R=(K>0)?K+10:0;break;case o.left:S=-u.arrowScroll;break;case o.right:S=u.arrowScroll;break;default:return true}F(N,S,R);L.preventDefault()}function n(K){d=K.target}var i={};setInterval(function(){i={}},10*1000);var v=(function(){var K=0;return function(L){return L.uniqueID||(L.uniqueID=K++)}})();function c(L,K){for(var M=L.length;M--;){i[v(L[M])]=K}return K}function B(N){var L=[];var K=w.scrollHeight;do{var M=i[v(N)];if(M){return c(L,M)}L.push(N);if(K===N.scrollHeight){if(!p||w.clientHeight+10<K){return c(L,document.body)}}else{if(N.clientHeight+10<N.scrollHeight){overflow=getComputedStyle(N,"").getPropertyValue("overflow-y");if(overflow==="scroll"||overflow==="auto"){return c(L,N)}}}}while(N=N.parentNode)}function f(M,L,K){window.addEventListener(M,L,(K||false))}function a(M,L,K){window.removeEventListener(M,L,(K||false))}function k(L,K){return(L.nodeName||"").toLowerCase()===K.toLowerCase()}function x(K,L){K=(K>0)?1:-1;L=(L>0)?1:-1;if(h.x!==K||h.y!==L){h.x=K;h.y=L;z=[];m=0}}var e;function I(K){if(!K){return}K=Math.abs(K);G.push(K);G.shift();clearTimeout(e);var M=(G[0]==G[1]&&G[1]==G[2]);var L=(q(G[0],120)&&q(G[1],120)&&q(G[2],120));return !(M||L)}function q(L,K){return(Math.floor(L/K)==L/K)}var A=(function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||function(M,L,K){window.setTimeout(M,K||(1000/60))}})();function C(K){var M,N,L;K=K*u.pulseScale;if(K<1){M=K-(1-Math.exp(-K))}else{N=Math.exp(-1);K-=1;L=1-Math.exp(-K);M=N+(L*(1-N))}return M*u.pulseNormalize}function j(K){if(K>=1){return 1}if(K<=0){return 0}if(u.pulseNormalize==1){u.pulseNormalize/=C(1)}return C(K)}var H=/chrome/i.test(window.navigator.userAgent);var r="onmousewheel" in document;if(r&&H){f("mousedown",n);f("mousewheel",l);f("load",E)}})();
-}*/
-var overflow; 
+
+
+	if( $('.carousel-article').length >= 0 ){
+
+		var carouselMain = 		$('.carousel-article .carousel-main'),
+				carouselNav = 		$('.carousel-article .carousel-nav');
+
+		for( var i = 0 ; i < carouselMain.length ; i++ ){
+
+			var crs = $(carouselMain).eq(i).flickity({
+				imagesLoaded: true,
+				prevNextButtons: false,
+				cellAlign: 'center',
+				//friction: 1,
+				//selectedAttraction: 1,
+				initialIndex: 1,
+				draggable: true,
+				contain: true,
+				pageDots: false
+			});
+
+			$(carouselNav).eq(i).flickity({
+				imagesLoaded: true,
+				initialIndex: 1,
+			  asNavFor: $(carouselMain)[i],
+			  prevNextButtons: true,
+			  draggable: true,
+			  cellAlign: 'center',
+			  adaptiveHeight: true,
+			  //contain: true,
+			  pageDots: false
+			});
+
+		}
+	}
+
+
+
+
 
 	});//$
 }) (jQuery);
+
+
 
 
 var isWebkit = /Webkit/i.test(navigator.userAgent),
@@ -116,22 +150,6 @@ var isWebkit = /Webkit/i.test(navigator.userAgent),
 
 function loadedInit(){
 
-	//SCROLLR
-	$("[data-scroll-animated]").map(function(i, el){
-		var el = $(el) ;
-		var scrollOffset = [];
-	 	$( el.attr("data-scroll-animated").split(',') )
-	 		.map(function(i, el){
-				scrollOffset.push( el.trim() );
-			})
-
-		i % 2 == 1 ? 
-		el.attr("data-"+scrollOffset[0], "transform: translate3d(-30%, 0%, 0px);")
-			.attr("data-"+scrollOffset[1], "transform: translate3d( 0%, 0%, 0px);")
-		:
-		el.attr("data-"+scrollOffset[0], "transform: translate3d(30%, 0%, 0px);")
-			.attr("data-"+scrollOffset[1], "transform: translate3d( 0%, 0%, 0px);")
-	})
 	//WOW
 	$(".animation").map(function(i, el){
 		$(el).addClass("fadeInUp")
@@ -204,7 +222,9 @@ function scrolledDiv(el) {
 
 
 
-
+function checkView( width ){
+	return ($( document ).width() > width);
+}
 
 
 
@@ -215,7 +235,7 @@ function Menu( menu, options ){
 	var self = this;
 	menu = $( menu );
 
-	//ПОЛЯ
+	
 	this.menuClass						= menu[0].className;
 	this.menuToggleBtn 				= $( $(options.menuToggleBtn) ) ;
 	this.menuToggleBtnParent  = $(this.menuToggleBtn).parent();
@@ -223,14 +243,14 @@ function Menu( menu, options ){
 	this.modalMenu  					= $( $(options.modalMenu) );
 	this.modalMenuStatus 		 	= false; 
 
-	//МЕТОДЫ
+
 	this.menuToggle					= function(){
 		$( this.menuToggleBtn ).trigger("click");
 		return this.modalMenuStatus = !this.modalMenuStatus;
 	}
 
 
-	menu.find("[class|='sub']").closest("li").addClass("sub-parent");
+	menu.find("[class*='sub']").closest("li").addClass("sub-parent");
 	$(".min-navbar").append( menu.clone() ).find( "."+this.menuClass ).addClass("min");
 
 	this.modalMenu.on('show.bs.modal', function (e) {
@@ -308,19 +328,19 @@ function Menu( menu, options ){
 window.$.fn.initMenu = function(option){
 
 	var options = $.extend({
-		"menuToggleBtn"					: false, 		// Кнопка бара
-		"subMenu"								: false, 		// Класс подменю
-		"modalMenu"							: false, 		// Модальное меню
+		"menuToggleBtn"					: false, 		
+		"subMenu"								: false, 		
+		"modalMenu"							: false, 		
 
-		"menuToggle"						: Function, 	// Переключение
+		"menuToggle"						: Function, 	
 		"menuHoverIn"						: Function,
 		"menuHoverOut"					: Function,
 		"subHoverIn"						: Function,
 		"subHoverOut"						: Function,
-		"modalMenuShow"					: Function, 	// Открытие меню
-		"modalMenuShown"				: Function,		// Меню раскрыт
-		"modalMenuHide"					: Function, 	// Раскрытие Меню
-		"modalMenuHidden"				: Function 		// Меню скрыт
+		"modalMenuShow"					: Function,
+		"modalMenuShown"				: Function,
+		"modalMenuHide"					: Function,
+		"modalMenuHidden"				: Function 
 
 
 	}, option );
@@ -331,12 +351,4 @@ window.$.fn.initMenu = function(option){
 }
 
 
-
-
-
-
-
-function checkView( width ){
-	return ($( document ).width() > width);
-}
 

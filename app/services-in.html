@@ -6,16 +6,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		
-	  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	  	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
-   	<link rel="stylesheet" href="css/main.css">
+   		<link rel="stylesheet" href="css/main.css">
+		
+		<!-- REVOLUTION BANNER CSS SETTINGS -->
+		<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" />
 
-
-		<script src="js/scripts.min.js"></script>
-		<script src="js/main.js"></script>
 
     <title>Title</title>
 
@@ -26,65 +26,69 @@
 
   </head>
 <body>
-	<noscript>
-		<p>Ваш браузер не поддерживает скрипты!<br/> 
-			 Пожалуйста подключите в настройках браузера Javascript</p>
-	</noscript> 
-	<!-- HEADER -->
-	
-	<div class="header-hidden"></div>
 
+	<noscript><h1>Ваш браузер не поддерживает скрипты!<br/> Пожалуйста подключите в настройках браузера Javascript</h1></noscript> 
+
+	<!-- HEADER -->
+	<div class="header-hidden"></div>
 	<header id="header" class="header-scroll">
 		<div class="container">
+
 			<div class="header-navbar">
-		    <!-- LOGOTYPE -->
-	      <div class="logo">
-	      	<a  href="index.html" ><img src="img/logo.svg"/></a>
-	      </div>
-	      <!-- MENU TOGGLE BUTTON -->
-		     <button class="menu-toggle collapsed" type="button" data-toggle="modal" data-target="#menuModal">
-		       <span class="icon-bar"></span>
-		       <span class="icon-bar"></span>
-		       <span class="icon-bar"></span>
-		    </button>
-		  </div>
-      <!-- NAVBAR -->
-	  	<nav class="main-navbar">
+				<!-- LOGO -->
+				<div class="logo">
+					<a  href="index.html" ><img src="img/logo.svg"/></a>
+				</div>
+				<!-- MENU TOGGLE BUTTON -->
+				<button class="menu-toggle collapsed" type="button" data-toggle="modal" data-target="#menuModal">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
 
-	  		<div class="nav-feedback">
-		  		<button class="btn-blue-1" type="button" data-toggle="modal" data-target="#feedback-modal">
-		  				<b class="clc">Связаться с нами</b>
-		  		</button>
-		  	</div>
+			<!-- NAVBAR -->
+			<nav class="main-navbar">
 
+				<div class="nav-feedback">
+					<button class="btn-blue-1" type="button" data-toggle="modal" data-target="#feedback-modal">
+						<b class="clc">Связаться с нами</b>
+					</button>
+				</div>
 
-        <!-- MENU -->
-       	<div class="nav-menu">
-	       	<div class="nav-header">
+				<div class="nav-menu">
+					<div class="nav-header">
 
-
-	          <ul class="menu-list">
+						<ul class="menu-list">
 							<li><a href="about.html">О нас</a></li>
 							<li><a href="services.html">Услуги</a></li>
-							<li><a href="ourcars.html">Наше авто</a></li>
+							<li><a href="ourcars.html">Наше авто</a>
+								<ul class="sub-menu-1">
+									<li><a href="ourcars-in.html">Тягачи</a></li>
+									<li><a href="ourcars-in.html">Самосвалы</a></li>
+									<li><a href="ourcars-in.html">Полуприцепы</a></li>
+									<li><a href="ourcars-in.html">Прочий автотранспорт</a></li>
+								</ul>
+							</li>
 							<li><a href="reviews.html">Отзывы</a></li>
 							<li><a href="contacts.html">Контакты</a></li>
-	          </ul>
-						
+						</ul>
+						<!-- LANG -->
 						<div class="dropdown-lang">
-						  <div tabindex="1" role="button" class="dropbtn">
-						  	<span>Ру</span><i class="fa fa-angle-down"></i>
-						  </div>
-						  <div class="dropdown-content">
-						    <a href="ru">Ру</a>
-						    <a href="uz">Уз</a>
-						    <a href="en">Англ</a>
-						  </div>
+							<div tabindex="1" role="button" class="dropbtn">
+								<span>Ру</span><i class="fa fa-angle-down"></i>
+							</div>
+							<div class="dropdown-content">
+								<a href="ru">Ру</a>
+								<a href="uz">Уз</a>
+								<a href="en">Англ</a>
+							</div>
 						</div>
 
-      		</div>
-      	</div>
-	  	</nav>
+					</div>
+				</div>
+
+			</nav>
 
 		</div><!-- ./CONTAINER -->
 	</header>
@@ -92,99 +96,59 @@
 
 
 	<!-- MIN MENU MODAL -->
-  <div class="min-menu-modal modal scale a-minMenu" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="min-menu">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	    	
-	    	<button type="button" class="btn" data-dismiss="modal">
-	    		<span class="icon-bar"></span>
-	    		<span class="icon-bar"></span>
-	    	</button>
+	<div class="min-menu-modal modal scale a-minMenu" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="min-menu">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
 
-	      <div class="modal-body min-navbar">
-	      	<!-- js append menu -->
-	      </div>
-	      
-	    </div>
-	  </div>
+				<button type="button" class="btn" data-dismiss="modal">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<div class="modal-body min-navbar">
+					<!-- js append min-menu -->
+				</div>
+
+			</div>
+		</div>
 	</div>
 
 
 
-
-
-
-
-
 	<!-- FEEDBACK MODAL-->
-	<div class="feedback-modal modal slideInUp animated" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
+	<div class="feedback-modal modal  slideInUp animated" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
 
-	    	<button type="button" class="btn" data-dismiss="modal">
-	    		<span class="icon-bar"></span>
-	    		<span class="icon-bar"></span>
-	    	</button>
+				<button type="button" class="btn" data-dismiss="modal">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
 
-	      <div class="modal-body">
-
+				<div class="modal-body">
 
 					<div class="col-md-12 success-info">
 						<div id="success-message"></div>
 						<div id="fail-message"></div>
 					</div>
-					<h2>Связаться с нами</h2>
-	      	<form id="feedback" method="post" action="feedback.php" class="contact-form">
 
-
-
+				  	<form  method="post" action="" class="contact-form">
+						<h2>Связаться с нами</h2>
 						<label>Ваше имя</label>
-						<input class="form-control" 
-									 type="text" 
-									 name="name" 
-									 placeholder="Имя" autocomplete="off" required="required"
-									 data-toggle="popover" 
-									 data-trigger="focus"
-									 data-content="Введите своё имя"/>
-
-
-
+						<input class="form-control" type="text" name="name" placeholder="Имя" autocomplete="off"/>
 						<label>Электронная почта</label>
-						<input class="form-control" 
-									 type="email" 
-									 name="email" 
-									 placeholder="email" autocomplete="off" required="required"
-									 data-toggle="popover" 
-									 data-trigger="focus"
-									 data-content="Укажите электронную почту"/>
-
-
+						<input class="form-control" type="text" name="email" placeholder="email" autocomplete="off"/>
 						<label>Номер телефона</label>
-						<input class="form-control" type="tel" 
-									 name="phone" 
-									 placeholder="+998 (xx) xxx-xx-xx" autocomplete="off" required="required"
-									 minlength="14"
-									 data-toggle="popover" 
-									 data-trigger="focus"
-									 data-content="Укажите номер телефона"/>
-
-
-
-						<textarea class="form-control" 
-									 name="message" 
-									 placeholder="Сообщение"></textarea>
-						
-	      	</form>
-			      <div class="modal-footer">
-			      	<button type="submit" class="align-right btn-opacity" form="feedback">Отправить</button>
-			      </div>
-
-	      </div>
-	    </div>
-	  </div>
+						<input class="form-control" type="text" name="phone" placeholder="+998 (xx) xxx-xx-xx" autocomplete="off"/>
+						<textarea class="form-control" name="message" placeholder="Сообщение"></textarea>
+						<div class="modal-footer">
+							<button type="submit" class="align-right btn-opacity">Отправить</button>
+						</div>
+			  		</form>
+			  </div>
+			</div>
+		</div>
 	</div>
-
-
 
 
 
@@ -212,200 +176,185 @@
 
 
 
-
-
-
-
-		<div class="services-in list-style-1">
-
-			<!-- BANNER -->
-			<div id="banner" class="row" style="background-image: url('img/slider/slide-1.jpg');">
-				<div class="banner-shadow" 
-									data-aos="fade"
-									data-aos-once="true"
-									data-aos-duration="1000"
-									data-aos-once="true"
-									data-aos-delay="200">
-				</div>
-					<div class="container">
-
-					<div class="banner-content">
-
-						<h1 data-aos="fade-right"
-								data-aos-duration="1000"
-								data-aos-once="true"
-								data-aos-delay="300">
-								Жд перевозки</h1>
-
-						<ol class="breadcrumb padd-hor-0 marg-bottom-0 marg-top-15" 
-								data-aos="fade-left"
-								data-aos-duration="1000"
-								data-aos-once="true"
-								data-aos-delay="300">
-
-						  <li><a href="index.html">Главная</a></li>
-						  <li><a href="services.html">Услуги</a></li>
-						  <li class="active"><a href="">Жд перевозки</a></li>
-
-						</ol>
-					</div>
-
-				</div> <!-- ./CONTEINER -->
-			</div><!-- ./BANNER -->
-
-			<div class="container service m-v-30">
-				<section class="row service-section list-style-1">
-						<h1>Железнодорожные перевозки</h1>
-						<h3>
-							ЖД грузоперевозки вагонами с 
-							<em>
-								<font color="#e21e24">MAN</font>
-								<font color="#1f4c99">LOGISTIC SERVICE</font>
-							</em> – это экономия времени и финансовых средств
-						</h3>
-
-						<div class="m-v-30">
-							<div class="service-content bg-color-white p-30 wow animation">
-								<p>
-									В распоряжении группы компаний, которые входят в 
-									состав транспортного холдинга <em>MAN LOGISTIC SERVICE</em>, 
-									имеется большой парк собственной и арендованной грузовой и 
-									железнодорожной техники, что помогает нам слажено и 
-									профессионально организовать свою работу, обеспечивая перевозку 
-									разных партий грузов на любые расстояния в максимально сжатые сроки.
-								</p>
-								<p>
-									Если вас интересует качественная, надежная, 
-									безопасная и недорогая перевозка грузов железнодорожным транспортом, 
-									то вы обратились по адресу. <em>MAN LOGISTIC SERVICE</em> – это ЖД оператор, 
-									в сферу деятельности которого входит организация грузоперевозок железной дорогой 
-								</p>
-							</div>
-						</div>
-
-				</section><!-- ./ROW -->
-
-				<section class="row service-section list-style-1">
-						<h3>Организация грузоперевозок, преимущества железнодорожных перевозок</h3>
-						<div class="m-v-30">
-							<div class="service-content bg-color-white p-30 wow animation">
-								<p>
-									<h4>Грузоперевозки ЖД имеют ряд неоспоримых преимуществ, среди которых можно выделить следующие:</h4>
-									<ul>
-										<li>Удобство</li>
-										<li>Экономичность</li>
-										<li>Практичность и мобильность</li>
-										<li>Надежность и безопасность</li>
-										<li>Высокая степень сохранности грузов</li>
-										<li>
-											Универсальность. ЖД перевозки вагонами позволяют транспортировать 
-											любые виды грузов, в том числе машины, станки, оборудование, 
-											строительные материалы, продукты питания, одежду, обувь, инструменты и т.д.
-										</li>
-									</ul>																					
-								</p>
-								<p>
-									Перевозка груза ЖД транспортом – 
-									это очень популярная и востребованная услуга, 
-									которая занимает второе место после автомобильных грузоперевозок. 
-									Огромным преимуществом железнодорожных перевозок вагонами является 
-									их независимость от погодных условий и прочих факторов, которые, 
-									как правило, мешают своевременной транспортировке грузов до места назначения 
-									другими видами транспорта.
-								</p>
-							</div>
-						</div>	
-				</section><!-- ./ROW -->
-			</div><!-- ./CONTEINER -->
-
-			<!-- BONUS -->
-			<div class="row m-v-30">
-				<div class="skin-bonus p-v-50" style="background-image: url('img/semi-bg-1.jpg');">
-					<div class="container">
-						<div class="align-center color-white">
-							<h2>Получите беспланый расчет тарифа</h2>
-							<button class="btn-blue-1" type="button" data-toggle="modal" data-target="#feedback-modal">
-				  				<b class="clc">Связаться с нами</b>
-				  		</button>
-						</div>
-					</div>
-				</div>
-			</div><!-- ./BONUS -->
-
-
+		<!-- BANNER -->
+		<div id="banner" class="row" style="background-image: url('img/slider/slide-1.jpg');">
+			<div class="banner-shadow" data-aos="fade" data-aos-once="true" data-aos-duration="1000" data-aos-delay="200"></div>
 			<div class="container">
 
-				<h1>Отзывы</h1>
+				<div class="banner-content">
+					<h1 data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" data-aos-delay="300">
+						Жд перевозки
+					</h1>
+					<ol class="breadcrumb p-h-0 m-b-0 m-t-15" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" data-aos-delay="300">
+					  <li><a href="index.html">Главная</a></li>
+					  <li><a href="services.html">Услуги</a></li>
+					  <li class="active"><a href="">Жд перевозки</a></li>
+					</ol>
+				</div>
 
+			</div> <!-- ./CONTEINER -->
+		</div><!-- ./BANNER -->
+
+
+		<div class="row services-in">
+
+			<div class="bg-line">
+				<svg>
+				  	<g id="lineGr">
+				  		<path class="line-1" data-0="stroke-dashoffset:10297;" data-1800="stroke-dashoffset:15436;" d="M 0,2268.9744 C 0,2265.8097 1.3010447,2264.1738 13.5,2252 L 27,2238.5278 V 2078.679 1918.8301 l 99.75,-100.4014 99.75,-100.4015 388,-0.028 388,-0.028 5.75,-5.0687 5.75,-5.0687 v -358.23 -358.23012 l -2.8047,-2.68709 L 1008.3906,986 524.44528,985.95837 40.5,985.91675 36.742379,982.59581 32.984758,979.27487 33.242379,916.93565 33.5,854.59643 50.71785,838.54822 67.935699,822.5 l 0.0096,-59.5 0.0097,-59.5 -17.401012,-16 -17.401012,-16 L 33.076487,479.95295 33,288.4059 36.792163,284.70295 40.584325,281 H 555.11785 1069.6514 l 2.1743,-2.31445 L 1074,276.3711 V 138.18555 0 h 2.5 2.5 V 139.29705 278.5941 l -3.7922,3.70295 L 1071.4157,286 H 556.88215 42.348628 L 40.174314,288.31445 38,290.6289 v 189.52567 189.52568 l 17.5,16.26301 17.5,16.263 v 61.31354 c 0,34.54032 -0.385564,61.45909 -0.882983,61.64687 -0.485641,0.18333 -8.360641,7.27605 -17.5,15.7616 L 38,856.35654 v 60.66674 c 0,57.50296 0.09537,60.75305 1.828741,62.32173 C 41.525105,980.8802 76.720334,981 526.04089,981 h 484.38341 l 4.2878,4.20821 4.2879,4.20821 v 360.20188 360.2019 l -7.3631,6.5899 -7.363,6.5899 H 616.22041 228.16693 L 130.08346,1821.7368 32,1920.4737 v 160.0249 160.0248 L 16,2256.5 c -15.91300475,15.8897 -16,15.9575 -16,12.4744 z"/>
+				  		<path class="line-2" data-0="stroke-dashoffset:10297;" data-1800="stroke-dashoffset:15436;" d="M 0,2337.9901 C 0,2334.72 2.4014968,2332.0889 36.5,2298 L 73,2261.5103 73.038067,2094.5051 73.076135,1927.5 198.28807,1801.7065 323.5,1675.9131 l 365.36421,0.043 365.36419,0.043 5.8858,-5.0989 5.8858,-5.099 v -319.714 -319.7139 l -2.8047,-2.6871 -2.8047,-2.6871 H 575.26223 90.133899 L 86.56695,1016.6461 83,1012.294 V 932.38629 852.47857 L 100.5,835 118,817.52143 V 754 690.47857 L 100.5,673 83,655.52143 V 449.46366 243.4059 L 86.792163,239.70295 90.584325,236 H 554.11785 1017.6514 l 2.1743,-2.31445 L 1022,231.3711 V 115.68555 0 h 2.5 2.5 l -0.027,116.75 -0.027,116.75 -3.4864,3.75 -3.4864,3.75 H 556.16096 92.348728 L 90.174414,243.31445 88,245.6289 V 449.57517 653.52143 L 105.5,671 123,688.47857 v 65.57658 65.57659 L 105.5,837.02849 88,854.42523 v 78.1003 78.10027 l 2.804719,2.6871 2.804719,2.6871 H 578.09651 1062.5836 l 4.2082,4.2879 4.2082,4.2878 v 321.6185 321.6185 l -7.1217,6.5937 -7.1218,6.5936 H 691.02337 325.29021 L 201.64511,1805.3924 78,1929.7847 v 166.8625 166.8624 L 39,2302.5 c -37.8127531,37.8034 -39,38.8838 -39,35.4901 z"/>
+				 	 </g>
+				</svg>
+			</div>
+
+			<div class="container">
+				<div class="service-in-content m-v-60 list-style-1 parag-m-v-10">
+						<h1>Железнодорожные перевозки</h1>
+						<h3>ЖД грузоперевозки вагонами с <em><font color="#e21e24">MAN </font><font color="#1f4c99">LOGISTIC SERVICE</font></em> – это экономия времени и финансовых средств</h3>
+						<p>
+							В распоряжении группы компаний, которые входят в 
+							состав транспортного холдинга <em>MAN LOGISTIC SERVICE</em>, 
+							имеется большой парк собственной и арендованной грузовой и 
+							железнодорожной техники, что помогает нам слажено и 
+							профессионально организовать свою работу, обеспечивая перевозку 
+							разных партий грузов на любые расстояния в максимально сжатые сроки.
+						</p>
+						<p>
+							Если вас интересует качественная, надежная, 
+							безопасная и недорогая перевозка грузов железнодорожным транспортом, 
+							то вы обратились по адресу. <em>MAN LOGISTIC SERVICE</em> – это ЖД оператор, 
+							в сферу деятельности которого входит организация грузоперевозок железной дорогой 
+						</p>
+						<p>&nbsp;</p>
+						<h3>Организация грузоперевозок, преимущества железнодорожных перевозок</h3>
+						<p>&nbsp;</p>
+						<h4>Грузоперевозки ЖД имеют ряд неоспоримых преимуществ, среди которых можно выделить следующие:</h4>
+						<p>&nbsp;</p>
+						<ul>
+							<li><b><em>Удобство</em></b></li>
+							<li><b><em>Экономичность</em></b></li>
+							<li><b><em>Практичность и мобильность</em></b></li>
+							<li><b><em>Надежность и безопасность</em></b></li>
+							<li><b><em>Высокая степень сохранности грузов</em></b></li>
+							<li>
+								<b><em>
+									Универсальность. ЖД перевозки вагонами позволяют транспортировать любые виды грузов, в том числе машины, станки, оборудование, строительные материалы, продукты питания, одежду, обувь, инструменты и т.д.
+								</em></b>
+							</li>
+						</ul>																					
+				
+						<p>&nbsp;</p>
+						<p>
+							Перевозка груза ЖД транспортом – 
+							это очень популярная и востребованная услуга, 
+							которая занимает второе место после автомобильных грузоперевозок. 
+							Огромным преимуществом железнодорожных перевозок вагонами является 
+							их независимость от погодных условий и прочих факторов, которые, 
+							как правило, мешают своевременной транспортировке грузов до места назначения 
+							другими видами транспорта.
+						</p>
+
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+
+		<!-- BONUS -->
+		<div class="row m-v-30">
+			<div class="skin-bonus p-v-50" style="background-image: url('img/semi-bg-1.jpg');">
+				<div class="container">
+					<div class="align-center color-white">
+						<h2>Получите беспланый расчет тарифа</h2>
+						<button class="btn-blue-1" type="button" data-toggle="modal" data-target="#feedback-modal">
+			  				<b class="clc">Связаться с нами</b>
+			  			</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- ./BONUS -->
+
+
+
+
+
+
+
+
+
+
+
+		<!-- REVIEWS -->
+		<div class="row">
+			<div class="container">
+				<h1>Отзывы</h1>
 				<div class="short-reviews m-v-60 m-b-120">
 				  <div class="bord">
 				  	<div class="tab-content">
 
-					    <figure role="tabpanel" class="tab-pane fade" id="review-1">
-					    		<img src="img/review-1.jpg" alt=""/>
-						    	<aside>
-						    		<b><font size="4">Азизов Ботирбек, </font></b>
-						    		<em>Предприниматель</em>
-						        <p>
-											Руководство замечательное, порядочное и с пониманием относиться ко всему! 
-											Нет ничего трудного,если все во время исполнишь свое обязательство. 
-											Встреча руководства и коллег после дальней командировки. 
-											Нет ничего трудного,если все во время исполнишь свое обязательство. 
-											Встреча руководства и коллег после дальней командировки.
-						        </p>
-						        <p>
-											Руководство замечательное, порядочное и с пониманием относиться ко всему! 
-											Нет ничего трудного,если все во время исполнишь свое обязательство. 
-											Встреча руководства и коллег после дальней командировки. 
-											Нет ничего трудного,если все во время исполнишь свое обязательство. 
-											Встреча руководства и коллег после дальней командировки.
-						        </p>
-						      </aside>
-					    </figure>
+						<figure role="tabpanel" class="tab-pane fade" id="review-1">
+							<img src="img/review-1.jpg" alt=""/>
+							<aside>
+								<b><font size="4">Азизов Ботирбек, </font></b><em>Предприниматель</em>
+								<p>
+									Руководство замечательное, порядочное и с пониманием относиться ко всему! 
+									Нет ничего трудного,если все во время исполнишь свое обязательство. 
+									Встреча руководства и коллег после дальней командировки. 
+									Нет ничего трудного,если все во время исполнишь свое обязательство. 
+									Встреча руководства и коллег после дальней командировки.
+								</p>
+								<p>
+									Руководство замечательное, порядочное и с пониманием относиться ко всему! 
+									Нет ничего трудного,если все во время исполнишь свое обязательство. 
+									Встреча руководства и коллег после дальней командировки. 
+									Нет ничего трудного,если все во время исполнишь свое обязательство. 
+									Встреча руководства и коллег после дальней командировки.
+								</p>
+							</aside>
+						</figure>
 
-					    <figure role="tabpanel" class="tab-pane fade in active" id="review-2">
-					    		<img src="img/review-2.jpg" alt=""/>
-						    	<aside>
-						    		<b><font size="4">Ботиржонов Азизбек, </font></b>
-						    		<em>Предприниматель</em>
-						        <p>
-											Руководство замечательное, порядочное и с пониманием относиться ко всему! 
-											Нет ничего трудного,если все во время исполнишь свое обязательство. 
-											Встреча руководства и коллег после дальней командировки. 
-											Нет ничего трудного,если все во время исполнишь свое обязательство. 
-											Встреча руководства и коллег после дальней командировки.
-						        </p>
-						      </aside>
-					    </figure>
+						<figure role="tabpanel" class="tab-pane fade in active" id="review-2">
+							<img src="img/review-2.jpg" alt=""/>
+							<aside>
+								<b><font size="4">Ботиржонов Азизбек, </font></b><em>Предприниматель</em>
+								<p>
+									Руководство замечательное, порядочное и с пониманием относиться ко всему! 
+									Нет ничего трудного,если все во время исполнишь свое обязательство. 
+									Встреча руководства и коллег после дальней командировки. 
+									Нет ничего трудного,если все во время исполнишь свое обязательство. 
+									Встреча руководства и коллег после дальней командировки.
+								</p>
+							</aside>
+						</figure>
 
-					    <figure role="tabpanel" class="tab-pane fade" id="review-3">
-					    		<img src="img/review-3.jpg" alt=""/>
-						    	<aside>
-						    		<b><font size="4">Авезов Рустам, </font></b>
-						    		<em>Предприниматель</em>
-						        <p>
-											Руководство замечательное, порядочное и с пониманием относиться ко всему! 
-											Нет ничего трудного,если все во время исполнишь свое обязательство.
-						        </p>
-						      </aside>
-					    </figure>
+						<figure role="tabpanel" class="tab-pane fade" id="review-3">
+							<img src="img/review-3.jpg" alt=""/>
+							<aside>
+								<b><font size="4">Авезов Рустам, </font></b><em>Предприниматель</em>
+								<p>
+									Руководство замечательное, порядочное и с пониманием относиться ко всему! 
+									Нет ничего трудного,если все во время исполнишь свое обязательство.
+								</p>
+							</aside>
+						</figure>
 
 				
-
-
-
-						 	<!-- REVIEWS-TAB PAGINATION -->
-						  <ul class="pagination-red" role="tablist">
-						    <li><a href="#review-1" data-toggle="tab"> </a></li>
-						    <li class="active"><a href="#review-2" data-toggle="tab"></a></li>
-						    <li><a href="#review-3" data-toggle="tab"></a></li>
-						  </ul>
+						<!-- REVIEWS-TAB PAGINATION -->
+						<ul class="pagination-red" role="tablist">
+							<li><a href="#review-1" data-toggle="tab"> </a></li>
+							<li class="active"><a href="#review-2" data-toggle="tab"></a></li>
+							<li><a href="#review-3" data-toggle="tab"></a></li>
+						</ul>
 
 
 				  	</div><!-- ./TAB-CONTENT -->
 				  </div>
-			</div><!-- ./CONTEINER -->
+				</div>
 
+			</div>
 		</div>
 
 
@@ -415,7 +364,13 @@
 
 
 
+
+
 	</main><!-- ./MAIN -->
+
+
+
+
 
 
 
@@ -455,25 +410,18 @@
 		</div>
 
 
-
-
 		<div class="skin-2">
 			<div class="container">
 
 				<div class="col-xs-12 footer-info">
+
 					<div class="col-md-6 copyright">
-
 						<p>
-							<a href="https://www.life-style.uz" 
-									title="Создание и продвижение сайтов в Ташкенте"
-									style="text-decoration: underline;">Создание сайтов</a> 
-
-									<em><font color="skyblue">Life</font></em>
-
-									<font color="ghostwhite">Style</font>
+							<a href="https://www.life-style.uz" title="Создание и продвижение сайтов в Ташкенте" style="text-decoration: underline;">Создание сайтов</a> 
+							<em><font color="skyblue">Life</font></em>
+							<font color="ghostwhite">Style</font>
 						</p>
 					</div>
-				
 					<div class="col-md-6 social">
 						<ul>
 							<li><a href=""><i class="fa fa-facebook"></i></a></li>
@@ -482,24 +430,19 @@
 							<li><a href=""><i class="fa fa-telegram"></i></a></li>
 						</ul>
 					</div>
+
 				</div>
 
 			</div>
 		</div>
 	</footer>
+
+
+
 	
 
-
-
-
-
-
-
-
-
-
-
-
+		<script src="js/scripts.min.js"></script>
+		<script src="js/main.js"></script>
 
 
 

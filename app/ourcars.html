@@ -6,12 +6,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		
-	  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	  	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
-   	<link rel="stylesheet" href="css/main.css">
+   		<link rel="stylesheet" href="css/main.css">
+		
+		<!-- REVOLUTION BANNER CSS SETTINGS -->
+		<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" />
 
 
     <title>Title</title>
@@ -23,65 +26,69 @@
 
   </head>
 <body>
-	<noscript>
-		<p>Ваш браузер не поддерживает скрипты!<br/> 
-			 Пожалуйста подключите в настройках браузера Javascript</p>
-	</noscript> 
-	<!-- HEADER -->
-	
-	<div class="header-hidden"></div>
 
+	<noscript><h1>Ваш браузер не поддерживает скрипты!<br/> Пожалуйста подключите в настройках браузера Javascript</h1></noscript> 
+
+	<!-- HEADER -->
+	<div class="header-hidden"></div>
 	<header id="header" class="header-scroll">
 		<div class="container">
+
 			<div class="header-navbar">
-		    <!-- LOGOTYPE -->
-	      <div class="logo">
-	      	<a  href="index.html" ><img src="img/logo.svg"/></a>
-	      </div>
-	      <!-- MENU TOGGLE BUTTON -->
-		     <button class="menu-toggle collapsed" type="button" data-toggle="modal" data-target="#menuModal">
-		       <span class="icon-bar"></span>
-		       <span class="icon-bar"></span>
-		       <span class="icon-bar"></span>
-		    </button>
-		  </div>
-      <!-- NAVBAR -->
-	  	<nav class="main-navbar">
+				<!-- LOGO -->
+				<div class="logo">
+					<a  href="index.html" ><img src="img/logo.svg"/></a>
+				</div>
+				<!-- MENU TOGGLE BUTTON -->
+				<button class="menu-toggle collapsed" type="button" data-toggle="modal" data-target="#menuModal">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
 
-	  		<div class="nav-feedback">
-		  		<button class="btn-blue-1" type="button" data-toggle="modal" data-target="#feedback-modal">
-		  				<b class="clc">Связаться с нами</b>
-		  		</button>
-		  	</div>
+			<!-- NAVBAR -->
+			<nav class="main-navbar">
 
+				<div class="nav-feedback">
+					<button class="btn-blue-1" type="button" data-toggle="modal" data-target="#feedback-modal">
+						<b class="clc">Связаться с нами</b>
+					</button>
+				</div>
 
-        <!-- MENU -->
-       	<div class="nav-menu">
-	       	<div class="nav-header">
+				<div class="nav-menu">
+					<div class="nav-header">
 
-
-	          <ul class="menu-list">
+						<ul class="menu-list">
 							<li><a href="about.html">О нас</a></li>
 							<li><a href="services.html">Услуги</a></li>
-							<li><a href="ourcars.html">Наше авто</a></li>
+							<li><a href="ourcars.html">Наше авто</a>
+								<ul class="sub-menu-1">
+									<li><a href="ourcars-in.html">Тягачи</a></li>
+									<li><a href="ourcars-in.html">Самосвалы</a></li>
+									<li><a href="ourcars-in.html">Полуприцепы</a></li>
+									<li><a href="ourcars-in.html">Прочий автотранспорт</a></li>
+								</ul>
+							</li>
 							<li><a href="reviews.html">Отзывы</a></li>
 							<li><a href="contacts.html">Контакты</a></li>
-	          </ul>
-						
+						</ul>
+						<!-- LANG -->
 						<div class="dropdown-lang">
-						  <div tabindex="1" role="button" class="dropbtn">
-						  	<span>Ру</span><i class="fa fa-angle-down"></i>
-						  </div>
-						  <div class="dropdown-content">
-						    <a href="ru">Ру</a>
-						    <a href="uz">Уз</a>
-						    <a href="en">Англ</a>
-						  </div>
+							<div tabindex="1" role="button" class="dropbtn">
+								<span>Ру</span><i class="fa fa-angle-down"></i>
+							</div>
+							<div class="dropdown-content">
+								<a href="ru">Ру</a>
+								<a href="uz">Уз</a>
+								<a href="en">Англ</a>
+							</div>
 						</div>
 
-      		</div>
-      	</div>
-	  	</nav>
+					</div>
+				</div>
+
+			</nav>
 
 		</div><!-- ./CONTAINER -->
 	</header>
@@ -89,95 +96,60 @@
 
 
 	<!-- MIN MENU MODAL -->
-  <div class="min-menu-modal modal scale a-minMenu" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="min-menu">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	    	
-	    	<button type="button" class="btn" data-dismiss="modal">
-	    		<span class="icon-bar"></span>
-	    		<span class="icon-bar"></span>
-	    	</button>
+	<div class="min-menu-modal modal scale a-minMenu" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="min-menu">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
 
-	      <div class="modal-body min-navbar">
-	      	<!-- js append menu -->
-	      </div>
-	      
-	    </div>
-	  </div>
+				<button type="button" class="btn" data-dismiss="modal">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<div class="modal-body min-navbar">
+					<!-- js append min-menu -->
+				</div>
+
+			</div>
+		</div>
 	</div>
 
 
 
-
-
-
 	<!-- FEEDBACK MODAL-->
-	<div class="feedback-modal modal slideInUp animated" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
+	<div class="feedback-modal modal  slideInUp animated" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
 
-	    	<button type="button" class="btn" data-dismiss="modal">
-	    		<span class="icon-bar"></span>
-	    		<span class="icon-bar"></span>
-	    	</button>
+				<button type="button" class="btn" data-dismiss="modal">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
 
-	      <div class="modal-body">
-
+				<div class="modal-body">
 
 					<div class="col-md-12 success-info">
 						<div id="success-message"></div>
 						<div id="fail-message"></div>
 					</div>
-					<h2>Связаться с нами</h2>
-	      	<form id="feedback" method="post" action="feedback.php" class="contact-form">
 
-
-
+				  	<form  method="post" action="" class="contact-form">
+						<h2>Связаться с нами</h2>
 						<label>Ваше имя</label>
-						<input class="form-control" 
-									 type="text" 
-									 name="name" 
-									 placeholder="Имя" autocomplete="off" required="required"
-									 data-toggle="popover" 
-									 data-trigger="focus"
-									 data-content="Введите своё имя"/>
-
-
-
+						<input class="form-control" type="text" name="name" placeholder="Имя" autocomplete="off"/>
 						<label>Электронная почта</label>
-						<input class="form-control" 
-									 type="email" 
-									 name="email" 
-									 placeholder="email" autocomplete="off" required="required"
-									 data-toggle="popover" 
-									 data-trigger="focus"
-									 data-content="Укажите электронную почту"/>
-
-
+						<input class="form-control" type="text" name="email" placeholder="email" autocomplete="off"/>
 						<label>Номер телефона</label>
-						<input class="form-control" type="tel" 
-									 name="phone" 
-									 placeholder="+998 (xx) xxx-xx-xx" autocomplete="off" required="required"
-									 minlength="14"
-									 data-toggle="popover" 
-									 data-trigger="focus"
-									 data-content="Укажите номер телефона"/>
-
-
-
-						<textarea class="form-control" 
-									 name="message" 
-									 placeholder="Сообщение"></textarea>
-						
-	      	</form>
-			      <div class="modal-footer">
-			      	<button type="submit" class="align-right btn-opacity" form="feedback">Отправить</button>
-			      </div>
-
-	      </div>
-	    </div>
-	  </div>
+						<input class="form-control" type="text" name="phone" placeholder="+998 (xx) xxx-xx-xx" autocomplete="off"/>
+						<textarea class="form-control" name="message" placeholder="Сообщение"></textarea>
+						<div class="modal-footer">
+							<button type="submit" class="align-right btn-opacity">Отправить</button>
+						</div>
+			  		</form>
+			  </div>
+			</div>
+		</div>
 	</div>
+
 
 
 
@@ -205,43 +177,27 @@
 
 
 
+		<!-- BANNER -->
+		<div id="banner" class="row" style="background-image: url('img/banner/services.jpg');">
+			<div class="banner-shadow" data-aos="fade" data-aos-once="true" data-aos-duration="1000" data-aos-delay="200"></div>
+			<div class="container">
 
-
-
-		<div class="ourcars list-style-1">
-
-			<!-- BANNER -->
-			<div id="banner" class="row" style="background-image: url('img/banner/services.jpg');">
-				<div class="banner-shadow" 
-									data-aos="fade"
-									data-aos-once="true"
-									data-aos-duration="1000"
-									data-aos-delay="200">
+				<div class="banner-content">
+					<h1 data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" data-aos-delay="300">
+						Наше авто
+					</h1>
+					<ol class="breadcrumb p-h-0 m-b-0 m-t-15" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" data-aos-delay="300">
+					  <li><a href="index.html">Главная</a></li>
+					  <li class="active"><a href="">Наше авто</a></li>
+					</ol>
 				</div>
-				<div class="container">
 
-					<div class="banner-content">
+			</div> <!-- ./CONTEINER -->
+		</div><!-- ./BANNER -->
 
-						<h1 data-aos="fade-right"
-								data-aos-duration="1000"
-								data-aos-once="true"
-								data-aos-delay="300">
-								Наше авто</h1>
 
-						<ol class="breadcrumb padd-hor-0 marg-bottom-0 marg-top-15" 
-								data-aos="fade-left"
-								data-aos-duration="1000"
-								data-aos-once="true"
-								data-aos-delay="300">
 
-						  <li><a href="index.html">Главная</a></li>
-						  <li class="active"><a href="">Наше авто</a></li>
-
-						</ol>
-					</div>
-
-				</div> <!-- ./CONTEINER -->
-			</div><!-- ./BANNER -->
+		<div class="ourcars list-style-1 p-v-60">
 
 
 
@@ -255,44 +211,43 @@
 			</div>
 
 
-			<div class="row ourcars-content-1">
-				<div class="container m-v-60">
-					<h1>Наши авто</h1>
-					<div class="desc-content" data-aos="fade">
-						<p>
-							Создавая эту страничку, мы обещали, что будем честно сообщать о себе хорошее и плохое. Так вот, хорошая новость, в январе-феврале мы отгрузили из РФ 11 машин со сборным грузом и 3 машины с другим груз
-						</p>
+			<div class="row">
+				<div class="container">
+					<h1>Наше авто</h1>
+
+					<div class="ourcars-content row m-v-60">
+
+						<div class="box ourcars-item" style="background-image: url(img/slider/slide-1.jpg);" data-aos="fade" data-aos-offset="200" data-aos-once="true">
+							<a href="ourcars-in.html">Тягачи</a>
+						</div>
+
+						<div class="box ourcars-item" style="background-image: url(img/slider/slide-2.jpg);" data-aos="fade" data-aos-offset="200" data-aos-once="true">
+							<a href="ourcars-in.html">Самосвалы</a>
+						</div>
+						
+						<div class="box ourcars-item" style="background-image: url(img/slider/slide-3.jpg);" data-aos="fade" data-aos-offset="200" data-aos-once="true">
+							<a href="ourcars-in.html">Полуприцепы</a>
+						</div>
+
+						<div class="box ourcars-item" style="background-image: url(img/slider/slide-4.jpg);" data-aos="fade" data-aos-offset="200" data-aos-once="true">
+							<a href="ourcars-in.html">Прочий автотранспорт</a>
+						</div>
 					</div>
+
 				</div>
 			</div>
 
-<!-- 
-			<div class="row ourcars-content-2 bg-parallax">
-				<div class="over-skin">
-					<div id="lax"></div>
-					<div
-						class="parallax-image-wrapper parallax-image-wrapper-100"
-						data-anchor-target=".ourcars-content-1 + .bg-parallax"
-						data-bottom-top="transform:translate3d(0px, 200%, 0px)"
-						data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-						<div class="bg-black"></div>
-						<div
-							class="parallax-image parallax-image-100"
-							style="background-image:url(img/other/cross-boy.jpg)"
-							data-anchor-target=".ourcars-content-1 + .bg-parallax"
-							data-bottom-top="transform: translate3d(0px, -40%, 0px);"
-							data-top-bottom="transform: translate3d(0px, 40%, 0px);"
-						></div>
-					</div>
-				</div>
-			</div>
- -->
 
 		</div>
 
 
 
 	</main><!-- ./MAIN -->
+
+
+
+
+
 
 
 
@@ -329,25 +284,18 @@
 		</div>
 
 
-
-
 		<div class="skin-2">
 			<div class="container">
 
 				<div class="col-xs-12 footer-info">
+
 					<div class="col-md-6 copyright">
-
 						<p>
-							<a href="https://www.life-style.uz" 
-									title="Создание и продвижение сайтов в Ташкенте"
-									style="text-decoration: underline;">Создание сайтов</a> 
-
-									<em><font color="skyblue">Life</font></em>
-
-									<font color="ghostwhite">Style</font>
+							<a href="https://www.life-style.uz" title="Создание и продвижение сайтов в Ташкенте" style="text-decoration: underline;">Создание сайтов</a> 
+							<em><font color="skyblue">Life</font></em>
+							<font color="ghostwhite">Style</font>
 						</p>
 					</div>
-				
 					<div class="col-md-6 social">
 						<ul>
 							<li><a href=""><i class="fa fa-facebook"></i></a></li>
@@ -356,26 +304,19 @@
 							<li><a href=""><i class="fa fa-telegram"></i></a></li>
 						</ul>
 					</div>
+
 				</div>
 
 			</div>
 		</div>
 	</footer>
+
+
+
 	
 
-
-
-
-	<script src="js/scripts.min.js"></script>
-	<script src="js/main.js"></script>
-
-
-
-
-
-
-
-
+		<script src="js/scripts.min.js"></script>
+		<script src="js/main.js"></script>
 
 
 

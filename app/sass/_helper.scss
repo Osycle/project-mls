@@ -14,9 +14,7 @@
 //-----------------------------PADD
 html{
 	
-.p-0{
-	padding: 0;
-}
+
 @for $i from 0 through 24 {
 	.p-h-#{5*$i} { 
 		padding-left: 5*$i+px;
@@ -73,9 +71,6 @@ html{
 .m-auto{
 	margin: auto;
 }
-/* [class*="m-h"], [class*="m-v"]{
-	overflow: hidden;	
-} */
 
 //--------------------Parag-MARGIN
 @for $i from 0 through 12 {
@@ -127,46 +122,6 @@ html{
 	}
 }
 
-
-//------------------Parag-PADDING
-@for $i from 0 through 12 {
-	.parag-p-t-#{5*$i} { 
-		p{
-			padding-top: 5*$i+px;
-		}
-	}
-}
-@for $i from 0 through 12 {
-	.parag-p-b-#{5*$i} { 
-		p{
-			padding-bottom: 5*$i+px;
-		}
-	}
-}
-
-@for $i from 0 through 12 {
-	.parag-p-l-#{5*$i} { 
-		p{
-			padding-left: 5*$i+px;
-		}
-	}
-}
-@for $i from 0 through 12 {
-	.parag-p-r-#{5*$i} { 
-		p{
-			padding-right: 5*$i+px;
-		}
-	}
-}
-
-@for $i from 0 through 12 {
-	.parag-p-h-#{5*$i} { 
-		p{
-			padding-right: 5*$i+px;
-			padding-left: 5*$i+px;
-		}
-	}
-}
 
 
 
@@ -255,6 +210,182 @@ html{
 	}
 }
 
+// PIE
+
+
+
+
+
+
+// PIE CELLS
+
+
+[class*="pie-cells"]{
+
+	margin-left: -15px;
+	margin-right: -15px;
+	line-height: 0;
+	letter-spacing: -5px;
+	*{
+		line-height: none;
+		letter-spacing: normal;
+	}
+
+
+	&.left{ text-align: left; }
+	&.center{ text-align: center; }
+	&.right{ text-align: right; }
+
+	&.center, &.left, &.right{
+	 *{
+			text-align: initial;
+			text-align: unset;
+		}
+	}
+	.pie-cell{
+		display: inline-block;
+		display: inline-table;
+		padding-left: 15px;
+		padding-right: 15px;
+		position: relative;
+	}
+
+
+}
+@for $i from 0 through 12 {
+	.pie-cells-#{$i}{
+		.pie-cell{
+			width: ( 100/$i )+%;
+		}
+	}
+}
+
+
+
+
+
+// PIE FLEX
+.pie-flex-content{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+	flex-flow: row wrap;
+}
+[class*="pie-xs-flex"], [class*="pie-sm-flex"], [class*="pie-md-flex"], [class*="pie-lg-flex"]{
+	align-self: center;
+}
+@for $i from 0 through 10{
+	.pie-xs-flex-#{$i} {
+		flex-basis: (10*$i)+%;
+	}
+}
+
+
+
+@media (min-width:768px){
+	@for $i from 0 through 10{
+		.pie-sm-flex-#{$i} {
+			flex-basis: (10*$i)+%;
+		}
+	}
+}
+
+@media (min-width:992px){
+	@for $i from 0 through 10{
+		.pie-md-flex-#{$i} {
+			flex-basis: (10*$i)+%;
+		}
+	}
+}
+
+
+@media (min-width:1200px){
+	@for $i from 0 through 10{
+		.pie-lg-flex-#{$i} {
+			flex-basis: (10*$i)+%;
+		}
+	}
+}
+
+
+
+
+
+// PIE BOOTSTRAP
+
+
+
+@for $i from 0 through 12{
+	.pie-xs-#{$i}{
+		width: ( ($i*100) /12)+%;
+	}
+}
+[class*="pie-xs"]:not([class*="-flex"]){
+	display: table-cell;
+	vertical-align: middle;
+}
+@media (min-width:768px){
+	@for $i from 0 through 12{
+		.pie-sm-#{$i}{
+			width: ( ($i*100) /12)+%;
+		}
+	}
+}
+
+@media (min-width:992px){
+	[class*="pie-md"]:not([class*="-flex"]){
+		display: table-cell;
+		vertical-align: middle;
+	}
+	@for $i from 0 through 12{
+		.pie-md-#{$i}{
+			width: ( ($i*100) /12)+%;
+		}
+	}
+}
+
+@media (min-width:1200px){
+	[class*="pie-lg"]:not([class*="-flex"]){
+		display: table-cell;
+		vertical-align: middle;
+	}
+	@for $i from 0 through 12{
+		.pie-lg-#{$i}{
+			width: ( ($i*100) /12)+%;
+		}
+	}
+}
+
+
+
+@for $i from 0 through 12{
+	.pie-xs-elastic-#{$i}{
+		width: ( 0.0 + ($i/12) )+% ;
+	}
+}
+@media (min-width:768px){
+	@for $i from 0 through 12{
+		.pie-sm-elastic-#{$i}{
+			width: ( 0.0 + ($i/12) )+% ;
+		}
+	}
+}
+@media (min-width:992px){
+	@for $i from 0 through 12{
+		.pie-md-elastic-#{$i}{
+			width: ( 0.0 + ($i/12) )+% ;
+		}
+	}
+}
+
+@media (min-width:1200px){
+	@for $i from 0 through 12{
+		.pie-lg-elastic-#{$i}{
+			width: ( 0.0 + ($i/12) )+% ;
+		}
+	}
+}
 
 
 
@@ -338,6 +469,10 @@ html{
 	text-transform: none;
 }
 
+
+.relative{
+	position: relative;
+}
 
 
 @media (max-width: 991px){

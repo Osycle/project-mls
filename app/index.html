@@ -6,22 +6,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		
-	  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	  	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
-   	<link rel="stylesheet" href="css/main.css">
-
-
-		<script src="js/scripts.min.js"></script>
-		<script src="js/main.js"></script>
+   		<link rel="stylesheet" href="css/main.css">
 		
 		<!-- REVOLUTION BANNER CSS SETTINGS -->
 		<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" />
-		<!-- jQuery REVOLUTION Slider  -->
-		<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-		<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+
 
     <title>Title</title>
 
@@ -32,64 +26,69 @@
 
   </head>
 <body>
-	<noscript>
-		<h1>Ваш браузер не поддерживает скрипты!<br/> 
-			 Пожалуйста подключите в настройках браузера Javascript</h1>
-	</noscript> 
+
+	<noscript><h1>Ваш браузер не поддерживает скрипты!<br/> Пожалуйста подключите в настройках браузера Javascript</h1></noscript> 
+
 	<!-- HEADER -->
-	
 	<div class="header-hidden"></div>
 	<header id="header" class="header-scroll">
 		<div class="container">
+
 			<div class="header-navbar">
-		    <!-- LOGOTYPE -->
-	      <div class="logo">
-	      	<a  href="index.html" ><img src="img/logo.svg"/></a>
-	      </div>
-	      <!-- MENU TOGGLE BUTTON -->
-		     <button class="menu-toggle collapsed" type="button" data-toggle="modal" data-target="#menuModal">
-		       <span class="icon-bar"></span>
-		       <span class="icon-bar"></span>
-		       <span class="icon-bar"></span>
-		    </button>
-		  </div>
-      <!-- NAVBAR -->
-	  	<nav class="main-navbar">
+				<!-- LOGO -->
+				<div class="logo">
+					<a  href="index.html" ><img src="img/logo.svg"/></a>
+				</div>
+				<!-- MENU TOGGLE BUTTON -->
+				<button class="menu-toggle collapsed" type="button" data-toggle="modal" data-target="#menuModal">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
 
-	  		<div class="nav-feedback">
-		  		<button class="btn-blue-1" type="button" data-toggle="modal" data-target="#feedback-modal">
-		  				<b class="clc">Связаться с нами</b>
-		  		</button>
-		  	</div>
+			<!-- NAVBAR -->
+			<nav class="main-navbar">
 
+				<div class="nav-feedback">
+					<button class="btn-blue-1" type="button" data-toggle="modal" data-target="#feedback-modal">
+						<b class="clc">Связаться с нами</b>
+					</button>
+				</div>
 
-        <!-- MENU -->
-       	<div class="nav-menu">
-	       	<div class="nav-header">
+				<div class="nav-menu">
+					<div class="nav-header">
 
-
-	          <ul class="menu-list">
+						<ul class="menu-list">
 							<li><a href="about.html">О нас</a></li>
 							<li><a href="services.html">Услуги</a></li>
-							<li><a href="ourcars.html">Наше авто</a></li>
+							<li><a href="ourcars.html">Наше авто</a>
+								<ul class="sub-menu-1">
+									<li><a href="ourcars-in.html">Тягачи</a></li>
+									<li><a href="ourcars-in.html">Самосвалы</a></li>
+									<li><a href="ourcars-in.html">Полуприцепы</a></li>
+									<li><a href="ourcars-in.html">Прочий автотранспорт</a></li>
+								</ul>
+							</li>
 							<li><a href="reviews.html">Отзывы</a></li>
 							<li><a href="contacts.html">Контакты</a></li>
-	          </ul>
-						
+						</ul>
+						<!-- LANG -->
 						<div class="dropdown-lang">
-						  <div tabindex="1" role="button" class="dropbtn">
-						  	<span>Ру</span><i class="fa fa-angle-down"></i>
-						  </div>
-						  <div class="dropdown-content">
-						    <a href="ru">Ру</a>
-						    <a href="uz">Уз</a>
-						    <a href="en">Англ</a>
-						  </div>
+							<div tabindex="1" role="button" class="dropbtn">
+								<span>Ру</span><i class="fa fa-angle-down"></i>
+							</div>
+							<div class="dropdown-content">
+								<a href="ru">Ру</a>
+								<a href="uz">Уз</a>
+								<a href="en">Англ</a>
+							</div>
 						</div>
 
-      		</div>
-      	</div>
-	  	</nav>
+					</div>
+				</div>
+
+			</nav>
 
 		</div><!-- ./CONTAINER -->
 	</header>
@@ -97,94 +96,58 @@
 
 
 	<!-- MIN MENU MODAL -->
-  <div class="min-menu-modal modal scale a-minMenu" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="min-menu">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	    	
-	    	<button type="button" class="btn" data-dismiss="modal">
-	    		<span class="icon-bar"></span>
-	    		<span class="icon-bar"></span>
-	    	</button>
+	<div class="min-menu-modal modal scale a-minMenu" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="min-menu">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
 
-	      <div class="modal-body min-navbar">
-	      	<!-- js append menu -->
-	      </div>
-	      
-	    </div>
-	  </div>
+				<button type="button" class="btn" data-dismiss="modal">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<div class="modal-body min-navbar">
+					<!-- js append min-menu -->
+				</div>
+
+			</div>
+		</div>
 	</div>
-
-
-
 
 
 
 	<!-- FEEDBACK MODAL-->
 	<div class="feedback-modal modal  slideInUp animated" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
 
-	    	<button type="button" class="btn" data-dismiss="modal">
-	    		<span class="icon-bar"></span>
-	    		<span class="icon-bar"></span>
-	    	</button>
+				<button type="button" class="btn" data-dismiss="modal">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
 
-	      <div class="modal-body">
-
+				<div class="modal-body">
 
 					<div class="col-md-12 success-info">
 						<div id="success-message"></div>
 						<div id="fail-message"></div>
 					</div>
-					<h2>Связаться с нами</h2>
-	      	<form id="feedback" method="post" action="feedback.php" class="contact-form">
 
-
-
+				  	<form  method="post" action="" class="contact-form">
+						<h2>Связаться с нами</h2>
 						<label>Ваше имя</label>
-						<input class="form-control" 
-									 type="text" 
-									 name="name" 
-									 placeholder="Имя" autocomplete="off" required="required"
-									 data-toggle="popover" 
-									 data-trigger="focus"
-									 data-content="Введите своё имя"/>
-
-
-
+						<input class="form-control" type="text" name="name" placeholder="Имя" autocomplete="off"/>
 						<label>Электронная почта</label>
-						<input class="form-control" 
-									 type="email" 
-									 name="email" 
-									 placeholder="email" autocomplete="off" required="required"
-									 data-toggle="popover" 
-									 data-trigger="focus"
-									 data-content="Укажите электронную почту"/>
-
-
+						<input class="form-control" type="text" name="email" placeholder="email" autocomplete="off"/>
 						<label>Номер телефона</label>
-						<input class="form-control" type="tel" 
-									 name="phone" 
-									 placeholder="+998 (xx) xxx-xx-xx" autocomplete="off" required="required"
-									 minlength="14"
-									 data-toggle="popover" 
-									 data-trigger="focus"
-									 data-content="Укажите номер телефона"/>
-
-
-
-						<textarea class="form-control" 
-									 name="message" 
-									 placeholder="Сообщение"></textarea>
-						
-	      	</form>
-			      <div class="modal-footer">
-			      	<button type="submit" class="align-right btn-opacity" form="feedback">Отправить</button>
-			      </div>
-
-	      </div>
-	    </div>
-	  </div>
+						<input class="form-control" type="text" name="phone" placeholder="+998 (xx) xxx-xx-xx" autocomplete="off"/>
+						<textarea class="form-control" name="message" placeholder="Сообщение"></textarea>
+						<div class="modal-footer">
+							<button type="submit" class="align-right btn-opacity">Отправить</button>
+						</div>
+			  		</form>
+			  </div>
+			</div>
+		</div>
 	</div>
 
 
@@ -212,28 +175,72 @@
 			<div class="rev-slider">
 				<ul>
 
-
-
-
-
-
-
 					<!-- SLIDE -->
-					<li class="slide-1" 
-							data-transition="zoomout"
-							data-masterspeed="800">
+					<li class="slide-1" data-transition="zoomout" data-masterspeed="800">
 
 						<img src="img/slider/slide-1.jpg">
 
 						<div class="caption customin " 
-								 data-x="center" 
-								 data-y="center"
-								 data-voffset="-150"
-								 data-speed="500" 
-								 data-start="700" 
-								 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								 data-easing="easeOutBack">
+								data-x="center" 
+								data-y="center"
+								data-voffset="-150"
+								data-speed="500" 
+								data-start="700" 
+								data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-easing="easeOutBack">
 							<h1>Авто перевозки</h1>
+						</div>
+
+
+						<div class="tp-caption sfb fade start" 
+								data-x="center" 
+								data-y="center" 
+								data-voffset="-50"
+								data-speed="500" 
+								data-start="900" >
+							
+							<p>
+								Автомобильная перевозка - один из самых удобных 
+								видов доставки грузов. Оперативность этого вида 
+								транспортировки привлекает большое количество клиентов, 
+								именно поэтому мы будем рады предложить вам 
+								конкурентоспособные тарифы на транспортировку вашего 
+								груза автомобильным транспортом.
+							</p>
+
+						</div>
+
+
+						<div class="tp-caption customin start show" 
+								data-x="center" 
+								data-y="center" 
+								data-voffset="50" 
+								data-speed="500"
+								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+								data-start="1000">
+							<div class="btn-red-1">
+								<a href="services-in.html">Подробнее</a>
+							</div>
+						</div>
+
+					</li>
+
+
+
+					<!-- SLIDE -->
+					<li class="slide-2" data-transition="zoomout" data-masterspeed="800">
+
+						<img src="img/slider/slide-2.jpg">
+
+						<div class="caption customin " 
+								data-x="center" 
+								data-y="center"
+								data-voffset="-150"
+								data-speed="500" 
+								data-start="700" 
+								data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-easing="easeOutBack">
+							<h1>ЖД перевозки</h1>
 						</div>
 
 
@@ -245,100 +252,51 @@
 								 data-start="900" >
 							
 							<p>
-								Автомобильная перевозка - один из самых удобных видов доставки грузов. Оперативность этого вида транспортировки привлекает большое количество клиентов, именно поэтому мы будем рады предложить вам конкурентоспособные тарифы на транспортировку вашего груза автомобильным транспортом.
+								Вид наземного транспорта, перевозка грузов и 
+								пассажиров на котором осуществляется колёсными 
+								транспортными средствами по рельсовым путям.
 							</p>
 
 						</div>
 
 
 						<div class="tp-caption customin start show" 
-								 data-x="center" 
-								 data-y="center" 
-								 data-voffset="50" 
-								 data-speed="500"
-								 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								 data-start="1000">
+								data-x="center" 
+								data-y="center" 
+								data-voffset="50" 
+								data-speed="500"
+								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+								data-start="1000">
 							<div class="btn-red-1">
-									<a href="services-in.html">Подробнее</a>
-							</div>
-						</div>
-
-					</li>
-
-
-
-					<!-- SLIDE -->
-					<li class="slide-2" 
-							data-transition="zoomout"
-							data-masterspeed="800">
-
-						<img src="img/slider/slide-2.jpg">
-
-						<div class="caption customin " 
-								 data-x="center" 
-								 data-y="center"
-								 data-voffset="-150"
-								 data-speed="500" 
-								 data-start="700" 
-								 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								 data-easing="easeOutBack">
-							<h1 >ЖД перевозки</h1>
-						</div>
-
-
-						<div class="tp-caption sfb fade  start" 
-								 data-x="center" 
-								 data-y="center" 
-								 data-voffset="-50"
-								 data-speed="500" 
-								 data-start="900" >
-							
-							<p>Вид наземного транспорта, перевозка грузов и 
-								пассажиров на котором осуществляется колёсными 
-								транспортными средствами по рельсовым путям.</p>
-
-						</div>
-
-
-						<div class="tp-caption customin start show" 
-								 data-x="center" 
-								 data-y="center" 
-								 data-voffset="50" 
-								 data-speed="500"
-								 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								 data-start="1000">
-							<div class="btn-red-1">
-									<a href="services-in.html">Подробнее</a>
+								<a href="services-in.html">Подробнее</a>
 							</div>
 						</div>
 
 					</li>
 
 					<!-- SLIDE -->
-				<li class="slide-3" 
-							data-transition="zoomout"
-							data-masterspeed="800">
+				<li class="slide-3" data-transition="zoomout" data-masterspeed="800">
 
 						<img src="img/slider/slide-3.jpg">
 
 						<div class="caption customin " 
-								 data-x="center" 
-								 data-y="center"
-								 data-voffset="-150"
-								 data-speed="500" 
-								 data-start="700" 
-								 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								 data-easing="easeOutBack">
+								data-x="center" 
+								data-y="center"
+								data-voffset="-150"
+								data-speed="500" 
+								data-start="700" 
+								data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-easing="easeOutBack">
 							<h1>Авиаперевозки</h1>
 						</div>
 
 
 						<div class="tp-caption sfb fade  start" 
-								 data-x="center" 
-								 data-y="center" 
-								 data-voffset="-50"
-								 data-speed="500" 
-								 data-start="900" >
+								data-x="center" 
+								data-y="center" 
+								data-voffset="-50"
+								data-speed="500" 
+								data-start="900" >
 							
 							<p>
 								Авиаперевозки – это самый быстрый способ доставки Вашего товара от отправителя к месту назначения.
@@ -348,14 +306,14 @@
 
 
 						<div class="tp-caption customin start show" 
-								 data-x="center" 
-								 data-y="center" 
-								 data-voffset="50" 
-								 data-speed="500"
-								 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								 data-start="1000">
+								data-x="center" 
+								data-y="center" 
+								data-voffset="50" 
+								data-speed="500"
+								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+								data-start="1000">
 							<div class="btn-red-1">
-									<a href="services-in.html">Подробнее</a>
+								<a href="services-in.html">Подробнее</a>
 							</div>
 						</div>
 
@@ -364,30 +322,28 @@
 
 
 					<!-- SLIDE -->
-					<li class="slide-4" 
-							data-transition="zoomout"
-							data-masterspeed="800">
+					<li class="slide-4" data-transition="zoomout" data-masterspeed="800">
 
 						<img src="img/slider/slide-4.jpg">
 
 						<div class="caption customin " 
-								 data-x="center" 
-								 data-y="center"
-								 data-voffset="-150"
-								 data-speed="500" 
-								 data-start="700" 
-								 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								 data-easing="easeOutBack">
+								data-x="center" 
+								data-y="center"
+								data-voffset="-150"
+								data-speed="500" 
+								data-start="700" 
+								data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-easing="easeOutBack">
 							<h1>Морские перевозки</h1>
 						</div>
 
 
 						<div class="tp-caption sfb fade  start" 
-								 data-x="center" 
-								 data-y="center" 
-								 data-voffset="-50"
-								 data-speed="500" 
-								 data-start="900" >
+								data-x="center" 
+								data-y="center" 
+								data-voffset="-50"
+								data-speed="500" 
+								data-start="900" >
 							
 							<p>
 								Вид водного транспорта. К морскому транспорту относится любое судно, 
@@ -399,14 +355,14 @@
 
 
 						<div class="tp-caption customin start show" 
-								 data-x="center" 
-								 data-y="center" 
-								 data-voffset="50" 
-								 data-speed="500"
-								 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								 data-start="1000">
+								data-x="center" 
+								data-y="center" 
+								data-voffset="50" 
+								data-speed="500"
+								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+								data-start="1000">
 							<div class="btn-red-1">
-									<a href="services-in.html">Подробнее</a>
+								<a href="services-in.html">Подробнее</a>
 							</div>
 						</div>
 
@@ -415,31 +371,28 @@
 
 
 					<!-- SLIDE -->
-					<li class="slide-5" 
-							data-transition="zoomout"
-							data-masterspeed="800">
+					<li class="slide-5"  data-transition="zoomout" data-masterspeed="800">
 
 						<img src="img/slider/slide-5.jpg">
 
 						<div class="caption customin " 
-								 data-x="center" 
-								 data-y="center"
-								 data-voffset="-150"
-								 data-speed="500" 
-								 data-start="700" 
-								 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								 data-easing="easeOutBack">
+								data-x="center" 
+								data-y="center"
+								data-voffset="-150"
+								data-speed="500" 
+								data-start="700" 
+								data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-easing="easeOutBack">
 							<h1>Страхование грузов</h1>
 						</div>
 
 
 						<div class="tp-caption sfb fade  start" 
-								 data-x="center" 
-								 data-y="center" 
-								 data-voffset="-50"
-								 data-speed="500" 
-								 data-start="900" >
-							
+								data-x="center" 
+								data-y="center" 
+								data-voffset="-50"
+								data-speed="500" 
+								data-start="900" >
 							<p>
 								Один из видов имущественного страхования, 
 								имеющий целью защиту имущественных интересов владельцев 
@@ -451,14 +404,14 @@
 
 
 						<div class="tp-caption customin start show" 
-								 data-x="center" 
-								 data-y="center" 
-								 data-voffset="50" 
-								 data-speed="500"
-								 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								 data-start="1000">
+								data-x="center" 
+								data-y="center" 
+								data-voffset="50" 
+								data-speed="500"
+								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+								data-start="1000">
 							<div class="btn-red-1">
-									<a href="services-in.html">Подробнее</a>
+								<a href="services-in.html">Подробнее</a>
 							</div>
 						</div>
 
@@ -524,21 +477,9 @@
 						<div class="p-v-30 float-left p-h-30 parag-m-t-15 col-md-8">
 						  <!-- Nav tabs -->
 						  <ul class="ver-tab-nav" role="tablist">
-						    <li class="active">
-						    	<a href="#ver-info-1" data-toggle="tab">
-						    		<b>Информация о нас</b>
-						    	</a>
-						    </li>
-						    <li>
-						    	<a href="#ver-info-2" data-toggle="tab">
-						    		<b>Наша миссия</b>
-						    	</a>
-						    </li>
-						    <li>
-						    	<a href="#ver-info-3" data-toggle="tab">
-						    		<b>Цели компании</b>
-						    	</a>
-						    </li>
+						    <li class="active"><a href="#ver-info-1" data-toggle="tab"><b>Информация о нас</b></a></li>
+						    <li><a href="#ver-info-2" data-toggle="tab"><b>Наша миссия</b></a></li>
+						    <li><a href="#ver-info-3" data-toggle="tab"><b>Цели компании</b></a></li>
 						  </ul>
 
 						  <!-- Tab panes -->
@@ -551,35 +492,34 @@
 						    		Индии и ОАЭ.
 						    	</p>
 						    	<p>
-										Для организации перевозок автомобильным транспортом мы 
-										используем как собственный, так и привлеченный автопарк. 
-										Благодаря этому нам удалось максимально расширить географию 
-										наших автоперевозок и удовлетворять потребности клиентов в 
-										полном объеме.
+									Для организации перевозок автомобильным транспортом мы 
+									используем как собственный, так и привлеченный автопарк. 
+									Благодаря этому нам удалось максимально расширить географию 
+									наших автоперевозок и удовлетворять потребности клиентов в 
+									полном объеме.
 						    	</p>
 						    	<ul>
 						    		<li>Автомобильные грузоперевозки  подтвердили универсальность</li>
-										<li>Междугородние перевозки пользуются популярностью</li>
-										<li>ЖД перевозки осуществляются колёсными транспортнымисредствами, по железнодорожным путям</li>
+									<li>Междугородние перевозки пользуются популярностью</li>
+									<li>ЖД перевозки осуществляются колёсными транспортнымисредствами, по железнодорожным путям</li>
 						    	</ul>
 						    </div>
 
 						    <div role="tabpanel" class="tab-pane fadeIn animated" id="ver-info-2">
 						    	<p>
 						    		Для организации перевозок автомобильным транспортом мы 
-										используем как собственный, так и привлеченный автопарк. 
-										Благодаря этому нам удалось максимально расширить географию 
-										наших автоперевозок и удовлетворять потребности клиентов в 
-										полном объеме.
+									используем как собственный, так и привлеченный автопарк. 
+									Благодаря этому нам удалось максимально расширить географию 
+									наших автоперевозок и удовлетворять потребности клиентов в 
+									полном объеме.
 						    	</p>
 						    </div>
-
 
 						    <div role="tabpanel" class="tab-pane fadeIn animated" id="ver-info-3">
 						    	<p>
 						    		Вид наземного транспорта, перевозка грузов и 
-										пассажиров на котором осуществляется колёсными 
-										транспортными средствами по рельсовым путям.
+									пассажиров на котором осуществляется колёсными 
+									транспортными средствами по рельсовым путям.
 						    	</p>
 						    </div>
 
@@ -621,7 +561,6 @@
 		<div class="row m-v-60">
 			<div class="container">
 
-				
 				<div class="short-advantage inlineble-2">
 
 					<figure data-aos="fade">
@@ -656,6 +595,7 @@
 							<p>Надежность</p>
 						</div>
 					</figure>
+
 				</div>
 
 
@@ -686,24 +626,18 @@
 		<!-- SHORT-ABOUT-TEXT -->
 		<div class="row m-v-60">
 			<div class="container">
+				<div class="about-text parag-m-t-15 p-v-40 p-h-40">
+					<p>
+						Еще вчера - мы не беспокоились, что нас не знают, но заботились о том, чтобы нас знали.
+						<br/>
+						Уже сегодня наша компания успешно занимается транспортировками грузов из Европы, стран СНГ и Юго-Восточной Азии.
+					</p>
 
-				
-				<div>
-					<div class="about-text parag-m-t-15 p-v-40 p-h-40">
-						<p>
-							Еще вчера - мы не беспокоились, что нас не знают, но заботились о том, чтобы нас знали.
-							<br/>
-							Уже сегодня наша компания успешно занимается транспортировками грузов из Европы, стран СНГ и Юго-Восточной Азии.
-						</p>
-
-						<p>
-							С каждым днем мы увеличиваем свой опыт в осуществлении транспортировок грузов. Мы верим, что сплоченность нашей команды, профессионализм 
-							и ответственность - непременные условия достижения высоких результатов.
-						</p>
-					</div>
+					<p>
+						С каждым днем мы увеличиваем свой опыт в осуществлении транспортировок грузов. Мы верим, что сплоченность нашей команды, профессионализм 
+						и ответственность - непременные условия достижения высоких результатов.
+					</p>
 				</div>
-
-
 			</div> <!-- ./CONTAINER -->
 		</div><!-- ./SHORT-ABOUT-TEXT -->
 		
@@ -735,7 +669,7 @@
 						<h2>Получите беспланый расчет тарифа</h2>
 						<button class="btn-blue-1" type="button" data-toggle="modal" data-target="#feedback-modal">
 			  				<b class="clc">Связаться с нами</b>
-			  		</button>
+			  			</button>
 					</div>
 
 				</div>
@@ -779,11 +713,7 @@
 						</div>
 
 						<div class="desc p-v-30 p-h-15">
-							<b class="display-block p-v-10">
-								<a href="">
-									Самосвал MAN TGS 41.400
-								</a>
-							</b>
+							<b class="display-block p-v-10"><a href="">Самосвал MAN TGS 41.400</a></b>
 							<p>
 								Создавая эту страничку, мы обещали, 
 								что будем честно сообщать о себе хорошее и плохое. 
@@ -801,11 +731,7 @@
 						</div>
 
 						<div class="desc p-v-30 p-h-15">
-							<b class="display-block p-v-10">
-								<a href="">
-									MAN TGS 19.360 Евро 4, MAN TGS 19.400
-								</a>
-							</b>
+							<b class="display-block p-v-10"><a href="">MAN TGS 19.360 Евро 4, MAN TGS 19.400</a></b>
 							<p>
 								Создавая эту страничку, мы обещали, 
 								что будем честно сообщать о себе хорошее и плохое. 
@@ -823,11 +749,7 @@
 						</div>
 
 						<div class="desc p-v-30 p-h-15">
-							<b class="display-block p-v-10">
-								<a href="">
-									Фургоны марки ГБАСПГ ISUZU SAZ NQR  PL
-								</a>
-							</b>
+							<b class="display-block p-v-10"><a href="">Фургоны марки ГБАСПГ ISUZU SAZ NQR  PL</a></b>
 							<p>
 								Создавая эту страничку, мы обещали, 
 								что будем честно сообщать о себе хорошее и плохое. 
@@ -845,11 +767,7 @@
 						</div>
 
 						<div class="desc p-v-30 p-h-15">
-							<b class="display-block p-v-10">
-								<a href="">
-									Результаты работы в январе и феврале
-								</a>
-							</b>
+							<b class="display-block p-v-10"><a href="">Результаты работы в январе и феврале</a></b>
 							<p>
 								Создавая эту страничку, мы обещали, 
 								что будем честно сообщать о себе хорошее и плохое. 
@@ -897,84 +815,78 @@
 				<h1>Отзывы</h1>
 
 				<div class="short-reviews marg-ver-30 p-v-45">
+					<div class="bord">
+						<div class="tab-content">
 
-			
 
-					 
-					  <div class="bord">
-					  	<div class="tab-content">
 
-						    <figure role="tabpanel" class="tab-pane fade" id="review-1">
-						    		<img src="img/review-1.jpg" alt=""/>
+							<figure role="tabpanel" class="tab-pane fade" id="review-1">
+								<img src="img/review-1.jpg" alt=""/>
 
-							    	<aside>
-							    		<b><font size="4">Азизов Ботирбек, </font></b>
-							    		<em>Предприниматель</em>
-							        <p>
-												Руководство замечательное, порядочное и с пониманием относиться ко всему! 
-												Нет ничего трудного,если все во время исполнишь свое обязательство. 
-												Встреча руководства и коллег после дальней командировки. 
-												Нет ничего трудного,если все во время исполнишь свое обязательство. 
-												Встреча руководства и коллег после дальней командировки.
-							        </p>
-							        <p>
-												Руководство замечательное, порядочное и с пониманием относиться ко всему! 
-												Нет ничего трудного,если все во время исполнишь свое обязательство. 
-												Встреча руководства и коллег после дальней командировки. 
-												Нет ничего трудного,если все во время исполнишь свое обязательство. 
-												Встреча руководства и коллег после дальней командировки.
-							        </p>
+								<aside>
+									<b><font size="4">Азизов Ботирбек, </font></b>
+									<em>Предприниматель</em>
+									<p>
+										Руководство замечательное, порядочное и с пониманием относиться ко всему! 
+										Нет ничего трудного,если все во время исполнишь свое обязательство. 
+										Встреча руководства и коллег после дальней командировки. 
+										Нет ничего трудного,если все во время исполнишь свое обязательство. 
+										Встреча руководства и коллег после дальней командировки.
+									</p>
+									<p>
+										Руководство замечательное, порядочное и с пониманием относиться ко всему! 
+										Нет ничего трудного,если все во время исполнишь свое обязательство. 
+										Встреча руководства и коллег после дальней командировки. 
+										Нет ничего трудного,если все во время исполнишь свое обязательство. 
+										Встреча руководства и коллег после дальней командировки.
+									</p>
+								</aside>
+							</figure>
 
-							      </aside>
-						    </figure>
 
-						    <figure role="tabpanel" class="tab-pane fade in active" id="review-2">
-						    		<img src="img/review-2.jpg" alt=""/>
+							<figure role="tabpanel" class="tab-pane fade in active" id="review-2">
+								<img src="img/review-2.jpg" alt=""/>
 
-							    	<aside>
-							    		<b><font size="4">Ботиржонов Азизбек, </font></b>
-							    		<em>Предприниматель</em>
-							        <p>
-												Руководство замечательное, порядочное и с пониманием относиться ко всему! 
-												Нет ничего трудного,если все во время исполнишь свое обязательство. 
-												Встреча руководства и коллег после дальней командировки. 
-												Нет ничего трудного,если все во время исполнишь свое обязательство. 
-												Встреча руководства и коллег после дальней командировки.
-							        </p>
-							      </aside>
-						    </figure>
+								<aside>
+									<b><font size="4">Ботиржонов Азизбек, </font></b>
+									<em>Предприниматель</em>
+									<p>
+										Руководство замечательное, порядочное и с пониманием относиться ко всему! 
+										Нет ничего трудного,если все во время исполнишь свое обязательство. 
+										Встреча руководства и коллег после дальней командировки. 
+										Нет ничего трудного,если все во время исполнишь свое обязательство. 
+										Встреча руководства и коллег после дальней командировки.
+									</p>
+								</aside>
+							</figure>
 
 						    <figure role="tabpanel" class="tab-pane fade" id="review-3">
-						    		<img src="img/review-3.jpg" alt=""/>
+								<img src="img/review-3.jpg" alt=""/>
 
-							    	<aside>
-							    		<b><font size="4">Авезов Рустам, </font></b>
-							    		<em>Предприниматель</em>
-							        <p>
-												Руководство замечательное, порядочное и с пониманием относиться ко всему! 
-												Нет ничего трудного,если все во время исполнишь свое обязательство.
-							        </p>
-							      </aside>
+								<aside>
+									<b><font size="4">Авезов Рустам, </font></b>
+									<em>Предприниматель</em>
+									<p>
+										Руководство замечательное, порядочное и с пониманием относиться ко всему! 
+										Нет ничего трудного,если все во время исполнишь свое обязательство.
+									</p>
+								</aside>
 						    </figure>
 
-					
 
 
 
-							 	<!-- REVIEWS-TAB PAGINATION -->
-							  <ul class="pagination-red" role="tablist">
 
-							    <li><a href="#review-1" data-toggle="tab"> </a></li>
-							    <li class="active"><a href="#review-2" data-toggle="tab"></a></li>
-							    <li><a href="#review-3" data-toggle="tab"></a></li>
+							<!-- REVIEWS-TAB PAGINATION -->
+							<ul class="pagination-red" role="tablist">
+								<li><a href="#review-1" data-toggle="tab"> </a></li>
+								<li class="active"><a href="#review-2" data-toggle="tab"></a></li>
+								<li><a href="#review-3" data-toggle="tab"></a></li>
+							</ul>
 
-							  </ul>
 
-
-					  	</div><!-- ./TAB-CONTENT -->
-					  </div>
-				
-
+						</div><!-- ./TAB-CONTENT -->
+					</div>
 				</div>
 			</div><!-- ./CONTAINER -->
 		</div><!-- ./SHORT-REVIEWS -->
@@ -997,33 +909,28 @@
 
 		<!-- MAP -->
 		<div class="map-content m-t-60">
-
 			<div class="container">
-
 				<div class="col-md-3 map-block bg-color-white">
 
 					<h2>Контакты</h2>
 					<address>
 						<h4>Адрес</h4>
-							Республика Узбекистан, г.Ташкент, Яшнабадский район,<br>
-							ул. Уйсозлар, 23 А
+						Республика Узбекистан, г.Ташкент, Яшнабадский район,<br>
+						ул. Уйсозлар, 23 А
 
 						<h4>Телефон</h4>
-						<p>+99871 280 24 97<br/>
-							 +99871 280 32 34</p>
+						<p>+99871 280 24 97</p>
+						<p>+99871 280 32 34</p>
 
 						<h4>Email</h4>
-						<a href="mailto:manlogistic777@gmail.com">
-							manlogistic777@gmail.com</a>
-
+						<a href="mailto:manlogistic777@gmail.com">manlogistic777@gmail.com</a>
 					</address>
-				</div>
 
+				</div>
 			</div>
+
 			<div id="map" class="row"></div>
 
-				</div>
-			</div>
 		</div><!-- ./MAP -->
 
 
@@ -1066,25 +973,18 @@
 		</div>
 
 
-
-
 		<div class="skin-2">
 			<div class="container">
 
 				<div class="col-xs-12 footer-info">
+
 					<div class="col-md-6 copyright">
-
 						<p>
-							<a href="https://www.life-style.uz" 
-									title="Создание и продвижение сайтов в Ташкенте"
-									style="text-decoration: underline;">Создание сайтов</a> 
-
-									<em><font color="skyblue">Life</font></em>
-
-									<font color="ghostwhite">Style</font>
+							<a href="https://www.life-style.uz" title="Создание и продвижение сайтов в Ташкенте" style="text-decoration: underline;">Создание сайтов</a> 
+							<em><font color="skyblue">Life</font></em>
+							<font color="ghostwhite">Style</font>
 						</p>
 					</div>
-				
 					<div class="col-md-6 social">
 						<ul>
 							<li><a href=""><i class="fa fa-facebook"></i></a></li>
@@ -1093,36 +993,44 @@
 							<li><a href=""><i class="fa fa-telegram"></i></a></li>
 						</ul>
 					</div>
+
 				</div>
 
 			</div>
 		</div>
 	</footer>
+
+
+
 	
 
-
-
+		<script src="js/scripts.min.js"></script>
+		<script src="js/main.js"></script>
+		
+		<!-- jQuery REVOLUTION Slider  -->
+		<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+		<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
 
 
 			<script>
 
 			var i = {
-							// GOOGLE MAP INIT
-							gm_content: '<h3><a  href="index.html" ><img src="img/logo.svg"/></a></h3>'+
-											'<p>Республика Узбекистан, г.Ташкент, Яшнабадский район, ул. Уйсозлар, 23 А</p>'+
-											'<p><strong>Телефоны:</strong></p>'+
-											'<p>+99871 280 24 97<br>+99871 280 24 97</p>'+
-											'<p><strong>E-mail:</strong></p>'+
-											'<p>manlogistic777@gmail.com</p>',
+						// GOOGLE MAP INIT
+						gm_content: '<h3><a  href="index.html" ><img src="img/logo.svg"/></a></h3>'+
+										'<p>Республика Узбекистан, г.Ташкент, Яшнабадский район, ул. Уйсозлар, 23 А</p>'+
+										'<p><strong>Телефоны:</strong></p>'+
+										'<p>+99871 280 24 97<br>+99871 280 24 97</p>'+
+										'<p><strong>E-mail:</strong></p>'+
+										'<p>manlogistic777@gmail.com</p>',
 
-							gm_title : 								'Мы',
-							gm_icon: 									"img/icons/marker.png",
+						gm_title : 		'Мы',
+						gm_icon: 		"img/icons/marker.png",
 
-							gm_marker_position_lat:  	41.2579352,
-							gm_marker_position_lng:  	69.3347696,
+						gm_marker_position_lat:  	41.2579352,
+						gm_marker_position_lng:  	69.3347696,
 
-							gm_position_lat: 			 		41.2579352,
-							gm_position_lng: 				 	69.3347696
+						gm_position_lat: 			 		41.2579352,
+						gm_position_lng: 				 	69.3347696
 					}
 
 			var mapBlock = document.getElementsByClassName("map-block")[0];
