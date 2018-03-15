@@ -116,7 +116,7 @@ $color_gray_3: darken(#ebebeb, 2%);
 				img{
 					max-height: 100%;
 					max-width: 100%;
-					width: 100%;
+					width: auto;
 					height: auto;
 					margin: 0 auto;
 					display: block;
@@ -729,12 +729,17 @@ tr:nth-child(even) {
 			}
 		}
 
-		//&.short-carpark{
-		//	figure{
-		//		width: 48%;
-		//		margin-right: 1%;
-		//	}
-		//}
+		&.short-carpark{
+			figure{
+				width: 49%;
+				margin-right: 1%;
+				.desc{
+					margin-top: 5px;
+					margin-bottom: 60px;
+					padding: 0;
+				}
+			}
+		}
 
 
 	}
@@ -752,12 +757,12 @@ tr:nth-child(even) {
 			}
 		}
 
-		// &.short-carpark{
-		// 	figure{
-		// 		width: 100%;
-		// 		margin-right: 0;
-		// 	}
-		// }
+		&.short-carpark{
+			figure{
+				width: 100%;
+				margin-right: 0;
+			}
+		}
 
 	}
 
@@ -1531,12 +1536,18 @@ main{
 //INDEX SLIDER
 .index-slider{
 	overflow: hidden;
+	@media ( max-width:991px ) {
+		.fullscreen-container{
+			height: 445px !important;
+		}
+	}
 }
 .fullscreen-container {
 	width:100%;
 	position:relative;
 	padding:0;
 	height: 845px;
+
 }
 .banner{
 	//width:100%;
@@ -1553,12 +1564,14 @@ main{
  *{
 		color: white;
 	}
+
+
 	h1{
-		position: relative;
+		//position: relative;
 		font-weight: 500;
 		font-size: em(45, 16);
 		letter-spacing:2px;
-		height: 80px;
+		
 	}
 	h2{
 		white-space: normal;
@@ -1568,8 +1581,7 @@ main{
 		line-height: 110% !important;
 	}
 	p{
-		font-size: em(14, 16) ;
-		padding: 0 25%;
+		font-size: 14px ;
 		text-align: center;
 		line-height: 20px;
 	}
@@ -1587,21 +1599,36 @@ main{
 
 	.slide-1{
 
-		.pargi{
-			width: 50%;
-			text-align: center;
-			line-height: 20px;
-			font-size: em(14, 16) !important;
-		}
 		.splitted{
 		}
 		.tp-splitted{
 			 
 		}
 	}
+	@media ( min-width:992px ) {
+		p{
+			padding: 0 25%;
+		}
+	}
+	@media only screen and (max-width: 991px){
+		.tp-caption{
+			text-align: center;
+			padding: 0 15px;
+	    //left: 0 !important;
+    	//top: 20% !important;
+		}
+		h1{
+			font-size: 30px;
+		}
+		p{
+			display: none;
+			position: relative;
+			font-size: 18px;
+		}
 
-	@media only screen and (max-width: 767px){
-
+		[class*="btn"]{
+			display: none;
+		}
 /* 		& {
 			ul li div{display: none;}
 			ul li div.tp-bgimg, ul li div.slotholder{display: block;}
@@ -1721,7 +1748,8 @@ main{
 	&:before{
 		@extend .claf;
     height: 100px;
-    top: -100px;
+    top: 0;
+    margin-top: -60px;
     left: 50%;
 
     transform: matrix(2, 0, -40, 5, 0, 0);
@@ -1731,6 +1759,7 @@ main{
     height: 100px;
     top: 100%;
     left: 50%;
+    margin-top: -20px;
     transform: matrix(2, 0, 40, 5, 0, 0);
 	}
 
@@ -1927,6 +1956,7 @@ main{
 .list-style-1{
 	ul{
 		position: relative;
+		text-align:left;
 		li{
 			list-style: none;
 			list-style-position: outside;
@@ -2034,14 +2064,12 @@ main{
 .short-carpark{
 	@include align-cells(90, 4, table);
 	@include img-flex-align(100px, flex-end);
-	// figure{
-	// 	width: 23%;
- //    margin-right: 1.5%;
- //    height: 530px;
- //    img{
- //    	width: 100%;
- //    }
-	// }
+	.img-content{
+		img{
+			width: auto !important;
+		}
+	}
+
 	a{
 		font-weight: 600;
 		font-size: em(17, 16);
@@ -2117,6 +2145,9 @@ main{
 
 	}
 
+}
+.short-reviews-content{
+	padding: 0;
 }
 .pagination-red{
 
@@ -2244,9 +2275,15 @@ main{
 @media only screen and (max-width: 991px){
 	.ver-tab-nav, .ver-tab-content{
 		width: 100%;
+		li a{
+			margin: 0;
+		}
 	}
 	.ver-tab-content{
     height: initial;
+    p{
+    	margin: 15px 0;
+    }
 	}
 	.ver-tab-nav{
 		border: 1px solid $color_gray_1;
@@ -2822,7 +2859,7 @@ main{
 	background-origin: border-box;
 	background-size: cover;
 
-	flex-basis: 40% !important;
+	//flex-basis: 40% !important;
 	&:nth-child(1){transition-delay: 0.4s !important;}
 	&:nth-child(2){transition-delay: 0.3s !important;}
 	&:nth-child(3){transition-delay: 0.2s !important;}
@@ -2888,7 +2925,9 @@ main{
 		}
 
 	}
-
+	@media ( max-width:991px ) {
+		height: 250px;
+	}
 }
 
 
@@ -2980,11 +3019,13 @@ main{
 	}
 	.logo-content{
 		z-index: 3;
+		@media (max-width:991px){
+			img{
+				width: 75%;
+			}
+		}
 	}
 }
-
-
-
 
 
 
