@@ -1363,16 +1363,22 @@ $header-height: 130px;
 	z-index: 3;
 	background-position: center 0;
 	background-repeat: no-repeat;
-	background-size: contain;
 	//background-color: #3d4c51;
 	background-attachment: inherit;
 	@media (max-width:991px) {
 		background-size: cover;
 	}
-	
+	.banner-content{
+		@include table-celling( $header-height*3 );
+	}
+	&.cars{
+		background-size: contain;
+		.banner-content{
+			@include table-celling( $header-height*4+30 );
+		}
+	}
 }
 .banner-content{
-	@include table-celling( $header-height*4+30 );
 	width: 1%;
 	@media (max-width:991px) {
 		height: 250px;

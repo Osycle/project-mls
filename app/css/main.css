@@ -18521,20 +18521,28 @@ tr:nth-child(even) {
   z-index: 3;
   background-position: center 0;
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
   background-attachment: inherit; }
   @media (max-width: 991px) {
     #banner {
       -webkit-background-size: cover;
       background-size: cover; } }
+  #banner .banner-content {
+    display: table-cell;
+    height: 390px;
+    padding-left: 15px;
+    padding-right: 15px;
+    vertical-align: middle; }
+  #banner.cars {
+    -webkit-background-size: contain;
+    background-size: contain; }
+    #banner.cars .banner-content {
+      display: table-cell;
+      height: 550px;
+      padding-left: 15px;
+      padding-right: 15px;
+      vertical-align: middle; }
 
 .banner-content {
-  display: table-cell;
-  height: 550px;
-  padding-left: 15px;
-  padding-right: 15px;
-  vertical-align: middle;
   width: 1%; }
   @media (max-width: 991px) {
     .banner-content {
