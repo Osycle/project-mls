@@ -1546,7 +1546,7 @@ main{
 	overflow: hidden;
 	@media ( max-width:991px ) {
 		.fullscreen-container{
-			height: 445px !important;
+			//height: 445px !important;
 		}
 	}
 }
@@ -1554,7 +1554,7 @@ main{
 	width:100%;
 	position:relative;
 	padding:0;
-	height: 845px;
+	//height: 845px;
 
 }
 .banner{
@@ -1563,6 +1563,11 @@ main{
 }
 .tp-bannertimer{
 	//display: none;
+}
+@media (max-width: 991px) {
+	.tp-simpleresponsive .caption, .tp-simpleresponsive .tp-caption{
+		top: 0 !important;
+	}
 }
 .rev-slider{
 	overflow: hidden;
@@ -2400,7 +2405,7 @@ main{
 }
 .contacts-feedback{
 	
-	padding: 20px 30px;
+	//padding: 20px 30px;
 	//padding-bottom: 20px;
 	margin: 60px 0;
 	z-index: 2;
@@ -2518,7 +2523,7 @@ main{
 		margin: 40px 0;
 	}
 	p{
-		padding:0 15px;
+		//padding:0 15px;
 	}
 	h4{
 		margin: 15px 0;
@@ -3117,7 +3122,20 @@ main{
 /*
 										 --- OTHER ---
 */
-
+.short-reviews-content{
+	.flickity-viewport{
+		height: 180px;
+	}
+	.carousel-cell{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    *{
+    	height: 100%;
+    }
+	}
+}
 
 
 .carousel-article{
