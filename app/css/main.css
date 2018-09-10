@@ -18522,16 +18522,13 @@ tr:nth-child(even) {
   background-position: center 0;
   background-repeat: no-repeat;
   background-attachment: inherit; }
-  @media (max-width: 991px) {
-    #banner {
-      -webkit-background-size: cover;
-      background-size: cover; } }
   #banner .banner-content {
     display: table-cell;
     height: 390px;
     padding-left: 15px;
     padding-right: 15px;
-    vertical-align: middle; }
+    vertical-align: middle;
+    width: 1%; }
   #banner.cars {
     -webkit-background-size: contain;
     background-size: contain; }
@@ -18541,12 +18538,12 @@ tr:nth-child(even) {
       padding-left: 15px;
       padding-right: 15px;
       vertical-align: middle; }
-
-.banner-content {
-  width: 1%; }
   @media (max-width: 991px) {
-    .banner-content {
-      height: 250px; } }
+    #banner {
+      -webkit-background-size: cover;
+      background-size: cover; }
+      #banner .banner-content {
+        height: 130px; } }
 
 .banner-shadow {
   background: -webkit-gradient(linear, right top, left top, from(rgba(24, 80, 155, 0.4)), to(rgba(227, 31, 36, 0.3)));
@@ -19385,16 +19382,27 @@ main {
   -webkit-box-shadow: 0px 0px 35px -15px black;
   box-shadow: 0px 0px 35px -15px black;
   margin: 60px 0; }
-  .review .review-head {
-    padding: 70px 25%; }
-  .review p {
-    float: left; }
   .review img {
     width: 200px; }
-  .review:nth-child(odd) img {
-    float: left; }
-  .review:nth-child(even) img {
-    float: right; }
+  .review .review-head {
+    margin: 10px 0; }
+  @media (min-width: 992px) {
+    .review p {
+      float: left; }
+    .review .review-head {
+      padding: 70px 25%; }
+    .review:nth-child(odd) img {
+      float: left; }
+    .review:nth-child(even) img {
+      float: right; } }
+  @media (max-width: 991px) {
+    .review {
+      margin: 5px 0; } }
+
+@media (max-width: 991px) {
+  .reviews-content {
+    margin-top: 0;
+    pading-top: 0; } }
 
 .flex-box, .services-content, .ourcars-content {
   display: -webkit-box;

@@ -1365,11 +1365,10 @@ $header-height: 130px;
 	background-repeat: no-repeat;
 	//background-color: #3d4c51;
 	background-attachment: inherit;
-	@media (max-width:991px) {
-		background-size: cover;
-	}
+
 	.banner-content{
 		@include table-celling( $header-height*3 );
+		width: 1%;
 	}
 	&.cars{
 		background-size: contain;
@@ -1377,13 +1376,14 @@ $header-height: 130px;
 			@include table-celling( $header-height*4+30 );
 		}
 	}
-}
-.banner-content{
-	width: 1%;
 	@media (max-width:991px) {
-		height: 250px;
+		background-size: cover;
+		.banner-content{
+			height: 130px;
+		}
 	}
 }
+
 .banner-shadow{
 
 	background: linear-gradient(to left, rgba( $color_1, 0.4),rgba($color_4, 0.3) );
@@ -2635,31 +2635,42 @@ main{
 .review{
 	box-shadow: 0px 0px 35px -15px black;
 	margin: 60px 0;
-	.review-head{
-		//text-align: center;
-		padding: 140/2+px 25%;
-		
-	}
-	p{
-		
-		//padding:0 50px;
-		float: left;
-	}
 	img{
 		width: 200px;
 	}
-	&:nth-child(odd){
-		img{
+	.review-head{
+		margin: 10px 0;
+	}
+	@media (min-width: 992px) {
+		p{
 			float: left;
 		}
-	}
-	&:nth-child(even){
-		img{
-			float: right;
+		.review-head{
+			//text-align: center;
+			padding: 140/2+px 25%;
+			
+		}
+		&:nth-child(odd){
+			img{
+				float: left;
+			}
+		}
+		&:nth-child(even){
+			img{
+				float: right;
+			}
 		}
 	}
+	@media (max-width:991px) {
+		margin: 5px 0;
+	}
 }
-
+@media (max-width:991px) {
+	.reviews-content{
+		margin-top: 0;
+		pading-top: 0;
+	}
+}
 
 
 
